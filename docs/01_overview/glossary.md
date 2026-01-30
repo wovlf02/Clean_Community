@@ -61,6 +61,37 @@
 | .pt 파일 | PyTorch 모델 저장 형식 |
 | 추론 (Inference) | 학습된 모델로 예측을 수행하는 과정 |
 | 토큰화 (Tokenization) | 텍스트를 모델이 처리할 수 있는 단위로 분할 |
+| 다중 라벨 분류 (Multi-label Classification) | 하나의 입력이 여러 클래스에 동시에 속할 수 있는 분류 방식 |
+| 앙상블 (Ensemble) | 여러 모델의 예측을 결합하여 성능을 향상시키는 기법 |
+| 가중 소프트 보팅 (Weighted Soft Voting) | 각 모델의 확률 예측에 가중치를 부여하여 평균하는 방식 |
+| 임계값 (Threshold) | 확률을 이진 분류로 변환하는 기준값 |
+| Hamming Accuracy | 다중 라벨에서 개별 라벨 정확도의 평균 |
+| F1-Score | 정밀도와 재현율의 조화 평균 |
+| F1-Macro | 클래스별 F1-Score의 단순 평균 |
+| ELECTRA | 효율적인 텍스트 인코더 사전학습 모델 아키텍처 |
+| BERT | Bidirectional Encoder Representations from Transformers |
+| RoBERTa | Robustly Optimized BERT Approach |
+| Transformers | Hugging Face의 사전학습 모델 라이브러리 |
+| Fine-tuning | 사전학습 모델을 특정 태스크에 맞게 추가 학습하는 과정 |
+| AEDA | An Easier Data Augmentation, 구두점 삽입 기반 데이터 증강 기법 |
+| BCEWithLogitsLoss | 다중 라벨 분류를 위한 Binary Cross-Entropy 손실 함수 |
+| pos_weight | 클래스 불균형 해결을 위한 양성 샘플 가중치 |
+
+### 사전학습 모델
+
+| 모델 | 설명 |
+|------|------|
+| KcELECTRA | 한국어 인터넷 언어에 특화된 ELECTRA 모델 (beomi) |
+| SoongsilBERT | 숭실대학교에서 개발한 한국어 BERT 모델 |
+| KLUE-RoBERTa | 한국어 언어 이해 벤치마크(KLUE) 기반 RoBERTa 모델 |
+
+### 데이터셋
+
+| 용어 | 설명 |
+|------|------|
+| UnSmile | Smilegate AI에서 제공하는 한국어 혐오 표현 탐지 데이터셋 |
+| 클래스 불균형 | 특정 클래스의 샘플이 다른 클래스보다 현저히 적거나 많은 현상 |
+| 오버샘플링 | 소수 클래스 데이터를 증가시키는 기법 |
 
 ### Cloud/DevOps
 
@@ -87,4 +118,4 @@
 
 ---
 
-**최종 업데이트**: 2026년 1월 29일
+**최종 업데이트**: 2026년 1월 30일
