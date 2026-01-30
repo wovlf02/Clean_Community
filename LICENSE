@@ -1,0 +1,301 @@
+# LICENSE
+
+**Copyright (c) 2026 Clean Community Project**
+
+---
+
+## License Type: Custom Source-Available License
+
+This software is **NOT open source**. The source code is made available for **viewing and evaluation purposes only**.
+
+---
+
+## 1. Proprietary Code License
+
+### Grant of Rights
+
+You are granted the following **LIMITED** rights:
+
+✅ **View** - You may view the source code
+✅ **Study** - You may study the code for educational purposes
+✅ **Reference** - You may reference the architecture in discussions (with attribution)
+
+### Restrictions
+
+You are **PROHIBITED** from:
+
+❌ **Using** - Running, executing, or deploying this software
+❌ **Copying** - Reproducing any part of the proprietary code
+❌ **Modifying** - Creating derivative works
+❌ **Distributing** - Sharing or redistributing the code
+❌ **Commercial Use** - Any commercial activity whatsoever
+❌ **Reverse Engineering** - Attempting to extract algorithms or trade secrets
+
+**Violation of these terms will result in legal action.**
+
+---
+
+## 2. Open Source Components
+
+This project incorporates the following open-source software, each governed by its original license:
+
+### 2.1 Datasets & Models (CC BY-SA 4.0)
+
+- **UnSmile Dataset** by Smilegate AI
+- **KLUE-RoBERTa** by KLUE Team
+
+**Our Compliance:**
+- ✅ Attribution provided in NOTICE.md
+- ✅ Source and license clearly stated
+- ⚠️ **Important:** CC BY-SA 4.0 ShareAlike applies ONLY if you redistribute the original dataset or model weights. Our trained model weights are derivative works and are licensed separately as proprietary.
+
+**Legal Interpretation:**
+Under CC BY-SA 4.0, the ShareAlike requirement applies to redistribution of the licensed material. When used as input to create a new work (trained model), the ShareAlike does NOT automatically extend to the new work. This is consistent with how CC licenses are interpreted in ML contexts.
+
+### 2.2 Pre-trained Models (Apache 2.0)
+
+- **KcELECTRA** by Junbum Lee (beomi)
+- **SoongsilBERT** by Soongsil University AI Lab
+
+**Our Compliance:**
+- ✅ Attribution provided
+- ✅ Original license notices preserved
+- ✅ Changes documented
+- ✅ Apache 2.0 allows proprietary derivative works
+
+### 2.3 Libraries & Frameworks
+
+| Component | License | Compliance |
+|-----------|---------|------------|
+| PyTorch | BSD-3-Clause | ✅ Attribution in NOTICE.md |
+| Transformers | Apache-2.0 | ✅ Attribution in NOTICE.md |
+| Next.js | MIT | ✅ Attribution in NOTICE.md |
+| React | MIT | ✅ Attribution in NOTICE.md |
+| FastAPI | MIT | ✅ Attribution in NOTICE.md |
+
+**All open-source licenses are fully complied with.**
+
+See [NOTICE.md](./NOTICE.md) for complete attribution.
+
+---
+
+## 3. Our Derivative Works
+
+### 3.1 Trained Model Weights
+
+Our trained model weights (`.pt` files) are **proprietary** and subject to this license, NOT the original dataset/model licenses.
+
+**Legal Basis:**
+- Trained weights are new copyrightable works
+- Training on CC BY-SA data does NOT make weights CC BY-SA
+- Analogous to: Training on a book doesn't make your brain CC BY-SA
+
+### 3.2 Custom Code
+
+All code written by us is **proprietary** and covered by Section 1 above.
+
+---
+
+## 4. Permitted Use Cases
+
+### ✅ Portfolio Review (Employers/Recruiters)
+- You may review this code as part of recruitment
+- You may discuss it in interviews
+- You may NOT use it in your company's projects
+
+### ✅ Academic Study (Students/Researchers)
+- You may study the architecture and patterns
+- You may cite this project in papers (with proper attribution)
+- You may NOT copy code for assignments or projects
+
+### ❌ Commercial Use
+- Absolutely prohibited without a commercial license
+
+### ❌ Personal Projects
+- You may NOT use this code in your own projects
+- You may NOT fork and modify
+- Write your own implementation
+
+---
+
+## 5. Commercial Licensing
+
+To use this software commercially, you must obtain a paid license.
+
+**Contact:** [your-email@example.com]
+
+**Commercial License Includes:**
+- ✅ Full usage rights
+- ✅ Source code access
+- ✅ Commercial deployment rights
+- ✅ Technical support
+- ✅ Legal indemnification
+
+---
+
+## 6. Legal Notices
+
+### 6.1 No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+### 6.2 Limitation of Liability
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### 6.3 Jurisdiction
+
+This license is governed by the laws of the Republic of Korea.
+
+### 6.4 Severability
+
+If any provision of this license is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
+
+---
+
+## 7. Enforcement
+
+### 7.1 Monitoring
+
+We actively monitor for unauthorized use through:
+- GitHub activity monitoring
+- Web scraping detection
+- Code similarity analysis
+
+### 7.2 Enforcement Actions
+
+Unauthorized use will result in:
+
+1. **Immediate cease and desist notice**
+2. **DMCA takedown request** (if redistributed)
+3. **Civil lawsuit** for copyright infringement
+4. **Damages** including actual damages and statutory damages
+5. **Attorney fees and costs**
+
+### 7.3 Reporting Violations
+
+If you discover unauthorized use of this code, please report to: [your-email@example.com]
+
+---
+
+## 8. License Compatibility
+
+**This proprietary license is NOT compatible with:**
+- GPL (any version)
+- AGPL
+- Any copyleft license
+
+**This license IS compatible with our use of:**
+- MIT licensed components
+- Apache 2.0 licensed components
+- BSD licensed components
+- CC BY-SA 4.0 components (with proper attribution)
+
+---
+
+## 9. Attribution Requirements
+
+When referencing this project (in permitted contexts), use:
+
+```
+Clean Community AI Platform
+Copyright (c) 2026 Clean Community Project
+Licensed under Custom Source-Available License
+GitHub: https://github.com/your-username/Clean_Community
+```
+
+---
+
+## 10. Updates to This License
+
+We reserve the right to update this license at any time. Continued viewing of the repository constitutes acceptance of any updates.
+
+---
+
+**Effective Date:** January 30, 2026
+**Last Updated:** January 30, 2026
+**Version:** 1.0
+
+---
+
+**© 2026 Clean Community Project. All Rights Reserved.**
+
+**Unauthorized use is copyright infringement and will be prosecuted to the fullest extent of the law.**
+
+See [NOTICE.md](./NOTICE.md) for third-party licenses.
+
+---
+
+## How to Get Permission
+
+If you wish to use any part of this code, you must obtain explicit written permission.
+
+**Contact:** [your-email@example.com]
+
+### Commercial Licensing Available
+
+For businesses interested in licensing this technology:
+- ✅ Full source code license
+- ✅ Commercial deployment rights
+- ✅ Technical support
+- ✅ Custom development
+
+**Pricing:** Contact for quote
+
+---
+
+## Enforcement
+
+Unauthorized use of this code will result in:
+
+1. **Cease and Desist Notice**
+2. **Legal Action** - Including damages and attorney fees
+3. **DMCA Takedown** - If redistributed on other platforms
+
+We actively monitor for unauthorized use.
+
+---
+
+## Legal Information
+
+### Jurisdiction
+This license is governed by the laws of the Republic of Korea.
+
+### No Warranty
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+### Limitation of Liability
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DAMAGES ARISING FROM VIEWING OR ATTEMPTING TO USE THIS SOFTWARE.
+
+---
+
+## For Employers/Recruiters
+
+If you're viewing this as part of a recruitment process:
+- ✅ You may review the code for evaluation purposes
+- ✅ You may discuss it in interviews
+- ❌ You may not use it in your own projects
+
+---
+
+## For Students/Learners
+
+If you're viewing this for educational purposes:
+- ✅ You may study the architecture and design patterns
+- ✅ You may learn from the implementation approach
+- ❌ You may not copy any code for your own projects
+- ❌ You may not submit this as your own work
+
+**Write your own code. Learn from this, but don't copy.**
+
+---
+
+**Effective Date:** January 30, 2026
+**Last Updated:** January 30, 2026
+
+---
+
+**Copyright (c) 2026 Clean Community Project**
+**All Rights Reserved**
+
+Any use of this code without explicit written permission is strictly prohibited and may result in legal action.

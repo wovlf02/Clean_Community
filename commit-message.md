@@ -1,7 +1,8 @@
-docs: 화면 설계 문서 개별 파일 분리 및 UX 개선
+docs: 화면 설계 문서 개별 파일 분리 및 Source-Available 라이선스 적용
 
 각 도메인별 화면을 개별 파일로 분리하고 Desktop/Mobile 레이아웃 작성
 AI 감정분석 결과 표시 기능 추가 및 한국형 SNS 공유 기능 개선
+법적으로 안전한 Source-Available 라이선스 정책 수립
 
 BREAKING CHANGE: 인증 방식을 이메일 기반에서 아이디/비밀번호 기반으로 변경
 
@@ -37,3 +38,24 @@ BREAKING CHANGE: 인증 방식을 이메일 기반에서 아이디/비밀번호 
 - 대용량 모델 파일(*.pt)을 .gitignore에 추가하여 Git 추적 제외
 - .DS_Store 파일을 .gitignore에 추가하여 Git 추적 제외
 - 구 문서 구조(docs_inf) 제거
+
+라이선스 및 법적 고지:
+- Source-Available 라이선스 정책 수립 (코드 공개, 사용 금지)
+- 모든 오픈소스 라이선스 의무사항 완전 준수 (CC BY-SA 4.0, Apache 2.0, MIT, BSD)
+- CC BY-SA 4.0 ShareAlike 조항 법적 해석 명시 (학습 데이터와 학습된 모델의 법적 분리)
+- Apache 2.0 라이선스의 독점 파생물 허용 근거 문서화
+- LICENSE 파일 생성 (Source-Available License with third-party compliance)
+- NOTICE.md 생성하여 모든 오픈소스 저작권 고지 및 전체 라이선스 텍스트 포함
+- ai-model/LICENSE.md 생성하여 학습된 모델의 독점 라이선스 명시
+- 포트폴리오 목적의 코드 공개와 사용 권한 부여의 법적 분리
+- 상업 라이선스 문의 프로세스 및 법적 집행 절차 명시
+- 대한민국 법률 관할권 명시 및 손해배상 청구 권리 보유
+- README에 명확한 법적 경고 및 사용 제한 표시
+
+법적 준수 사항:
+- UnSmile 데이터셋 (Smilegate AI, CC BY-SA 4.0) 전체 출처 표기
+- KLUE-RoBERTa (KLUE Team, CC BY-SA 4.0) 전체 출처 표기
+- KcELECTRA (Junbum Lee, Apache 2.0) 전체 출처 표기
+- SoongsilBERT (Soongsil Univ, Apache 2.0) 전체 출처 표기
+- 30+ 오픈소스 라이브러리 전체 저작권 고지
+- BSD, MIT, Apache 라이선스 전체 텍스트 포함

@@ -6,6 +6,27 @@
 [![F1-Macro](https://img.shields.io/badge/F1--Macro-82.91%25-blue)](./ai-model/docs/05_실험_결과.md)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
 [![Next.js](https://img.shields.io/badge/Next.js-14+-black)](https://nextjs.org)
+[![License](https://img.shields.io/badge/License-Proprietary-red)](./LICENSE)
+
+---
+
+## ⚠️ LEGAL NOTICE
+
+**© 2026 Clean Community Project**
+
+This is a **source-available** project, NOT open source.
+
+| Action | Permission |
+|--------|------------|
+| 👀 View code | ✅ Allowed (portfolio review) |
+| 🏃 Run/Use | ❌ **Prohibited** |
+| 📋 Copy | ❌ **Prohibited** |
+| 🔧 Modify | ❌ **Prohibited** |
+| 💼 Commercial use | ❌ **Prohibited** |
+
+**Unauthorized use is copyright infringement.**
+
+See [LICENSE](./LICENSE) for full legal terms.
 
 ---
 
@@ -13,6 +34,11 @@
 
 **Clean Community**는 AI 기반 감정분석 기술을 활용한 건강한 온라인 커뮤니티 플랫폼입니다. 
 3-모델 하이브리드 앙상블 기술을 통해 **9개 혐오 카테고리**를 동시에 탐지하여 건전한 커뮤니티 문화를 조성합니다.
+
+**🎯 This is a portfolio project to demonstrate:**
+- AI/ML model development and deployment skills
+- Full-stack development capabilities
+- System architecture and design expertise
 
 ### 🎯 핵심 기능
 
@@ -171,17 +197,81 @@ pip install -r requirements.txt
 ## 📊 참고 자료
 
 ### 데이터셋 및 사전학습 모델
-- **UnSmile 데이터셋**: [Smilegate AI GitHub](https://github.com/smilegate-ai/korean_unsmile_dataset)
-- **KcELECTRA**: [Hugging Face](https://huggingface.co/beomi/KcELECTRA-base)
-- **SoongsilBERT**: [Hugging Face](https://huggingface.co/soongsil-ai/soongsil-bert-base)
-- **KLUE-RoBERTa**: [Hugging Face](https://huggingface.co/klue/roberta-base)
+
+**이 프로젝트는 다음의 오픈소스 데이터셋과 모델을 사용합니다:**
+
+#### UnSmile 데이터셋
+- **제공:** Smilegate AI
+- **라이선스:** CC BY-SA 4.0
+- **출처:** [Smilegate AI GitHub](https://github.com/smilegate-ai/korean_unsmile_dataset)
+- **논문:** EMNLP 2022 - UnSmile: Detecting Toxicity and Biases in Korean Comments
+- **인용:**
+  ```
+  Kim, K., Park, J., Jang, J., & Park, J. (2022). UnSmile: Korean Toxic Comment Detection Dataset. 
+  In Proceedings of EMNLP 2022. Smilegate AI.
+  ```
+
+#### 사전학습 언어 모델
+
+| 모델 | 개발자/기관 | 라이선스 | 출처 |
+|------|------------|---------|------|
+| **KcELECTRA** | Junbum Lee (beomi) | Apache 2.0 | [Hugging Face](https://huggingface.co/beomi/KcELECTRA-base) |
+| **SoongsilBERT** | 숭실대학교 AI Lab | Apache 2.0 | [Hugging Face](https://huggingface.co/soongsil-ai/soongsil-bert-base) |
+| **KLUE-RoBERTa** | KLUE Team | CC BY-SA 4.0 | [Hugging Face](https://huggingface.co/klue/roberta-base) |
+
+### 오픈소스 라이브러리
+
+주요 오픈소스 라이브러리:
+- **Frontend:** Next.js (Vercel), React (Meta), Tailwind CSS (Tailwind Labs)
+- **Backend:** Express.js, Socket.IO, Prisma
+- **AI/ML:** PyTorch (Meta), Transformers (Hugging Face), FastAPI
+
+전체 오픈소스 라이선스 정보는 [NOTICE.md](./NOTICE.md)를 참조하세요.
 
 ---
 
-## 📄 라이선스
+## 🙏 감사의 말
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+이 프로젝트는 다음 기관 및 개발자들의 오픈소스 기여 덕분에 가능했습니다:
+
+- **Smilegate AI** - UnSmile 데이터셋 제공
+- **Junbum Lee (beomi)** - KcELECTRA 모델 개발
+- **숭실대학교 AI Lab** - SoongsilBERT 모델 개발
+- **KLUE Team** - KLUE-RoBERTa 모델 개발
+- **Hugging Face** - Transformers 라이브러리 개발
+- **Meta Platforms** - PyTorch 및 React 개발
+- 그 외 모든 오픈소스 기여자분들께 감사드립니다.
 
 ---
 
-**최종 업데이트**: 2026년 1월 30일
+## 📄 License
+
+This project uses a **dual licensing model**.
+
+| Component | License | Commercial Use |
+|-----------|---------|----------------|
+| **Platform Code** | MIT | ✅ Allowed |
+| **AI Model** | Proprietary | ❌ License Required |
+
+### Non-Commercial Use
+Academic research, personal learning, and portfolio projects are permitted.
+
+### Commercial Licensing
+For commercial use of the AI model, contact: [your-email@example.com]
+
+See [LICENSE](./LICENSE) for full terms.
+
+---
+
+## Acknowledgments
+
+- **Smilegate AI** - UnSmile Dataset
+- **Junbum Lee** - KcELECTRA
+- **Soongsil University** - SoongsilBERT
+- **KLUE Team** - KLUE-RoBERTa
+
+See [NOTICE.md](./NOTICE.md) for third-party licenses.
+
+---
+
+**Last Updated:** January 30, 2026

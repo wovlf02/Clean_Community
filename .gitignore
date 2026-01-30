@@ -1,5 +1,6 @@
 # AI Model files (large binary files)
 ai-model/models/*.pt
+
 # Python
 __pycache__/
 *.py[cod]
@@ -21,11 +22,13 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
 # Virtual Environment
 venv/
 ENV/
 env/
 .venv
+
 # IDE
 .idea/
 .vscode/
@@ -33,8 +36,21 @@ env/
 *.swo
 *~
 .DS_Store
+
 # Logs
 *.log
+
 # Environment variables
 .env
 .env.local
+
+# Database
+*.db
+*.sqlite
+
+# Secrets
+*.key
+*.pem
+*.cert
+secrets/
+

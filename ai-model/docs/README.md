@@ -62,3 +62,18 @@
 | **F1-Macro** | **82.91%** |
 | **목표 달성** | 95% 초과 ✅ |
 
+---
+
+## ⚖️ License
+
+| Use Case | Allowed |
+|----------|---------|
+| Academic/Research | ✅ |
+| Personal Learning | ✅ |
+| Commercial | ❌ License Required |
+
+See [LICENSE.md](../LICENSE.md) for details.
+
+---
+
+**Last Updated:** January 30, 2026
