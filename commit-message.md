@@ -1,61 +1,24 @@
-docs: 화면 설계 문서 개별 파일 분리 및 Source-Available 라이선스 적용
+docs: Add FastAPI AI model server TODO documentation
 
-각 도메인별 화면을 개별 파일로 분리하고 Desktop/Mobile 레이아웃 작성
-AI 감정분석 결과 표시 기능 추가 및 한국형 SNS 공유 기능 개선
-법적으로 안전한 Source-Available 라이선스 정책 수립
+- AI 모델 서버 구축을 위한 상세 TODO 문서 7개 작성
+  - README.md: 프로젝트 개요 및 참고 문서 구조화
+  - 01_프로젝트_구조.md: FastAPI 디렉토리 구조 및 파일 설계
+  - 02_환경_설정.md: Python 환경, 의존성, 환경 변수 설정
+  - 03_모델_로딩.md: PT 모델 로드, 앙상블 구성, 추론 로직
+  - 04_API_엔드포인트.md: REST API 설계 (/analyze, /analyze/batch, /health)
+  - 05_NextJS_연동.md: Next.js 클라이언트 연동, 경고 모달 컴포넌트
+  - 06_테스트_및_검증.md: pytest 테스트, 정확도 검증, 성능 테스트
+  - 07_배포.md: Docker 컨테이너화, AWS ECS Fargate 배포
 
-BREAKING CHANGE: 인증 방식을 이메일 기반에서 아이디/비밀번호 기반으로 변경
+- 프로젝트 전체 버전 정보 업데이트
+  - Next.js: 14+ → 16
+  - React: 18+ → 19+
+  - Python: 3.10+ → 3.11.9
+  - Node.js: 20+ LTS → 24.11.0 LTS
+  
+- 각 TODO 문서에 ai-model 폴더의 기존 문서 참조 연결
+  - 모델 아키텍처, 학습 전략, 실험 결과 문서 참조
+  - 3개 PT 모델 파일 (kcelectra.pt, soongsil.pt, roberta_base.pt) 정보 포함
+  - 9개 혐오 카테고리 탐지 및 앙상블 전략 상세 설명
 
-주요 변경사항:
-
-인증 (01_auth):
-- 로그인 페이지 소셜 로그인 UI를 원형 아이콘 버튼으로 변경
-- 이메일 기반 인증을 본인확인 용도로 변경, 로그인은 아이디/비밀번호 사용
-- 아이디 찾기 페이지 추가 (이메일 인증 방식)
-- 비밀번호 재설정 프로세스를 이메일 링크에서 6자리 인증번호 방식으로 변경
-- 회원가입 4단계 프로세스 설계 (기본정보 → 이메일인증 → 프로필 → 약관동의)
-
-게시판 (02_board):
-- 게시글, 댓글, 대댓글에 AI 감정분석 결과 표시 기능 추가 (긍정/중립/주의/경고)
-- 공유 모달을 한국 주요 SNS 중심으로 변경 (카카오톡, 인스타그램, 카페, URL복사)
-- AI 감정분석 경고 모달에 모델 라벨링 기준 적용 (여성/가족, 남성, 악플/욕설 등)
-
-채팅 (03_chat):
-- 채팅 메시지에 AI 감정분석 결과 표시 기능 추가
-- 프로필 사진과 닉네임 세로 중앙 정렬로 수정
-- CSS Flexbox 정렬 규칙 명시
-
-설정 (06_settings):
-- 이용약관 페이지 추가 (대한민국 법령 기반 내용)
-- 개인정보 처리방침 페이지 추가 (개인정보 보호법 준수)
-- 마케팅 정보 수신 동의 페이지 추가 (신규 기능, 이벤트, AI 리포트 등)
-- 약관 페이지 UX 개선 요소 추가 (목차, 진행률, 검색, 확장/축소 기능)
-
-문서 구조:
-- 각 도메인별 인덱스 파일(*-screens.md) 생성 및 개별 화면 연결
-- overview.md에 핵심 설계 원칙 및 전체 파일 구조 업데이트
-- AI 모델 문서 및 데이터 추가 (ai-model 디렉토리)
-- 대용량 모델 파일(*.pt)을 .gitignore에 추가하여 Git 추적 제외
-- .DS_Store 파일을 .gitignore에 추가하여 Git 추적 제외
-- 구 문서 구조(docs_inf) 제거
-
-라이선스 및 법적 고지:
-- Source-Available 라이선스 정책 수립 (코드 공개, 사용 금지)
-- 모든 오픈소스 라이선스 의무사항 완전 준수 (CC BY-SA 4.0, Apache 2.0, MIT, BSD)
-- CC BY-SA 4.0 ShareAlike 조항 법적 해석 명시 (학습 데이터와 학습된 모델의 법적 분리)
-- Apache 2.0 라이선스의 독점 파생물 허용 근거 문서화
-- LICENSE 파일 생성 (Source-Available License with third-party compliance)
-- NOTICE.md 생성하여 모든 오픈소스 저작권 고지 및 전체 라이선스 텍스트 포함
-- ai-model/LICENSE.md 생성하여 학습된 모델의 독점 라이선스 명시
-- 포트폴리오 목적의 코드 공개와 사용 권한 부여의 법적 분리
-- 상업 라이선스 문의 프로세스 및 법적 집행 절차 명시
-- 대한민국 법률 관할권 명시 및 손해배상 청구 권리 보유
-- README에 명확한 법적 경고 및 사용 제한 표시
-
-법적 준수 사항:
-- UnSmile 데이터셋 (Smilegate AI, CC BY-SA 4.0) 전체 출처 표기
-- KLUE-RoBERTa (KLUE Team, CC BY-SA 4.0) 전체 출처 표기
-- KcELECTRA (Junbum Lee, Apache 2.0) 전체 출처 표기
-- SoongsilBERT (Soongsil Univ, Apache 2.0) 전체 출처 표기
-- 30+ 오픈소스 라이브러리 전체 저작권 고지
-- BSD, MIT, Apache 라이선스 전체 텍스트 포함
+Refs: #AI-Model-Server, #Documentation

@@ -10,9 +10,9 @@
 
 | 도구 | 버전 | 용도 |
 |------|------|------|
-| **Node.js** | 20+ LTS | JavaScript 런타임 |
+| **Node.js** | 24.11.0 LTS | JavaScript 런타임 |
 | **pnpm** | 8+ | 패키지 매니저 (권장) |
-| **Python** | 3.10+ | FastAPI 서버 |
+| **Python** | 3.11.9 | FastAPI 서버 |
 | **PostgreSQL** | 15+ | 데이터베이스 |
 | **Redis** | 7+ | 캐시/Pub-Sub (선택) |
 | **Git** | 최신 | 버전 관리 |

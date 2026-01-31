@@ -8,12 +8,12 @@
 
 | 구성요소 | 버전 |
 |----------|------|
-| Next.js | 14+ |
+| Next.js | 16 |
 | TypeScript | 5.x |
 | FastAPI | 0.100+ |
-| Python | 3.10+ |
+| Python | 3.11.9 |
 | Express.js | 4.x |
-| Node.js | 20+ LTS |
+| Node.js | 24.11.0 LTS |
 | PostgreSQL | 15+ |
 | Prisma | 5.x |
 
