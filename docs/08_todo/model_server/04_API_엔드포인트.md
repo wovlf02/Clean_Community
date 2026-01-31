@@ -12,14 +12,14 @@
 
 ## ✅ 체크리스트
 
-- [ ] Pydantic 요청/응답 스키마 정의
-- [ ] `POST /analyze` 엔드포인트 구현
-- [ ] `POST /analyze/batch` 엔드포인트 구현
-- [ ] `GET /health` 헬스체크 구현
-- [ ] 에러 핸들링 구현
-- [ ] CORS 설정
+- [x] Pydantic 요청/응답 스키마 정의
+- [x] `POST /analyze` 엔드포인트 구현
+- [x] `POST /analyze/batch` 엔드포인트 구현
+- [x] `GET /health` 헬스체크 구현
+- [x] 에러 핸들링 구현
+- [x] CORS 설정
 - [ ] Rate Limiting 적용
-- [ ] OpenAPI 문서 설정
+- [x] OpenAPI 문서 설정
 
 ---
 
