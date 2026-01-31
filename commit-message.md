@@ -1,37 +1,30 @@
-feat(socket): Socket.IO 실시간 통신 서버 구축
+docs: Next.js 프론트엔드 개발 TODO 문서 작성
 
-Express.js + Socket.IO 기반 실시간 채팅 서버를 구축했습니다.
+Next.js 16 기반 프론트엔드/백엔드 구축을 위한 상세 TODO 문서 작성
 
-## 주요 기능
-- JWT 기반 WebSocket 인증
-- 실시간 채팅 메시지 전송/수신
-- 채팅방 입장/퇴장 관리
-- 타이핑 인디케이터
-- 메시지 읽음 확인
-- 온라인 상태(Presence) 관리
-- 실시간 알림 전송
-- Redis Adapter를 통한 수평 확장 지원
-- 헬스체크 엔드포인트 (/health, /ready)
+- Phase 0-13 단계별 개발 가이드 생성 (총 35일 예상)
+- UI/CSS 파일 분리 방식 적용
+- UX 극대화 설계 원칙 문서화
+- npm 패키지 매니저 사용 (안정성 우선)
+- Mock 데이터 기반 프론트엔드 우선 개발 전략
 
-## 기술 스택
-- Node.js 24.11.0 LTS
-- TypeScript 5.x
-- Express 4.x
-- Socket.IO 4.x
-- ioredis 5.x
-- Redis Adapter
+주요 Phase:
+- Phase 0: 프로젝트 초기 설정 (패키지 설치, 폴더 구조)
+- Phase 1: 디자인 시스템 구축 (Tailwind, 테마, 폰트)
+- Phase 2: 공통 컴포넌트 개발 (Button, Input, Card, Modal 등)
+  - 폴더 분리 구조로 문서 크기 최적화 (5개 하위 문서)
+- Phase 3: 레이아웃 구현 (Header, Sidebar, BottomTab)
+- Phase 4-9: 화면 개발 (인증, 게시판, 채팅, 친구, 대시보드, 설정)
+- Phase 10: 백엔드 API 구축 (Prisma, NextAuth)
+- Phase 11: AI 서버 연동 (감정분석)
+- Phase 12: Socket 서버 연동 (실시간 채팅)
+- Phase 13: 최적화 및 마무리 (성능, SEO, 에러 처리)
 
-## 파일 구조
-- src/index.ts: 애플리케이션 엔트리포인트
-- src/config.ts: 환경 설정 관리
-- src/handlers/: Socket.IO 이벤트 핸들러
-- src/middlewares/: JWT 인증 미들웨어
-- src/services/: Redis, Logger 서비스
-- src/types/: TypeScript 타입 정의
-- docs/: 상세 기술 문서
+기술 스택:
+- Next.js 16.1.6, React 19.2.3, TypeScript 5.x
+- Tailwind CSS, shadcn/ui
+- Zustand, React Query, React Hook Form, Zod
+- NextAuth.js 5.x, Prisma 5.x
+- AI 서버 (8000 포트), Socket 서버 (4000 포트)
 
-## 문서
-- 아키텍처 설계 문서
-- Socket.IO 이벤트 API 명세
-- 배포 및 스케일링 가이드
-- 개발 환경 설정 가이드
+문서 위치: docs/08_todo/nextjs/
