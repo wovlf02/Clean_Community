@@ -1,45 +1,23 @@
-feat: Next.js 16 기반 프론트엔드 구현 및 문서 업데이트
+docs: clean_community.md 프로젝트 소개 문서 작성
 
-AI 기반 감정분석 커뮤니티 플랫폼의 프론트엔드 전면 구현
+Clean Community 프로젝트에 맞게 프로젝트 소개 문서 작성
 
-## 주요 기능
-- 사용자 인증 (로그인, 회원가입, 아이디 찾기, 비밀번호 재설정)
-- 게시판 (목록, 상세, 작성, 수정, 삭제, 좋아요, 댓글/대댓글)
-- 채팅 (1:1 DM, 그룹 채팅, 실시간 메시지, 음성/영상 통화 UI)
-- 친구 관리 (친구 목록, 친구 요청, 친구 검색, 온라인 상태)
-- 대시보드 (통계, 인기 게시글, 최근 활동, 차트)
-- 설정 (프로필, 비밀번호 변경, 계정 탈퇴, 알림 설정)
-- 관리자 대시보드 (사용자 관리, 게시글 관리, 신고 관리, 분석)
+## 변경 사항
+- clean_community.md 파일을 Clean Community 프로젝트 내용으로 전면 재작성
+- 기존 CoUp 프로젝트 내용 → Clean Community 내용으로 변경
 
-## 기술 스택
-- Next.js 16.1.6, React 19.2.3, TypeScript 5.x
-- Tailwind CSS v4, shadcn/ui
-- Zustand (전역 상태), TanStack Query (서버 상태)
-- NextAuth.js v5 (인증)
-- Prisma 7.x + PostgreSQL (데이터베이스)
-- Socket.IO (실시간 통신)
+## 추가된 내용
+- 프로젝트 개요: AI 기반 감정분석 커뮤니티 플랫폼 소개
+- 기술 스택: Next.js 16, React 19, TypeScript, FastAPI, PyTorch, Socket.IO 등
+- 개발 기간: 2026/01/15 ~ 2026/02/02
+- 프로젝트 진행률: 85% (Phase 1-3 완료)
+- GitHub 링크: https://github.com/wovlf02/Clean_Community
+- 문서 링크: docs 폴더 주요 문서 링크 추가
 
-## 프로젝트 구조
-- src/app/(auth): 인증 페이지 그룹
-- src/app/(main): 메인 레이아웃 페이지 그룹
-- src/app/api: API Routes
-- src/components: 재사용 가능한 컴포넌트
-- src/hooks: 커스텀 훅
-- src/lib: 유틸리티 함수
-- src/providers: Context Providers
-- src/store: Zustand 스토어
-- src/types: TypeScript 타입 정의
-
-## 문서 업데이트
-- docs/01_overview: 프로젝트 개요 및 진행 상태 업데이트
-- docs/02_requirements: 기능/비기능 요구사항 날짜 업데이트
-- docs/03_architecture: 기술 스택 버전 업데이트 (Next.js 16.1.6, Prisma 7.x)
-- docs/04_database: 데이터베이스 스키마 업데이트 (Prisma 7.x)
-- docs/05_screens: 화면 설계 개요 업데이트 (Next.js 16+)
-- docs/06_development: 개발 환경 설정 업데이트 (cc 폴더 구조)
-- docs/07_deployment: AWS 배포 가이드 업데이트
-- docs/08_todo: TODO 체크리스트 업데이트 (진행률 85%)
-- docs/09_git: Git 컨벤션 날짜 업데이트
-- docs/11_security: 보안 설계 업데이트 (bcryptjs)
-- docs/12_api: API 명세서 날짜 업데이트
-- docs/complement: 개선 사항 문서 추가
+## 개발 이슈 및 해결 방법 (6가지)
+1. 효율성 개선: 마이크로서비스 아키텍처, API Routes 도메인별 분리, 컴포넌트 모듈화
+2. AI 모델 개발: 3-모델 하이브리드 앙상블, 멀티라벨 분류 (9개 카테고리), Hamming Accuracy 96.22%
+3. 실시간 통신 구현: Socket.IO 독립 서버, 실시간 채팅/알림, 온라인 상태 관리
+4. 대시보드 및 관리자 기능: Recharts 활용 통계 시각화, 악성 콘텐츠 모니터링
+5. UI/UX 최적화: Tailwind CSS v4 + shadcn/ui, 다크 모드, 반응형 디자인
+6. 성능 최적화: Next.js 16 활용, React Query 캐싱, 코드 스플리팅
