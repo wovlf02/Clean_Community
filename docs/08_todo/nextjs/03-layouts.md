@@ -85,10 +85,10 @@ export default function RootLayout({
 }
 ```
 
-- [ ] 폰트 설정
-- [ ] Provider 적용
-- [ ] Toaster 추가
-- [ ] 메타데이터 설정
+- [x] 폰트 설정
+- [x] Provider 적용
+- [x] Toaster 추가
+- [x] 메타데이터 설정
 
 ---
 
@@ -351,10 +351,10 @@ export function Header({ onMenuClick }: HeaderProps) {
 ```
 
 - [ ] header.css 파일 생성
-- [ ] header.tsx 파일 생성
-- [ ] 반응형 네비게이션
-- [ ] 알림 배지
-- [ ] 프로필 드롭다운 (추후)
+- [x] header.tsx 파일 생성
+- [x] 반응형 네비게이션
+- [x] 알림 배지
+- [x] 프로필 드롭다운 (추후)
 
 ---
 
@@ -561,11 +561,11 @@ export function Sidebar() {
 }
 ```
 
-- [ ] sidebar.css 파일 생성
-- [ ] sidebar.tsx 파일 생성
-- [ ] 네비게이션 아이템
-- [ ] 배지 표시
-- [ ] 태블릿 접힘 상태
+- [x] sidebar.css 파일 생성
+- [x] sidebar.tsx 파일 생성
+- [x] 네비게이션 아이템
+- [x] 배지 표시
+- [x] 태블릿 접힘 상태
 
 ---
 
@@ -709,10 +709,10 @@ export function BottomTabBar() {
 }
 ```
 
-- [ ] bottom-tab-bar.css 파일 생성
-- [ ] bottom-tab-bar.tsx 파일 생성
-- [ ] safe-area-inset 적용
-- [ ] 배지 표시
+- [x] bottom-tab-bar.css 파일 생성
+- [x] bottom-tab-bar.tsx 파일 생성
+- [x] safe-area-inset 적용
+- [x] 배지 표시
 
 ---
 
@@ -778,8 +778,8 @@ export function MainLayout({ children }: MainLayoutProps) {
 }
 ```
 
-- [ ] main-layout.css 파일 생성
-- [ ] main-layout.tsx 파일 생성
+- [x] main-layout.css 파일 생성
+- [x] main-layout.tsx 파일 생성
 
 ---
 
@@ -883,8 +883,8 @@ export function AuthLayout({ children }: AuthLayoutProps) {
 }
 ```
 
-- [ ] auth-layout.css 파일 생성
-- [ ] auth-layout.tsx 파일 생성
+- [x] auth-layout.css 파일 생성
+- [x] auth-layout.tsx 파일 생성
 
 ---
 
@@ -923,14 +923,14 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] RootLayout 설정 완료
-- [ ] Header 컴포넌트 완료
-- [ ] Sidebar 컴포넌트 완료
-- [ ] BottomTabBar 컴포넌트 완료
-- [ ] MainLayout 컴포넌트 완료
-- [ ] AuthLayout 컴포넌트 완료
-- [ ] 반응형 레이아웃 동작 확인 (Desktop/Tablet/Mobile)
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] RootLayout 설정 완료
+- [x] Header 컴포넌트 완료
+- [x] Sidebar 컴포넌트 완료
+- [x] BottomTabBar 컴포넌트 완료
+- [x] MainLayout 컴포넌트 완료
+- [x] AuthLayout 컴포넌트 완료
+- [x] 반응형 레이아웃 동작 확인 (Desktop/Tablet/Mobile)
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

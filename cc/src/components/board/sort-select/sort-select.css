@@ -1,0 +1,30 @@
+/* components/board/sort-select/sort-select.css */
+
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-select__label {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.sort-select__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.sort-select__trigger:hover {
+  background-color: hsl(var(--accent));
+}

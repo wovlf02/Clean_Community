@@ -25,8 +25,8 @@ npx shadcn@latest init
 - Base color: Slate
 - CSS variables: Yes
 
-- [ ] shadcn/ui 초기화 완료
-- [ ] components.json 생성 확인
+- [x] shadcn/ui 초기화 완료
+- [x] components.json 생성 확인
 
 ---
 
@@ -45,14 +45,14 @@ npx shadcn@latest add select
 npx shadcn@latest add switch
 ```
 
-- [ ] button 설치
-- [ ] input 설치
-- [ ] textarea 설치
-- [ ] label 설치
-- [ ] checkbox 설치
-- [ ] radio-group 설치
-- [ ] select 설치
-- [ ] switch 설치
+- [x] button 설치
+- [x] input 설치
+- [x] textarea 설치
+- [x] label 설치
+- [x] checkbox 설치
+- [x] radio-group 설치
+- [x] select 설치
+- [x] switch 설치
 
 #### 2.2 레이아웃 컴포넌트
 
@@ -62,9 +62,9 @@ npx shadcn@latest add separator
 npx shadcn@latest add scroll-area
 ```
 
-- [ ] card 설치
-- [ ] separator 설치
-- [ ] scroll-area 설치
+- [x] card 설치
+- [x] separator 설치
+- [x] scroll-area 설치
 
 #### 2.3 오버레이 컴포넌트
 
@@ -77,12 +77,12 @@ npx shadcn@latest add dropdown-menu
 npx shadcn@latest add tooltip
 ```
 
-- [ ] dialog 설치
-- [ ] alert-dialog 설치
-- [ ] sheet 설치
-- [ ] popover 설치
-- [ ] dropdown-menu 설치
-- [ ] tooltip 설치
+- [x] dialog 설치
+- [x] alert-dialog 설치
+- [x] sheet 설치
+- [x] popover 설치
+- [x] dropdown-menu 설치
+- [x] tooltip 설치
 
 #### 2.4 피드백 컴포넌트
 
@@ -92,9 +92,9 @@ npx shadcn@latest add skeleton
 npx shadcn@latest add progress
 ```
 
-- [ ] sonner (toast) 설치
-- [ ] skeleton 설치
-- [ ] progress 설치
+- [x] sonner (toast) 설치
+- [x] skeleton 설치
+- [x] progress 설치
 
 #### 2.5 데이터 표시 컴포넌트
 
@@ -104,9 +104,9 @@ npx shadcn@latest add badge
 npx shadcn@latest add tabs
 ```
 
-- [ ] avatar 설치
-- [ ] badge 설치
-- [ ] tabs 설치
+- [x] avatar 설치
+- [x] badge 설치
+- [x] tabs 설치
 
 #### 2.6 폼 컴포넌트
 
@@ -115,8 +115,8 @@ npx shadcn@latest add form
 npx shadcn@latest add command
 ```
 
-- [ ] form (react-hook-form 통합) 설치
-- [ ] command (검색/명령 팔레트) 설치
+- [x] form (react-hook-form 통합) 설치
+- [x] command (검색/명령 팔레트) 설치
 
 ---
 
@@ -149,10 +149,10 @@ components/ui/
 └── ...
 ```
 
-- [ ] 각 컴포넌트를 폴더 구조로 재구성
-- [ ] CSS 파일 생성
-- [ ] index.ts 배럴 파일 생성
-- [ ] import 경로 업데이트
+- [x] 각 컴포넌트를 폴더 구조로 재구성
+- [x] CSS 파일 생성
+- [x] index.ts 배럴 파일 생성
+- [x] import 경로 업데이트
 
 #### 3.3 배럴 파일 예시
 
@@ -169,8 +169,8 @@ export * from './card';
 // ... 기타 컴포넌트
 ```
 
-- [ ] 개별 컴포넌트 배럴 파일 생성
-- [ ] 전체 UI 배럴 파일 생성
+- [x] 개별 컴포넌트 배럴 파일 생성
+- [x] 전체 UI 배럴 파일 생성
 
 ---
 
@@ -188,8 +188,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 ```
 
-- [ ] cn 함수 존재 확인
-- [ ] clsx, tailwind-merge 패키지 설치 확인
+- [x] cn 함수 존재 확인
+- [x] clsx, tailwind-merge 패키지 설치 확인
 
 ---
 
@@ -209,17 +209,17 @@ mkdir -p src/components/common/toaster
 mkdir -p src/components/common/skeletons
 ```
 
-- [ ] common 폴더 구조 생성
+- [x] common 폴더 구조 생성
 
 ---
 
 ## ✅ 완료 조건
 
-- [ ] 모든 shadcn/ui 컴포넌트 설치 완료
-- [ ] 컴포넌트 폴더 구조 재구성 완료
-- [ ] 배럴 파일 생성 완료
-- [ ] common 폴더 구조 생성 완료
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 모든 shadcn/ui 컴포넌트 설치 완료
+- [x] 컴포넌트 폴더 구조 재구성 완료
+- [x] 배럴 파일 생성 완료
+- [x] common 폴더 구조 생성 완료
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

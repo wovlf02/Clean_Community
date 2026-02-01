@@ -324,4 +324,4 @@ prisma/migrations/**/migration_lock.toml
 
 ---
 
-**최종 업데이트**: 2026년 1월 29일
+**최종 업데이트**: 2026년 2월 2일

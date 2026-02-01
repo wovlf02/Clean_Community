@@ -1,6 +1,7 @@
 import { Server } from 'socket.io';
 import { randomUUID } from 'crypto';
 import { logger } from '../services/logger.js';
+import { config } from '../config.js';
 import {
   AuthenticatedSocket,
   ChatMessage,
@@ -12,6 +13,36 @@ import {
   ServerToClientEvents,
   ClientToServerEvents,
 } from '../types/index.js';
+
+// API 호출 헬퍼 함수
+async function callNextJsApi(
+  endpoint: string,
+  method: string,
+  token: string,
+  body?: object
+): Promise<{ success: boolean; data?: any; error?: string }> {
+  try {
+    const response = await fetch(`${config.nextJsApiUrl}${endpoint}`, {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({})) as { error?: string };
+      return { success: false, error: errorData.error || 'API call failed' };
+    }
+
+    const data = await response.json();
+    return { success: true, data };
+  } catch (error) {
+    logger.error('API call failed', { endpoint, error });
+    return { success: false, error: 'Failed to call API' };
+  }
+}
 
 export const registerChatHandlers = (
   io: Server<ClientToServerEvents, ServerToClientEvents>,
@@ -89,19 +120,77 @@ export const registerChatHandlers = (
     });
   });
 
-  // Read message
-  socket.on('read_message', (payload: ReadMessagePayload) => {
+  // Read message - with database persistence
+  socket.on('read_message', async (payload: ReadMessagePayload) => {
     const { roomId, messageId } = payload;
 
-    socket.to(roomId).emit('message_read', {
-      userId: user.id,
-      messageId,
-    });
+    try {
+      // Get the token from the socket handshake (stored during authentication)
+      const token = socket.handshake.auth?.token;
 
-    logger.debug('Message read', {
-      userId: user.id,
-      roomId,
-      messageId
-    });
+      if (token) {
+        // Call Next.js API to persist read status
+        const result = await callNextJsApi(
+          `/api/chat/rooms/${roomId}/read`,
+          'PATCH',
+          token,
+          { messageIds: [messageId] }
+        );
+
+        if (result.success && result.data) {
+          // Broadcast updated unread count to all users in the room
+          io.to(roomId).emit('message_read', {
+            userId: user.id,
+            messageId,
+            unreadCount: result.data.unreadCount,
+          });
+
+          logger.info('Message read and persisted', {
+            userId: user.id,
+            roomId,
+            messageId,
+            unreadCount: result.data.unreadCount,
+          });
+        } else {
+          // Still broadcast even if persistence failed
+          socket.to(roomId).emit('message_read', {
+            userId: user.id,
+            messageId,
+          });
+
+          logger.warn('Message read broadcast without persistence', {
+            userId: user.id,
+            roomId,
+            messageId,
+            error: result.error,
+          });
+        }
+      } else {
+        // No token, just broadcast
+        socket.to(roomId).emit('message_read', {
+          userId: user.id,
+          messageId,
+        });
+
+        logger.debug('Message read (no token for persistence)', {
+          userId: user.id,
+          roomId,
+          messageId,
+        });
+      }
+    } catch (error) {
+      logger.error('Read message handler error', {
+        userId: user.id,
+        roomId,
+        messageId,
+        error,
+      });
+
+      // Still try to broadcast
+      socket.to(roomId).emit('message_read', {
+        userId: user.id,
+        messageId,
+      });
+    }
   });
 };

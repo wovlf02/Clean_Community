@@ -1,0 +1,37 @@
+/* components/layout/main-layout/main-layout.css */
+
+.main-layout {
+  display: flex;
+  height: calc(100vh - 4rem); /* header 높이 제외 */
+  overflow: hidden; /* 전체 레이아웃은 스크롤 안 함 */
+}
+
+.main-layout__content {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem;
+  overflow-y: auto; /* 콘텐츠 영역만 스크롤 */
+  overflow-x: hidden;
+}
+
+/* 관리자 페이지에서는 패딩 없이 전체 너비 사용 */
+.main-layout__content--admin {
+  padding: 0;
+}
+
+/* 모바일 여백 조정 */
+@media (max-width: 767px) {
+  .main-layout {
+    height: calc(100vh - 3.5rem - 4rem); /* header + bottom tab */
+  }
+
+  .main-layout__content {
+    padding: 1rem;
+    padding-bottom: 5rem; /* bottom tab 높이 + 여백 */
+  }
+
+  .main-layout__content--admin {
+    padding: 0;
+    padding-bottom: 0;
+  }
+}

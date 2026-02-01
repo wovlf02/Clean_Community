@@ -1,0 +1,61 @@
+/* components/dashboard/popular-posts/popular-posts.css */
+
+.popular-posts {
+  height: 100%;
+}
+
+.popular-posts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popular-posts__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+}
+
+.popular-posts__item:hover {
+  background-color: hsl(var(--accent));
+}
+
+.popular-posts__rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  background-color: hsl(var(--accent));
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.popular-posts__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.popular-posts__title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popular-posts__stats {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}

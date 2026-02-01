@@ -123,10 +123,10 @@ export function Toaster() {
 }
 ```
 
-- [ ] toaster.css 파일 생성
-- [ ] toaster.tsx 파일 생성
-- [ ] 테마 연동 (다크 모드)
-- [ ] 애니메이션 추가
+- [x] toaster.css 파일 생성
+- [x] toaster.tsx 파일 생성
+- [x] 테마 연동 (다크 모드)
+- [x] 애니메이션 추가
 
 #### 1.3 Toast 유틸리티 함수
 
@@ -176,9 +176,9 @@ export const showToast = {
 };
 ```
 
-- [ ] showToast 유틸리티 생성
-- [ ] promise 토스트 지원
-- [ ] RootLayout에 Toaster 추가
+- [x] showToast 유틸리티 생성
+- [x] promise 토스트 지원
+- [x] RootLayout에 Toaster 추가
 
 ---
 
@@ -347,11 +347,11 @@ export { MessageSkeleton } from './message-skeleton';
 export { ProfileSkeleton } from './profile-skeleton';
 ```
 
-- [ ] skeletons.css 공통 스타일 생성
-- [ ] PostCardSkeleton 생성
-- [ ] MessageSkeleton 생성
-- [ ] ProfileSkeleton 생성
-- [ ] 배럴 파일 생성
+- [x] skeletons.css 공통 스타일 생성
+- [x] PostCardSkeleton 생성
+- [x] MessageSkeleton 생성
+- [x] ProfileSkeleton 생성
+- [x] 배럴 파일 생성
 
 ---
 
@@ -464,22 +464,22 @@ Progress.displayName = 'Progress';
 export { Progress };
 ```
 
-- [ ] progress.css 파일 생성
-- [ ] progress.tsx 파일 생성
-- [ ] indeterminate 변형 (무한 로딩)
-- [ ] 크기/색상 변형
+- [x] progress.css 파일 생성
+- [x] progress.tsx 파일 생성
+- [x] indeterminate 변형 (무한 로딩)
+- [x] 크기/색상 변형
 
 ---
 
 ## ✅ 완료 조건
 
-- [ ] Toaster 컴포넌트 완료
-- [ ] Toast 유틸리티 함수 완료
-- [ ] Skeleton 컴포넌트들 완료
-- [ ] Progress 컴포넌트 완료
-- [ ] 모든 애니메이션 동작 확인
-- [ ] RootLayout에 Toaster 추가
-- [ ] 프로젝트 빌드 성공
+- [x] Toaster 컴포넌트 완료
+- [x] Toast 유틸리티 함수 완료
+- [x] Skeleton 컴포넌트들 완료
+- [x] Progress 컴포넌트 완료
+- [x] 모든 애니메이션 동작 확인
+- [x] RootLayout에 Toaster 추가
+- [x] 프로젝트 빌드 성공
 
 ---
 

@@ -1,0 +1,215 @@
+/* components/ui/toggle-switch/toggle-switch.css */
+
+.toggle-switch {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-switch:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+
+.toggle-switch--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* 트랙 */
+.toggle-switch__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.2) 100%
+  );
+  box-shadow:
+    inset 0 2px 4px hsl(var(--foreground) / 0.1),
+    0 1px 2px hsl(var(--background) / 0.5);
+}
+
+.toggle-switch--checked .toggle-switch__track {
+  background: linear-gradient(135deg,
+    hsl(var(--primary)) 0%,
+    hsl(142 76% 36%) 100%
+  );
+  box-shadow:
+    inset 0 2px 4px hsl(142 76% 26% / 0.2),
+    0 2px 8px hsl(var(--primary) / 0.3);
+}
+
+/* 썸(원형 버튼) */
+.toggle-switch__thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--muted)) 100%
+  );
+  border-radius: 50%;
+  box-shadow:
+    0 2px 8px hsl(var(--foreground) / 0.15),
+    0 1px 2px hsl(var(--foreground) / 0.1),
+    inset 0 1px 0 hsl(var(--background));
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-switch--checked .toggle-switch__thumb {
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #f0f0f0 100%
+  );
+  box-shadow:
+    0 2px 8px hsl(var(--foreground) / 0.2),
+    0 1px 2px hsl(var(--foreground) / 0.15),
+    inset 0 1px 0 #ffffff;
+}
+
+/* 라벨 */
+.toggle-switch__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: opacity 200ms ease;
+  text-shadow: 0 1px 1px hsl(var(--foreground) / 0.1);
+  user-select: none;
+}
+
+.toggle-switch__label--on {
+  color: hsl(var(--primary-foreground));
+  opacity: 0;
+}
+
+.toggle-switch__label--off {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+}
+
+.toggle-switch--checked .toggle-switch__label--on {
+  opacity: 1;
+}
+
+.toggle-switch--checked .toggle-switch__label--off {
+  opacity: 0;
+}
+
+/* 사이즈 - Small */
+.toggle-switch--sm .toggle-switch__track {
+  width: 44px;
+  height: 24px;
+  padding: 0 6px;
+}
+
+.toggle-switch--sm .toggle-switch__thumb {
+  width: 18px;
+  height: 18px;
+  left: 3px;
+}
+
+.toggle-switch--sm.toggle-switch--checked .toggle-switch__thumb {
+  left: calc(100% - 21px);
+}
+
+.toggle-switch--sm .toggle-switch__label {
+  font-size: 0.5rem;
+}
+
+.toggle-switch--sm .toggle-switch__label--on {
+  left: 6px;
+}
+
+.toggle-switch--sm .toggle-switch__label--off {
+  right: 6px;
+}
+
+/* 사이즈 - Medium */
+.toggle-switch--md .toggle-switch__track {
+  width: 56px;
+  height: 30px;
+  padding: 0 8px;
+}
+
+.toggle-switch--md .toggle-switch__thumb {
+  width: 24px;
+  height: 24px;
+  left: 3px;
+}
+
+.toggle-switch--md.toggle-switch--checked .toggle-switch__thumb {
+  left: calc(100% - 27px);
+}
+
+.toggle-switch--md .toggle-switch__label {
+  font-size: 0.5625rem;
+}
+
+.toggle-switch--md .toggle-switch__label--on {
+  left: 7px;
+}
+
+.toggle-switch--md .toggle-switch__label--off {
+  right: 7px;
+}
+
+/* 사이즈 - Large (기본) */
+.toggle-switch--lg .toggle-switch__track {
+  width: 72px;
+  height: 36px;
+  padding: 0 10px;
+}
+
+.toggle-switch--lg .toggle-switch__thumb {
+  width: 28px;
+  height: 28px;
+  left: 4px;
+}
+
+.toggle-switch--lg.toggle-switch--checked .toggle-switch__thumb {
+  left: calc(100% - 32px);
+}
+
+.toggle-switch--lg .toggle-switch__label {
+  font-size: 0.6875rem;
+}
+
+.toggle-switch--lg .toggle-switch__label--on {
+  left: 10px;
+}
+
+.toggle-switch--lg .toggle-switch__label--off {
+  right: 10px;
+}
+
+/* 호버 효과 */
+.toggle-switch:not(.toggle-switch--disabled):hover .toggle-switch__thumb {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.toggle-switch:not(.toggle-switch--disabled):active .toggle-switch__thumb {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* 포커스 시 글로우 효과 */
+.toggle-switch:focus-visible .toggle-switch__track {
+  box-shadow:
+    inset 0 2px 4px hsl(var(--foreground) / 0.1),
+    0 0 0 3px hsl(var(--primary) / 0.2);
+}
+
+.toggle-switch--checked:focus-visible .toggle-switch__track {
+  box-shadow:
+    inset 0 2px 4px hsl(142 76% 26% / 0.2),
+    0 0 0 3px hsl(var(--primary) / 0.3);
+}

@@ -29,7 +29,7 @@ NEXT_PUBLIC_AI_SERVER_URL=http://localhost:8000
 AI_SERVER_URL=http://localhost:8000
 ```
 
-- [ ] 환경 변수 설정
+- [x] 환경 변수 설정
 
 #### 1.2 AI 서버 클라이언트
 
@@ -75,9 +75,9 @@ export async function analyzeTexts(texts: string[]): Promise<AnalyzeResponse[]> 
 }
 ```
 
-- [ ] AI 서버 클라이언트 생성
-- [ ] 에러 처리
-- [ ] 타임아웃 설정
+- [x] AI 서버 클라이언트 생성
+- [x] 에러 처리
+- [x] 타임아웃 설정
 
 #### 1.3 감정분석 결과 타입
 
@@ -123,8 +123,8 @@ export const categoryLabels: Record<string, string> = {
 };
 ```
 
-- [ ] SentimentResult 타입 정의
-- [ ] 라벨 변환 함수
+- [x] SentimentResult 타입 정의
+- [x] 라벨 변환 함수
 
 ---
 
@@ -207,8 +207,8 @@ export function useSentimentAnalysis(options?: UseSentimentAnalysisOptions) {
 }
 ```
 
-- [ ] 게시글 작성 API에 분석 연동
-- [ ] 클라이언트 분석 훅 생성
+- [x] 게시글 작성 API에 분석 연동
+- [x] 클라이언트 분석 훅 생성
 
 ---
 
@@ -252,7 +252,7 @@ export async function POST(
 }
 ```
 
-- [ ] 댓글 작성 API에 분석 연동
+- [x] 댓글 작성 API에 분석 연동
 
 ---
 
@@ -280,7 +280,7 @@ const sendMessage = async (content: string) => {
 };
 ```
 
-- [ ] 채팅 메시지 API에 분석 연동
+- [x] 채팅 메시지 API에 분석 연동
 
 ---
 
@@ -325,7 +325,7 @@ const handleProceedAnyway = () => {
 };
 ```
 
-- [ ] 경고 모달 연동 로직 구현
+- [x] 경고 모달 연동 로직 구현
 
 ---
 
@@ -397,8 +397,8 @@ export function SentimentBadge({ label, showText = true }: SentimentBadgeProps) 
 }
 ```
 
-- [ ] sentiment-badge.css 파일 생성
-- [ ] SentimentBadge 컴포넌트 생성
+- [x] sentiment-badge.css 파일 생성
+- [x] SentimentBadge 컴포넌트 생성
 
 #### 6.2 게시글/댓글에 배지 표시
 
@@ -432,14 +432,14 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] AI 서버 클라이언트 구현
-- [ ] 게시글 작성 시 감정분석 연동
-- [ ] 댓글 작성 시 감정분석 연동
-- [ ] 채팅 메시지 감정분석 연동
-- [ ] SentimentBadge 컴포넌트 구현
-- [ ] SentimentWarningModal 연동
-- [ ] AI 서버 연결 테스트 완료
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] AI 서버 클라이언트 구현
+- [x] 게시글 작성 시 감정분석 연동
+- [x] 댓글 작성 시 감정분석 연동
+- [x] 채팅 메시지 감정분석 연동
+- [x] SentimentBadge 컴포넌트 구현
+- [x] SentimentWarningModal 연동
+- [x] AI 서버 연결 테스트 완료
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

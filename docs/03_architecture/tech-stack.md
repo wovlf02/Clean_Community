@@ -10,8 +10,8 @@
 
 | 기술 | 버전 | 용도 |
 |------|------|------|
-| **Next.js** | 16 | React 기반 풀스택 프레임워크 |
-| **React** | 19+ | UI 라이브러리 |
+| **Next.js** | 16.1.6 | React 기반 풀스택 프레임워크 |
+| **React** | 19.2.3 | UI 라이브러리 |
 | **TypeScript** | 5.x | 정적 타입 언어 |
 
 ### 1.2 상태 관리
@@ -26,10 +26,11 @@
 
 | 기술 | 용도 |
 |------|------|
-| **Tailwind CSS** | 유틸리티 우선 CSS |
+| **Tailwind CSS** | 유틸리티 우선 CSS (v4.1+) |
 | **shadcn/ui** | UI 컴포넌트 라이브러리 |
 | **Lucide Icons** | 아이콘 |
-| **Framer Motion** | 애니메이션 |
+| **tailwindcss-animate** | 애니메이션 |
+| **tw-animate-css** | CSS 애니메이션 |
 
 ### 1.4 실시간 통신
 
@@ -42,15 +43,16 @@
 | 기술 | 용도 |
 |------|------|
 | **fetch (내장)** | Next.js 내장 fetch |
-| **axios** | REST API 통신 (선택) |
 
 ### 1.6 기타
 
 | 기술 | 용도 |
 |------|------|
-| **Zod** | 스키마 검증 |
+| **Zod** | 스키마 검증 (v4.x) |
 | **date-fns** | 날짜 처리 |
 | **recharts** | 차트/그래프 (대시보드) |
+| **sonner** | 토스트 알림 |
+| **cmdk** | 커맨드 팔레트 |
 
 ---
 
@@ -60,15 +62,15 @@
 
 | 기술 | 버전 | 용도 |
 |------|------|------|
-| **Next.js API Routes** | 16 | REST API 엔드포인트 |
-| **NextAuth.js** | 5.x (Auth.js) | 인증/인가 |
+| **Next.js API Routes** | 16.1.6 | REST API 엔드포인트 |
+| **NextAuth.js** | 5.0.0-beta.30 (Auth.js) | 인증/인가 |
 
 ### 2.2 데이터베이스
 
 | 기술 | 용도 |
 |------|------|
 | **PostgreSQL** | 메인 관계형 데이터베이스 |
-| **Prisma** | TypeScript ORM |
+| **Prisma** | TypeScript ORM (v7.x) |
 
 ### 2.3 파일 저장
 
@@ -81,8 +83,7 @@
 
 | 기술 | 용도 |
 |------|------|
-| **bcrypt** | 비밀번호 해시 |
-| **nodemailer** | 이메일 발송 |
+| **bcryptjs** | 비밀번호 해시 |
 
 ---
 
@@ -351,4 +352,4 @@ NextAuth.js 자동 처리 (JWT Strategy)
 
 ---
 
-**최종 업데이트**: 2026년 1월 30일
+**최종 업데이트**: 2026년 2월 2일

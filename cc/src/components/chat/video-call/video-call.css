@@ -1,0 +1,128 @@
+/* components/chat/video-call/video-call.css */
+
+.video-call {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--background));
+  z-index: 50;
+}
+
+/* 비디오 그리드 */
+.video-call__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.video-call__participant {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: hsl(var(--muted));
+}
+
+.video-call__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-call__video-off {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.video-call__label {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: rgb(0 0 0 / 0.5);
+  color: white;
+  border-radius: 0.25rem;
+}
+
+/* 하단 컨트롤 바 */
+.video-call__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+/* 참여자 섹션 */
+.video-call__participants-section {
+  position: relative;
+}
+
+.video-call__participants-btn {
+  display: flex;
+  align-items: center;
+}
+
+.video-call__participants-list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  min-width: 180px;
+}
+
+.video-call__participant-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.video-call__participant-item:hover {
+  background-color: hsl(var(--accent));
+}
+
+.video-call__me {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 통화 시간 */
+.video-call__duration {
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--foreground));
+}
+
+/* 컨트롤 버튼들 */
+.video-call__buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 모바일 */
+@media (max-width: 640px) {
+  .video-call__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -27,7 +27,7 @@ Express.js + Socket.IO 기반 소켓 서버(4000 포트)와 연동하여 실시�
 NEXT_PUBLIC_SOCKET_SERVER_URL=http://localhost:4000
 ```
 
-- [ ] 환경 변수 설정
+- [x] 환경 변수 설정
 
 #### 1.2 Socket 클라이언트 설정
 
@@ -79,8 +79,8 @@ export function disconnectSocket() {
 }
 ```
 
-- [ ] Socket.IO 클라이언트 설정
-- [ ] 연결/해제 함수
+- [x] Socket.IO 클라이언트 설정
+- [x] 연결/해제 함수
 
 #### 1.3 Socket Provider
 
@@ -136,8 +136,8 @@ export function useSocket() {
 }
 ```
 
-- [ ] SocketProvider 생성
-- [ ] useSocket 훅 생성
+- [x] SocketProvider 생성
+- [x] useSocket 훅 생성
 - [ ] RootLayout에 SocketProvider 추가
 
 ---
@@ -258,10 +258,10 @@ export function useChatSocket({ roomId }: UseChatSocketOptions) {
 }
 ```
 
-- [ ] useChatSocket 훅 생성
-- [ ] 채팅방 입장/퇴장 이벤트
-- [ ] 메시지 송수신 이벤트
-- [ ] 읽음 확인 이벤트
+- [x] useChatSocket 훅 생성
+- [x] 채팅방 입장/퇴장 이벤트
+- [x] 메시지 송수신 이벤트
+- [x] 읽음 확인 이벤트
 
 ---
 
@@ -353,8 +353,8 @@ export function TypingIndicator({ roomId }: TypingIndicatorProps) {
 ```
 
 - [ ] typing-indicator.css 파일 생성
-- [ ] TypingIndicator 컴포넌트 생성
-- [ ] 애니메이션 도트 구현
+- [x] TypingIndicator 컴포넌트 생성
+- [x] 애니메이션 도트 구현
 
 #### 3.2 입력 시 타이핑 상태 전송
 
@@ -380,7 +380,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 };
 ```
 
-- [ ] 타이핑 상태 자동 전송
+- [x] 타이핑 상태 자동 전송
 
 ---
 
@@ -401,8 +401,8 @@ useEffect(() => {
 }, [messages, currentUserId, markAsRead]);
 ```
 
-- [ ] 읽음 처리 로직 구현
-- [ ] 읽음 상태 UI 업데이트
+- [x] 읽음 처리 로직 구현
+- [x] 읽음 상태 UI 업데이트
 
 ---
 
@@ -444,8 +444,8 @@ export function useOnlineStatus() {
 }
 ```
 
-- [ ] useOnlineStatus 훅 생성
-- [ ] 온라인 상태 Store 업데이트
+- [x] useOnlineStatus 훅 생성
+- [x] 온라인 상태 Store 업데이트
 
 ---
 
@@ -481,8 +481,8 @@ export function useNotificationsSocket() {
 }
 ```
 
-- [ ] useNotificationsSocket 훅 생성
-- [ ] 실시간 토스트 알림
+- [x] useNotificationsSocket 훅 생성
+- [x] 실시간 토스트 알림
 
 ---
 
@@ -538,15 +538,15 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] Socket.IO 클라이언트 설정 완료
-- [ ] SocketProvider 구현 및 적용
-- [ ] 실시간 채팅 메시지 송수신 동작
-- [ ] 타이핑 인디케이터 동작
-- [ ] 읽음 확인 동작
-- [ ] 온라인 상태 동작
-- [ ] 실시간 알림 동작
-- [ ] Socket 서버 연결 테스트 완료
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] Socket.IO 클라이언트 설정 완료
+- [x] SocketProvider 구현 및 적용
+- [x] 실시간 채팅 메시지 송수신 동작
+- [x] 타이핑 인디케이터 동작
+- [x] 읽음 확인 동작
+- [x] 온라인 상태 동작
+- [x] 실시간 알림 동작
+- [x] Socket 서버 연결 테스트 완료
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

@@ -21,40 +21,40 @@ Next.js 프로젝트의 기본 구조와 필수 패키지를 설정합니다.
 
 #### 1.1 스타일링 패키지
 ```bash
-npm install tailwindcss postcss autoprefixer
+npm install tailwindcss postcss autoprefixer @tailwindcss/postcss
 npm install -D @tailwindcss/typography
 ```
 
-- [ ] Tailwind CSS 설치
-- [ ] PostCSS 설정
-- [ ] Tailwind Typography 플러그인
+- [x] Tailwind CSS 설치
+- [x] PostCSS 설정
+- [x] Tailwind Typography 플러그인
 
 #### 1.2 shadcn/ui 설정
 ```bash
 npx shadcn@latest init
 ```
 
-- [ ] shadcn/ui 초기화
-- [ ] components.json 설정
-- [ ] 기본 유틸리티 함수 (cn)
+- [x] shadcn/ui 초기화
+- [x] components.json 설정
+- [x] 기본 유틸리티 함수 (cn)
 
 #### 1.3 상태 관리 패키지
 ```bash
 npm install zustand @tanstack/react-query
 ```
 
-- [ ] Zustand 설치
-- [ ] React Query 설치
-- [ ] QueryClient Provider 설정
+- [x] Zustand 설치
+- [x] React Query 설치
+- [x] QueryClient Provider 설정
 
 #### 1.4 폼 관리 패키지
 ```bash
 npm install react-hook-form zod @hookform/resolvers
 ```
 
-- [ ] React Hook Form 설치
-- [ ] Zod 스키마 검증 설치
-- [ ] Hookform Zod Resolver 설치
+- [x] React Hook Form 설치
+- [x] Zod 스키마 검증 설치
+- [x] Hookform Zod Resolver 설치
 
 #### 1.5 유틸리티 패키지
 ```bash
@@ -62,24 +62,24 @@ npm install lucide-react date-fns clsx tailwind-merge
 npm install class-variance-authority
 ```
 
-- [ ] Lucide Icons 설치
-- [ ] date-fns 설치
-- [ ] clsx + tailwind-merge 설치
-- [ ] CVA (Class Variance Authority) 설치
+- [x] Lucide Icons 설치
+- [x] date-fns 설치
+- [x] clsx + tailwind-merge 설치
+- [x] CVA (Class Variance Authority) 설치
 
 #### 1.6 차트 패키지 (대시보드)
 ```bash
 npm install recharts
 ```
 
-- [ ] Recharts 설치
+- [x] Recharts 설치
 
 #### 1.7 Socket 클라이언트
 ```bash
 npm install socket.io-client
 ```
 
-- [ ] Socket.IO 클라이언트 설치
+- [x] Socket.IO 클라이언트 설치
 
 ---
 
@@ -169,8 +169,8 @@ cc/src/
     └── fonts.css
 ```
 
-- [ ] 폴더 구조 생성
-- [ ] 각 폴더에 index.ts 배럴 파일 생성 (필요시)
+- [x] 폴더 구조 생성
+- [x] 각 폴더에 index.ts 배럴 파일 생성 (필요시)
 
 ---
 
@@ -215,9 +215,9 @@ NEXT_PUBLIC_SOCKET_SERVER_URL="http://localhost:4000"
 # S3_BUCKET_NAME=""
 ```
 
-- [ ] .env.local 파일 생성
-- [ ] .env.example 파일 생성 (버전 관리용)
-- [ ] .gitignore에 .env.local 확인
+- [x] .env.local 파일 생성
+- [x] .env.example 파일 생성 (버전 관리용)
+- [x] .gitignore에 .env.local 확인
 
 ---
 
@@ -243,8 +243,8 @@ NEXT_PUBLIC_SOCKET_SERVER_URL="http://localhost:4000"
 }
 ```
 
-- [ ] 경로 별칭 설정
-- [ ] 별칭 동작 확인
+- [x] 경로 별칭 설정
+- [x] 별칭 동작 확인
 
 ---
 
@@ -263,9 +263,9 @@ NEXT_PUBLIC_SOCKET_SERVER_URL="http://localhost:4000"
 }
 ```
 
-- [ ] Prettier 설치: `npm install -D prettier prettier-plugin-tailwindcss`
-- [ ] .prettierrc 파일 생성
-- [ ] package.json에 format 스크립트 추가
+- [x] Prettier 설치: `npm install -D prettier prettier-plugin-tailwindcss`
+- [x] .prettierrc 파일 생성
+- [x] package.json에 format 스크립트 추가
 
 #### 5.2 ESLint 규칙 추가
 
@@ -384,24 +384,24 @@ export interface SentimentResult {
 }
 ```
 
-- [ ] User 타입 정의
-- [ ] Post 타입 정의
-- [ ] Comment 타입 정의
-- [ ] ChatRoom, Message 타입 정의
-- [ ] Friend, FriendRequest 타입 정의
-- [ ] Notification 타입 정의
-- [ ] SentimentResult 타입 정의
+- [x] User 타입 정의
+- [x] Post 타입 정의
+- [x] Comment 타입 정의
+- [x] ChatRoom, Message 타입 정의
+- [x] Friend, FriendRequest 타입 정의
+- [x] Notification 타입 정의
+- [x] SentimentResult 타입 정의
 
 #### 6.2 Mock 데이터 파일 구조 (mocks/)
 
-- [ ] users.ts - 사용자 목 데이터 (10명 이상)
-- [ ] posts.ts - 게시글 목 데이터 (20개 이상)
-- [ ] comments.ts - 댓글 목 데이터 (대댓글 포함)
-- [ ] chat-rooms.ts - 채팅방 목 데이터
-- [ ] messages.ts - 메시지 목 데이터
-- [ ] friends.ts - 친구 목 데이터
-- [ ] notifications.ts - 알림 목 데이터
-- [ ] index.ts - 배럴 파일
+- [x] users.ts - 사용자 목 데이터 (10명 이상)
+- [x] posts.ts - 게시글 목 데이터 (20개 이상)
+- [x] comments.ts - 댓글 목 데이터 (대댓글 포함)
+- [x] chat-rooms.ts - 채팅방 목 데이터
+- [x] messages.ts - 메시지 목 데이터
+- [x] friends.ts - 친구 목 데이터
+- [x] notifications.ts - 알림 목 데이터
+- [x] index.ts - 배럴 파일
 
 ---
 
@@ -439,8 +439,8 @@ export function QueryProvider({ children }: { children: React.ReactNode }) {
 }
 ```
 
-- [ ] QueryProvider 생성
-- [ ] React Query Devtools 설치: `npm install -D @tanstack/react-query-devtools`
+- [x] QueryProvider 생성
+- [x] React Query Devtools 설치: `npm install -D @tanstack/react-query-devtools`
 
 #### 7.2 Theme Provider
 
@@ -464,8 +464,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 }
 ```
 
-- [ ] next-themes 설치: `npm install next-themes`
-- [ ] ThemeProvider 생성
+- [x] next-themes 설치: `npm install next-themes`
+- [x] ThemeProvider 생성
 
 #### 7.3 Root Layout에 Provider 적용
 
@@ -489,7 +489,7 @@ export default function RootLayout({ children }) {
 }
 ```
 
-- [ ] RootLayout에 Provider 적용
+- [x] RootLayout에 Provider 적용
 
 ---
 
@@ -536,10 +536,10 @@ export function truncate(str: string, length: number) {
 }
 ```
 
-- [ ] cn 함수 생성
-- [ ] 날짜 포맷 함수 생성
-- [ ] 상대 시간 함수 생성
-- [ ] 문자열 자르기 함수 생성
+- [x] cn 함수 생성
+- [x] 날짜 포맷 함수 생성
+- [x] 상대 시간 함수 생성
+- [x] 문자열 자르기 함수 생성
 
 ---
 
@@ -578,12 +578,12 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] 모든 필수 패키지 설치 완료
-- [ ] 폴더 구조 생성 완료
-- [ ] 환경 변수 파일 생성 완료
-- [ ] TypeScript 경로 별칭 동작 확인
-- [ ] Provider 설정 및 적용 완료
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 모든 필수 패키지 설치 완료
+- [x] 폴더 구조 생성 완료
+- [x] 환경 변수 파일 생성 완료
+- [x] TypeScript 경로 별칭 동작 확인
+- [x] Provider 설정 및 적용 완료
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

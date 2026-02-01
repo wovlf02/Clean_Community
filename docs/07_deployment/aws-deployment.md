@@ -293,7 +293,7 @@ jobs:
           ECR_REPOSITORY: socket-server
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG apps/socket-server
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG socket_server
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       
       - name: Update ECS service
@@ -318,7 +318,7 @@ jobs:
           ECR_REPOSITORY: ai-server
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG apps/ai-server
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ai_server
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       
       - name: Update ECS service
@@ -368,4 +368,4 @@ aws cloudwatch put-metric-alarm \
 
 ---
 
-**최종 업데이트**: 2026년 1월 29일
+**최종 업데이트**: 2026년 2월 2일

@@ -1,0 +1,100 @@
+/* components/dashboard/trending-topics/trending-topics.css */
+
+.trending-topics__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.trending-topics__title svg {
+  color: hsl(var(--primary));
+}
+
+.trending-topics__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trending-topics__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+}
+
+.trending-topics__item:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.trending-topics__rank {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+  background-color: hsl(var(--muted));
+  border-radius: 0.375rem;
+  flex-shrink: 0;
+}
+
+.trending-topics__item:nth-child(1) .trending-topics__rank {
+  background: linear-gradient(135deg, hsl(37, 91%, 55%), hsl(37, 91%, 65%));
+  color: white;
+}
+
+.trending-topics__item:nth-child(2) .trending-topics__rank {
+  background: linear-gradient(135deg, hsl(0, 0%, 65%), hsl(0, 0%, 75%));
+  color: white;
+}
+
+.trending-topics__item:nth-child(3) .trending-topics__rank {
+  background: linear-gradient(135deg, hsl(24, 60%, 50%), hsl(24, 60%, 60%));
+  color: white;
+}
+
+.trending-topics__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.trending-topics__tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.trending-topics__tag svg {
+  color: hsl(var(--primary));
+}
+
+.trending-topics__count {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.trending-topics__trend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}

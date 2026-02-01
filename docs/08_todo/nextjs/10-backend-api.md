@@ -24,8 +24,8 @@ npm install -D prisma
 npx prisma init
 ```
 
-- [ ] Prisma 설치
-- [ ] prisma/schema.prisma 생성 확인
+- [x] Prisma 설치
+- [x] prisma/schema.prisma 생성 확인
 
 #### 1.2 스키마 정의
 
@@ -289,9 +289,9 @@ enum NotificationType {
 }
 ```
 
-- [ ] Prisma 스키마 작성
-- [ ] 마이그레이션 실행: `npx prisma migrate dev`
-- [ ] Prisma Client 생성: `npx prisma generate`
+- [x] Prisma 스키마 작성
+- [x] 마이그레이션 실행: `npx prisma migrate dev`
+- [x] Prisma Client 생성: `npx prisma generate`
 
 #### 1.3 Prisma Client 싱글톤
 
@@ -312,7 +312,7 @@ export const prisma =
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 ```
 
-- [ ] Prisma Client 싱글톤 설정
+- [x] Prisma Client 싱글톤 설정
 
 ---
 
@@ -326,8 +326,8 @@ npm install bcryptjs
 npm install -D @types/bcryptjs
 ```
 
-- [ ] NextAuth 설치
-- [ ] bcryptjs 설치
+- [x] NextAuth 설치
+- [x] bcryptjs 설치
 
 #### 2.2 Auth 설정
 
@@ -398,10 +398,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 });
 ```
 
-- [ ] NextAuth 설정
-- [ ] Credentials Provider (이메일/비밀번호)
-- [ ] OAuth Providers (Google, Kakao, Naver)
-- [ ] 세션 콜백 설정
+- [x] NextAuth 설정
+- [x] Credentials Provider (이메일/비밀번호)
+- [x] OAuth Providers (Google, Kakao, Naver)
+- [x] 세션 콜백 설정
 
 #### 2.3 API Route 설정
 
@@ -412,13 +412,13 @@ import { handlers } from '@/auth';
 export const { GET, POST } = handlers;
 ```
 
-- [ ] NextAuth API Route 설정
+- [x] NextAuth API Route 설정
 
 ---
 
 ### 3. 인증 API
 
-- [ ] POST /api/auth/register - 회원가입
+- [x] POST /api/auth/register - 회원가입
 - [ ] POST /api/auth/verify-email - 이메일 인증
 - [ ] POST /api/auth/forgot-password - 비밀번호 재설정 요청
 - [ ] POST /api/auth/reset-password - 비밀번호 재설정
@@ -427,67 +427,67 @@ export const { GET, POST } = handlers;
 
 ### 4. 사용자 API
 
-- [ ] GET /api/users/me - 현재 사용자 조회
-- [ ] PATCH /api/users/me - 프로필 수정
-- [ ] PATCH /api/users/me/password - 비밀번호 변경
+- [x] GET /api/users/me - 현재 사용자 조회
+- [x] PATCH /api/users/me - 프로필 수정
+- [x] PATCH /api/users/me/password - 비밀번호 변경
 - [ ] DELETE /api/users/me - 계정 탈퇴 (Soft Delete)
 
 ---
 
 ### 5. 게시판 API
 
-- [ ] GET /api/posts - 게시글 목록 (페이지네이션, 필터, 검색)
-- [ ] POST /api/posts - 게시글 작성
-- [ ] GET /api/posts/[id] - 게시글 상세
-- [ ] PATCH /api/posts/[id] - 게시글 수정
-- [ ] DELETE /api/posts/[id] - 게시글 삭제
-- [ ] POST /api/posts/[id]/like - 좋아요 토글
-- [ ] POST /api/posts/[id]/view - 조회수 증가
+- [x] GET /api/posts - 게시글 목록 (페이지네이션, 필터, 검색)
+- [x] POST /api/posts - 게시글 작성
+- [x] GET /api/posts/[id] - 게시글 상세
+- [x] PATCH /api/posts/[id] - 게시글 수정
+- [x] DELETE /api/posts/[id] - 게시글 삭제
+- [x] POST /api/posts/[id]/like - 좋아요 토글
+- [x] POST /api/posts/[id]/view - 조회수 증가
 
 ---
 
 ### 6. 댓글 API
 
-- [ ] GET /api/posts/[id]/comments - 댓글 목록
-- [ ] POST /api/posts/[id]/comments - 댓글 작성
-- [ ] PATCH /api/comments/[id] - 댓글 수정
-- [ ] DELETE /api/comments/[id] - 댓글 삭제
+- [x] GET /api/posts/[id]/comments - 댓글 목록
+- [x] POST /api/posts/[id]/comments - 댓글 작성
+- [x] PATCH /api/comments/[id] - 댓글 수정
+- [x] DELETE /api/comments/[id] - 댓글 삭제
 
 ---
 
 ### 7. 채팅 API
 
-- [ ] GET /api/chat/rooms - 채팅방 목록
-- [ ] POST /api/chat/rooms - 채팅방 생성
-- [ ] GET /api/chat/rooms/[id] - 채팅방 상세
-- [ ] GET /api/chat/rooms/[id]/messages - 메시지 목록
-- [ ] POST /api/chat/rooms/[id]/messages - 메시지 저장
+- [x] GET /api/chat/rooms - 채팅방 목록
+- [x] POST /api/chat/rooms - 채팅방 생성
+- [x] GET /api/chat/rooms/[id] - 채팅방 상세
+- [x] GET /api/chat/rooms/[id]/messages - 메시지 목록
+- [x] POST /api/chat/rooms/[id]/messages - 메시지 저장
 
 ---
 
 ### 8. 친구 API
 
-- [ ] GET /api/friends - 친구 목록
-- [ ] GET /api/friends/requests - 친구 요청 목록
-- [ ] POST /api/friends/requests - 친구 요청 보내기
-- [ ] PATCH /api/friends/requests/[id] - 요청 수락/거절
-- [ ] DELETE /api/friends/[id] - 친구 삭제
+- [x] GET /api/friends - 친구 목록
+- [x] GET /api/friends/requests - 친구 요청 목록
+- [x] POST /api/friends/requests - 친구 요청 보내기
+- [x] PATCH /api/friends/requests/[id] - 요청 수락/거절
+- [x] DELETE /api/friends/[id] - 친구 삭제
 
 ---
 
 ### 9. 대시보드 API
 
-- [ ] GET /api/dashboard/stats - 사용자 통계
-- [ ] GET /api/dashboard/activity - 주간 활동
-- [ ] GET /api/posts/popular - 인기 게시글
+- [x] GET /api/dashboard/stats - 사용자 통계
+- [x] GET /api/dashboard/activity - 주간 활동
+- [x] GET /api/posts/popular - 인기 게시글
 
 ---
 
 ### 10. 알림 API
 
-- [ ] GET /api/notifications - 알림 목록
-- [ ] PATCH /api/notifications/read - 읽음 처리
-- [ ] DELETE /api/notifications/[id] - 알림 삭제
+- [x] GET /api/notifications - 알림 목록
+- [x] PATCH /api/notifications/read - 읽음 처리
+- [x] DELETE /api/notifications/[id] - 알림 삭제
 
 ---
 
@@ -540,12 +540,12 @@ cc/
 
 ## ✅ 완료 조건
 
-- [ ] Prisma 스키마 작성 및 마이그레이션 완료
-- [ ] NextAuth.js 설정 완료
-- [ ] 모든 API 엔드포인트 구현
+- [x] Prisma 스키마 작성 및 마이그레이션 완료
+- [x] NextAuth.js 설정 완료
+- [x] 모든 API 엔드포인트 구현
 - [ ] Mock 데이터 → 실제 API 연동 완료
 - [ ] Mock 데이터 파일 삭제
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

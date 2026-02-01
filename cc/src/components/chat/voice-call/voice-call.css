@@ -1,0 +1,53 @@
+/* components/chat/voice-call/voice-call.css */
+
+.voice-call {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgb(0 0 0 / 0.2);
+  cursor: grab;
+  user-select: none;
+  min-width: 200px;
+}
+
+.voice-call:active {
+  cursor: grabbing;
+}
+
+.voice-call__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.voice-call__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-call__name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.voice-call__duration {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-variant-numeric: tabular-nums;
+}
+
+.voice-call__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.voice-call__btn {
+  border-radius: 9999px;
+}

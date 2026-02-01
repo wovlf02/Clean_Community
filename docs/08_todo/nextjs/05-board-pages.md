@@ -85,9 +85,9 @@ export const mockComments: Comment[] = [
 ];
 ```
 
-- [ ] 게시글 Mock 데이터 생성 (20개+)
-- [ ] 댓글 Mock 데이터 생성 (대댓글 포함)
-- [ ] 카테고리 데이터
+- [x] 게시글 Mock 데이터 생성 (20개+)
+- [x] 댓글 Mock 데이터 생성 (대댓글 포함)
+- [x] 카테고리 데이터
 
 ---
 
@@ -172,8 +172,8 @@ export function PostCard({ post }: PostCardProps) {
 }
 ```
 
-- [ ] post-card.css 파일 생성
-- [ ] PostCard 컴포넌트 생성
+- [x] post-card.css 파일 생성
+- [x] PostCard 컴포넌트 생성
 
 #### 2.2 게시글 목록 페이지
 
@@ -259,12 +259,12 @@ export default function BoardPage() {
 }
 ```
 
-- [ ] board.css 파일 생성
-- [ ] 게시글 목록 페이지 구현
-- [ ] CategoryFilter 컴포넌트
-- [ ] SortSelect 컴포넌트
-- [ ] 검색 기능 (Mock)
-- [ ] 페이지네이션 연동
+- [x] board.css 파일 생성
+- [x] 게시글 목록 페이지 구현
+- [x] CategoryFilter 컴포넌트
+- [x] SortSelect 컴포넌트
+- [x] 검색 기능 (Mock)
+- [x] 페이지네이션 연동
 
 ---
 
@@ -272,12 +272,12 @@ export default function BoardPage() {
 
 #### 3.1 게시글 상세 컴포넌트
 
-- [ ] post-detail.css 파일 생성
-- [ ] 게시글 내용 표시
-- [ ] 작성자 정보
-- [ ] 좋아요 버튼 (토글)
-- [ ] 공유 버튼 (카카오톡, 인스타그램, 네이버 카페, URL 복사)
-- [ ] AI 감정분석 결과 배지 표시
+- [x] post-detail.css 파일 생성
+- [x] 게시글 내용 표시
+- [x] 작성자 정보
+- [x] 좋아요 버튼 (토글)
+- [x] 공유 버튼 (카카오톡, 인스타그램, 네이버 카페, URL 복사)
+- [x] AI 감정분석 결과 배지 표시
 
 #### 3.2 댓글 컴포넌트
 
@@ -314,11 +314,11 @@ export function CommentList({ comments, postId }: CommentListProps) {
 }
 ```
 
-- [ ] comment-list.css 파일 생성
-- [ ] CommentList 컴포넌트
-- [ ] CommentItem 컴포넌트 (대댓글 포함)
-- [ ] CommentForm 컴포넌트
-- [ ] 댓글 수정/삭제 UI
+- [x] comment-list.css 파일 생성
+- [x] CommentList 컴포넌트
+- [x] CommentItem 컴포넌트 (대댓글 포함)
+- [x] CommentForm 컴포넌트
+- [x] 댓글 수정/삭제 UI
 
 ---
 
@@ -450,12 +450,12 @@ export function PostEditor({ defaultValues, isEdit, onSubmit }: PostEditorProps)
 }
 ```
 
-- [ ] post-editor.css 파일 생성
-- [ ] PostEditor 컴포넌트
-- [ ] 폼 유효성 검사
-- [ ] AI 감정분석 연동 (Mock)
-- [ ] SentimentWarningModal 연동
-- [ ] 첨부파일 업로드 UI
+- [x] post-editor.css 파일 생성
+- [x] PostEditor 컴포넌트
+- [x] 폼 유효성 검사
+- [x] AI 감정분석 연동 (Mock)
+- [x] SentimentWarningModal 연동
+- [x] 첨부파일 업로드 UI
 
 ---
 
@@ -497,15 +497,15 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] 게시글/댓글 Mock 데이터 생성
-- [ ] 게시글 목록 페이지 완료
-- [ ] 카테고리 필터, 정렬, 검색 기능
-- [ ] 게시글 상세 페이지 완료
-- [ ] 좋아요, 공유 기능 UI
-- [ ] 댓글/대댓글 컴포넌트 완료
-- [ ] 게시글 작성/수정 페이지 완료
-- [ ] AI 감정분석 경고 모달 연동
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 게시글/댓글 Mock 데이터 생성
+- [x] 게시글 목록 페이지 완료
+- [x] 카테고리 필터, 정렬, 검색 기능
+- [x] 게시글 상세 페이지 완료
+- [x] 좋아요, 공유 기능 UI
+- [x] 댓글/대댓글 컴포넌트 완료
+- [x] 게시글 작성/수정 페이지 완료
+- [x] AI 감정분석 경고 모달 연동
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

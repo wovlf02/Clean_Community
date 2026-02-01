@@ -1,0 +1,132 @@
+/* app/(main)/settings/settings.css */
+
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.settings-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.settings-page__section {
+  padding: 0;
+}
+
+.settings-page__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.settings-page__item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* 테마 카드 스타일 */
+.settings-page__theme-card {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.03) 0%,
+    hsl(var(--primary) / 0.08) 100%
+  );
+  transition: box-shadow 200ms, border-color 200ms;
+}
+
+.settings-page__theme-card:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: 0 4px 16px hsl(var(--primary) / 0.1);
+}
+
+.settings-page__theme-item {
+  padding: 1.25rem;
+}
+
+.settings-page__theme-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
+  color: hsl(var(--primary-foreground));
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+}
+
+.settings-page__theme-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.settings-page__theme-label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.settings-page__theme-desc {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.settings-page__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-page__group-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  padding-left: 0.25rem;
+}
+
+.settings-page__group-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.settings-page__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 150ms ease-out;
+}
+
+.settings-page__link:hover {
+  background-color: hsl(var(--accent));
+}
+
+.settings-page__link:not(:last-child) {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.settings-page__link--danger {
+  color: rgb(239 68 68);
+}
+
+.settings-page__link--danger:hover {
+  background-color: rgb(254 226 226);
+}
+
+/* 다크모드에서 danger 색상 조정 */
+.dark .settings-page__link--danger:hover {
+  background-color: rgb(239 68 68 / 0.1);
+}
+

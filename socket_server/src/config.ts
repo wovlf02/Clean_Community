@@ -28,6 +28,9 @@ export const config = {
     level: process.env.LOG_LEVEL || 'debug',
   },
 
+  // Next.js API URL for database operations
+  nextJsApiUrl: process.env.NEXTJS_API_URL || 'http://localhost:3000',
+
   isDevelopment: process.env.NODE_ENV === 'development',
   isProduction: process.env.NODE_ENV === 'production',
 };

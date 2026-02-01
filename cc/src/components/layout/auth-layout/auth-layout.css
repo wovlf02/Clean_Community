@@ -1,0 +1,100 @@
+/* components/layout/auth-layout/auth-layout.css */
+
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 왼쪽 브랜딩 영역 */
+.auth-layout__brand {
+  display: none;
+  flex: 1;
+  background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(29 78 216) 100%);
+  padding: 3rem;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .auth-layout__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* 로고 */
+.auth-layout__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 200ms ease;
+}
+
+.auth-layout__logo:hover {
+  transform: scale(1.05);
+}
+
+.auth-layout__logo-image {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+}
+
+.auth-layout__brand-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.auth-layout__brand-description {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* 오른쪽 폼 영역 */
+.auth-layout__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: hsl(var(--background));
+}
+
+.auth-layout__form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* 모바일 로고 */
+.auth-layout__mobile-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.auth-layout__mobile-logo .auth-layout__logo-image {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+@media (min-width: 1024px) {
+  .auth-layout__mobile-logo {
+    display: none;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .auth-layout__content {
+    padding: 1.5rem;
+  }
+}

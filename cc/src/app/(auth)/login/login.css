@@ -1,0 +1,111 @@
+/* app/(auth)/login/login.css */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.login-page__header {
+  text-align: center;
+}
+
+.login-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.login-page__subtitle {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 로그인 폼 */
+.login-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 옵션 (자동 로그인, 비밀번호 찾기) */
+.login-page__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-page__remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.login-page__forgot {
+  font-size: 0.875rem;
+  color: hsl(var(--primary));
+}
+
+.login-page__forgot:hover {
+  text-decoration: underline;
+}
+
+/* 구분선 */
+.login-page__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-page__divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: hsl(var(--border));
+}
+
+.login-page__divider-text {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 소셜 로그인 */
+.login-page__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.login-page__social-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.login-page__social-btn:hover {
+  background-color: hsl(var(--accent));
+  transform: translateY(-2px);
+}
+
+/* 회원가입 링크 */
+.login-page__register {
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.login-page__register a {
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+.login-page__register a:hover {
+  text-decoration: underline;
+}

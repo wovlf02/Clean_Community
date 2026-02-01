@@ -243,13 +243,13 @@ export { Button };
 export { Button, type ButtonProps } from './button';
 ```
 
-- [ ] button.css 파일 생성
-- [ ] button.tsx 파일 생성 (CSS import)
-- [ ] index.ts 배럴 파일 생성
-- [ ] isLoading, leftIcon, rightIcon 속성 추가
-- [ ] 리플 효과 (터치 피드백) 구현
-- [ ] 호버/액티브 마이크로 애니메이션
-- [ ] 44px 최소 높이 (터치 친화적)
+- [x] button.css 파일 생성
+- [x] button.tsx 파일 생성 (CSS import)
+- [x] index.ts 배럴 파일 생성
+- [x] isLoading, leftIcon, rightIcon 속성 추가
+- [x] 리플 효과 (터치 피드백) 구현
+- [x] 호버/액티브 마이크로 애니메이션
+- [x] 44px 최소 높이 (터치 친화적)
 
 ---
 
@@ -421,12 +421,12 @@ Input.displayName = 'Input';
 export { Input };
 ```
 
-- [ ] input.css 파일 생성
-- [ ] input.tsx 파일 생성 (CSS import)
-- [ ] error 상태 스타일 추가
-- [ ] leftIcon, rightIcon 지원
-- [ ] 높이 44px 적용 (터치 친화적)
-- [ ] 포커스 시 아이콘 색상 변경 효과
+- [x] input.css 파일 생성
+- [x] input.tsx 파일 생성 (CSS import)
+- [x] error 상태 스타일 추가
+- [x] leftIcon, rightIcon 지원
+- [x] 높이 44px 적용 (터치 친화적)
+- [x] 포커스 시 아이콘 색상 변경 효과
 
 ---
 
@@ -530,22 +530,22 @@ export function FormField({
 }
 ```
 
-- [ ] form-field.css 파일 생성
-- [ ] form-field.tsx 파일 생성
-- [ ] 에러 시 흔들림 애니메이션
-- [ ] 아이콘과 함께 에러 메시지 표시
-- [ ] role="alert" 접근성 속성
+- [x] form-field.css 파일 생성
+- [x] form-field.tsx 파일 생성
+- [x] 에러 시 흔들림 애니메이션
+- [x] 아이콘과 함께 에러 메시지 표시
+- [x] role="alert" 접근성 속성
 
 ---
 
 ## ✅ 완료 조건
 
-- [ ] Button 컴포넌트 (CSS 분리) 완료
-- [ ] Input 컴포넌트 (CSS 분리) 완료
-- [ ] FormField 컴포넌트 완료
-- [ ] 모든 컴포넌트 배럴 파일 생성
-- [ ] 접근성 속성 (aria-*) 적용
-- [ ] 프로젝트 빌드 성공
+- [x] Button 컴포넌트 (CSS 분리) 완료
+- [x] Input 컴포넌트 (CSS 분리) 완료
+- [x] FormField 컴포넌트 완료
+- [x] 모든 컴포넌트 배럴 파일 생성
+- [x] 접근성 속성 (aria-*) 적용
+- [x] 프로젝트 빌드 성공
 
 ---
 

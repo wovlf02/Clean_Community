@@ -1,0 +1,126 @@
+.privacy-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-page__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.privacy-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.privacy-page__content {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: hsl(var(--foreground));
+}
+
+.privacy-intro {
+  margin-bottom: 2rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.privacy-section {
+  margin-bottom: 2rem;
+}
+
+.privacy-section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+
+.privacy-section h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.privacy-section p {
+  margin-bottom: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.privacy-section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  list-style-type: disc;
+  color: hsl(var(--muted-foreground));
+}
+
+.privacy-section li {
+  margin-bottom: 0.5rem;
+}
+
+.privacy-section ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.privacy-section ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  list-style-type: decimal;
+  color: hsl(var(--muted-foreground));
+}
+
+.privacy-section ol li {
+  margin-bottom: 0.5rem;
+}
+
+.privacy-section ol ul {
+  list-style-type: disc;
+}
+
+.privacy-section a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.privacy-section a:hover {
+  text-decoration: none;
+}
+
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.privacy-table th,
+.privacy-table td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.privacy-table th {
+  background-color: hsl(var(--muted));
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.privacy-table td {
+  color: hsl(var(--muted-foreground));
+}
+
+.privacy-table tr:nth-child(even) td {
+  background-color: hsl(var(--muted) / 0.3);
+}

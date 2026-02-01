@@ -13,7 +13,7 @@
 | 구성요소 | 개발 환경 | 운영 환경 |
 |----------|----------|----------|
 | **Database** | PostgreSQL 15+ | PostgreSQL 15+ (RDS) |
-| **ORM** | Prisma 5.x | Prisma 5.x |
+| **ORM** | Prisma 7.x | Prisma 7.x |
 | **Cache** | - | Redis (ElastiCache) |
 
 ### 1.2 연동 구조
@@ -357,4 +357,4 @@ enum ContentType {
 
 ---
 
-**최종 업데이트**: 2026년 1월 29일
+**최종 업데이트**: 2026년 2월 2일

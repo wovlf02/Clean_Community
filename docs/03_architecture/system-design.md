@@ -8,14 +8,15 @@
 
 | 구성요소 | 버전 |
 |----------|------|
-| Next.js | 16 |
+| Next.js | 16.1.6 |
+| React | 19.2.3 |
 | TypeScript | 5.x |
 | FastAPI | 0.100+ |
 | Python | 3.11.9 |
 | Express.js | 4.x |
 | Node.js | 24.11.0 LTS |
 | PostgreSQL | 15+ |
-| Prisma | 5.x |
+| Prisma | 7.x |
 
 ---
 
@@ -412,4 +413,4 @@
 
 ---
 
-**최종 업데이트**: 2026년 1월 30일
+**최종 업데이트**: 2026년 2월 2일

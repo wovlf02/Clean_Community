@@ -198,12 +198,12 @@ export function UserAvatar({
 }
 ```
 
-- [ ] user-avatar.css 파일 생성
-- [ ] user-avatar.tsx 파일 생성
-- [ ] 크기 변형 (sm, md, lg, xl)
-- [ ] 온라인 상태 인디케이터
-- [ ] 이니셜 폴백
-- [ ] 클릭 가능 상태 지원
+- [x] user-avatar.css 파일 생성
+- [x] user-avatar.tsx 파일 생성
+- [x] 크기 변형 (sm, md, lg, xl)
+- [x] 온라인 상태 인디케이터
+- [x] 이니셜 폴백
+- [x] 클릭 가능 상태 지원
 
 ---
 
@@ -368,11 +368,11 @@ export function Badge({
 }
 ```
 
-- [ ] badge.css 파일 생성
-- [ ] badge.tsx 파일 생성
-- [ ] 변형 (primary, success, warning, danger, outline)
-- [ ] 크기 변형 (sm, md, lg)
-- [ ] 닫기 버튼 지원
+- [x] badge.css 파일 생성
+- [x] badge.tsx 파일 생성
+- [x] 변형 (primary, success, warning, danger, outline)
+- [x] 크기 변형 (sm, md, lg)
+- [x] 닫기 버튼 지원
 
 ---
 
@@ -568,11 +568,11 @@ export function Pagination({
 }
 ```
 
-- [ ] pagination.css 파일 생성
-- [ ] pagination.tsx 파일 생성
-- [ ] 페이지 번호 로직 (생략 부호 포함)
-- [ ] 접근성 속성 (aria-label, aria-current)
-- [ ] 모바일 반응형
+- [x] pagination.css 파일 생성
+- [x] pagination.tsx 파일 생성
+- [x] 페이지 번호 로직 (생략 부호 포함)
+- [x] 접근성 속성 (aria-label, aria-current)
+- [x] 모바일 반응형
 
 ---
 
@@ -723,24 +723,24 @@ export function EmptyState({
 }
 ```
 
-- [ ] empty-state.css 파일 생성
-- [ ] empty-state.tsx 파일 생성
-- [ ] 아이콘, 제목, 설명, 액션 버튼 지원
-- [ ] compact 변형
-- [ ] 미세한 애니메이션 (bounce)
+- [x] empty-state.css 파일 생성
+- [x] empty-state.tsx 파일 생성
+- [x] 아이콘, 제목, 설명, 액션 버튼 지원
+- [x] compact 변형
+- [x] 미세한 애니메이션 (bounce)
 
 ---
 
 ## ✅ 완료 조건
 
-- [ ] UserAvatar 컴포넌트 (CSS 분리) 완료
-- [ ] Badge 컴포넌트 확장 완료
-- [ ] Pagination 컴포넌트 완료
-- [ ] EmptyState 컴포넌트 완료
-- [ ] 모든 컴포넌트 배럴 파일 생성
-- [ ] 접근성 속성 적용
-- [ ] 모바일 반응형 확인
-- [ ] 프로젝트 빌드 성공
+- [x] UserAvatar 컴포넌트 (CSS 분리) 완료
+- [x] Badge 컴포넌트 확장 완료
+- [x] Pagination 컴포넌트 완료
+- [x] EmptyState 컴포넌트 완료
+- [x] 모든 컴포넌트 배럴 파일 생성
+- [x] 접근성 속성 적용
+- [x] 모바일 반응형 확인
+- [x] 프로젝트 빌드 성공
 
 ---
 

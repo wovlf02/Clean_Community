@@ -8,10 +8,10 @@
 
 | 구성 요소 | 기술 | 역할 |
 |----------|------|------|
-| **Frontend** | Next.js 14+ / TypeScript | 화면 UI 및 사용자 인터랙션 |
-| **Styling** | Tailwind CSS + shadcn/ui | 디자인 시스템 |
+| **Frontend** | Next.js 16+ / TypeScript | 화면 UI 및 사용자 인터랙션 |
+| **Styling** | Tailwind CSS v4 + shadcn/ui | 디자인 시스템 |
 | **State** | Zustand + React Query | 상태 관리 |
-| **Auth** | NextAuth.js | 사용자 인증/인가 |
+| **Auth** | NextAuth.js v5 (Auth.js) | 사용자 인증/인가 |
 | **Real-time** | Socket.IO | 채팅, 알림 실시간 통신 |
 | **AI 감정분석** | FastAPI + 앙상블 모델 | 게시글, 댓글, 채팅 감정 분석 |
 
@@ -142,4 +142,4 @@
 
 ---
 
-**최종 업데이트**: 2026년 1월 30일
+**최종 업데이트**: 2026년 2월 2일

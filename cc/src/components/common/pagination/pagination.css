@@ -1,0 +1,73 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+/* 페이지 버튼 */
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: hsl(var(--foreground));
+  transition: all 150ms ease-out;
+  cursor: pointer;
+}
+
+.pagination__btn:hover:not(:disabled) {
+  background-color: hsl(var(--accent));
+}
+
+.pagination__btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+}
+
+.pagination__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 활성 페이지 */
+.pagination__btn--active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.pagination__btn--active:hover {
+  background-color: hsl(var(--primary));
+  opacity: 0.9;
+}
+
+/* 생략 부호 */
+.pagination__ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 모바일 최적화 */
+@media (max-width: 640px) {
+  .pagination__btn {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.75rem;
+  }
+
+  /* 모바일에서 일부 페이지 숨기기 */
+  .pagination__btn--hide-mobile {
+    display: none;
+  }
+}

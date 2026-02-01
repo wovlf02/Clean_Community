@@ -178,11 +178,11 @@ CardFooter.displayName = 'CardFooter';
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 ```
 
-- [ ] card.css 파일 생성
-- [ ] card.tsx 파일 생성
-- [ ] interactive variant 호버 효과 (translateY + shadow)
-- [ ] 키보드 네비게이션 포커스 스타일
-- [ ] 다크 모드 그림자 조정
+- [x] card.css 파일 생성
+- [x] card.tsx 파일 생성
+- [x] interactive variant 호버 효과 (translateY + shadow)
+- [x] 키보드 네비게이션 포커스 스타일
+- [x] 다크 모드 그림자 조정
 
 ---
 
@@ -353,10 +353,10 @@ export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 }
 ```
 
-- [ ] modal.css 공통 스타일 파일 생성
-- [ ] 애니메이션 (fade + scale)
-- [ ] 모바일 하단 시트 스타일 옵션
-- [ ] 아이콘 변형 (success, danger, warning)
+- [x] modal.css 공통 스타일 파일 생성
+- [x] 애니메이션 (fade + scale)
+- [x] 모바일 하단 시트 스타일 옵션
+- [x] 아이콘 변형 (success, danger, warning)
 
 ---
 
@@ -460,9 +460,9 @@ export function ConfirmDialog({
 }
 ```
 
-- [ ] ConfirmDialog 컴포넌트 생성
-- [ ] 아이콘 변형 (success, danger, warning)
-- [ ] isLoading 상태 지원
+- [x] ConfirmDialog 컴포넌트 생성
+- [x] 아이콘 변형 (success, danger, warning)
+- [x] isLoading 상태 지원
 
 ---
 
@@ -603,22 +603,22 @@ export function SentimentWarningModal({
 }
 ```
 
-- [ ] sentiment-warning-modal.css 파일 생성
-- [ ] sentiment-warning-modal.tsx 파일 생성
-- [ ] 배지 순차 등장 애니메이션
-- [ ] 접근성 role 속성 추가
+- [x] sentiment-warning-modal.css 파일 생성
+- [x] sentiment-warning-modal.tsx 파일 생성
+- [x] 배지 순차 등장 애니메이션
+- [x] 접근성 role 속성 추가
 
 ---
 
 ## ✅ 완료 조건
 
-- [ ] Card 컴포넌트 (CSS 분리) 완료
-- [ ] Modal 공통 CSS 완료
-- [ ] ConfirmDialog 컴포넌트 완료
-- [ ] SentimentWarningModal 컴포넌트 완료
-- [ ] 모든 애니메이션 동작 확인
-- [ ] 모바일 반응형 확인
-- [ ] 프로젝트 빌드 성공
+- [x] Card 컴포넌트 (CSS 분리) 완료
+- [x] Modal 공통 CSS 완료
+- [x] ConfirmDialog 컴포넌트 완료
+- [x] SentimentWarningModal 컴포넌트 완료
+- [x] 모든 애니메이션 동작 확인
+- [x] 모바일 반응형 확인
+- [x] 프로젝트 빌드 성공
 
 ---
 

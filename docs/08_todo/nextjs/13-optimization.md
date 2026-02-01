@@ -69,8 +69,8 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
-- [ ] remotePatterns 설정
-- [ ] 외부 이미지 도메인 추가
+- [x] remotePatterns 설정
+- [x] 외부 이미지 도메인 추가
 
 ---
 
@@ -209,9 +209,9 @@ export const metadata: Metadata = {
 };
 ```
 
-- [ ] 기본 메타데이터 설정
-- [ ] Open Graph 설정
-- [ ] Twitter Card 설정
+- [x] 기본 메타데이터 설정
+- [x] Open Graph 설정
+- [x] Twitter Card 설정
 
 #### 4.2 동적 메타데이터 (게시글)
 
@@ -297,8 +297,8 @@ export default function NotFound() {
 }
 ```
 
-- [ ] error.tsx 생성
-- [ ] not-found.tsx 생성
+- [x] error.tsx 생성
+- [x] not-found.tsx 생성
 - [ ] 각 라우트별 에러 페이지 (선택)
 
 ---
@@ -354,9 +354,9 @@ export default function BoardPage() {
 }
 ```
 
-- [ ] loading.tsx 생성
-- [ ] Suspense 적용
-- [ ] 스켈레톤 UI 연결
+- [x] loading.tsx 생성
+- [x] Suspense 적용
+- [x] 스켈레톤 UI 연결
 
 ---
 
@@ -448,13 +448,13 @@ cc/
 - [ ] next/image 적용 완료
 - [ ] 코드 스플리팅 적용
 - [ ] 번들 크기 최적화
-- [ ] SEO 메타 태그 설정
-- [ ] Error/NotFound 페이지 구현
-- [ ] Loading UI 최적화
+- [x] SEO 메타 태그 설정
+- [x] Error/NotFound 페이지 구현
+- [x] Loading UI 최적화
 - [ ] Lighthouse 90+ 달성
 - [ ] 모든 기능 테스트 통과
 - [ ] 반응형 테스트 통과
-- [ ] 프로덕션 빌드 성공
+- [x] 프로덕션 빌드 성공
 
 ---
 

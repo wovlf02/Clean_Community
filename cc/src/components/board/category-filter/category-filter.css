@@ -1,0 +1,34 @@
+/* components/board/category-filter/category-filter.css */
+
+.category-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-filter__item {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  background-color: transparent;
+  border: 1px solid hsl(var(--border));
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.category-filter__item:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--primary));
+}
+
+.category-filter__item--active {
+  color: white;
+  background-color: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+}
+
+.category-filter__item--active:hover {
+  color: white;
+}

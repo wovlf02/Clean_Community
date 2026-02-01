@@ -18,8 +18,17 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/mocks/*": ["./src/mocks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/providers/*": ["./src/providers/*"],
+      "@/generated/*": ["./generated/*"]
     }
   },
   "include": [

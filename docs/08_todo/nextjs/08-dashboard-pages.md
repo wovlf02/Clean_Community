@@ -54,9 +54,9 @@ export const mockRecentActivities = [
 ];
 ```
 
-- [ ] 통계 Mock 데이터 생성
-- [ ] 주간 활동 Mock 데이터 생성
-- [ ] 최근 활동 Mock 데이터 생성
+- [x] 통계 Mock 데이터 생성
+- [x] 주간 활동 Mock 데이터 생성
+- [x] 최근 활동 Mock 데이터 생성
 
 ---
 
@@ -179,9 +179,9 @@ export function StatCard({
 }
 ```
 
-- [ ] stat-card.css 파일 생성
-- [ ] StatCard 컴포넌트 생성
-- [ ] 증감 표시 (화살표 + 색상)
+- [x] stat-card.css 파일 생성
+- [x] StatCard 컴포넌트 생성
+- [x] 증감 표시 (화살표 + 색상)
 
 ---
 
@@ -239,9 +239,9 @@ export function ActivityChart() {
 }
 ```
 
-- [ ] activity-chart.css 파일 생성
-- [ ] ActivityChart 컴포넌트 (Recharts)
-- [ ] 반응형 차트
+- [x] activity-chart.css 파일 생성
+- [x] ActivityChart 컴포넌트
+- [x] 반응형 차트
 
 ---
 
@@ -295,17 +295,17 @@ export function PopularPosts() {
 }
 ```
 
-- [ ] popular-posts.css 파일 생성
-- [ ] PopularPosts 컴포넌트
-- [ ] 순위 표시
+- [x] popular-posts.css 파일 생성
+- [x] PopularPosts 컴포넌트
+- [x] 순위 표시
 
 ---
 
 ### 5. 최근 활동 타임라인
 
-- [ ] RecentActivity 컴포넌트
-- [ ] 활동 타입별 아이콘
-- [ ] 시간 표시
+- [x] RecentActivity 컴포넌트
+- [x] 활동 타입별 아이콘
+- [x] 시간 표시
 
 ---
 
@@ -373,9 +373,9 @@ export default function DashboardPage() {
 }
 ```
 
-- [ ] dashboard.css 파일 생성
-- [ ] 대시보드 레이아웃 구현
-- [ ] 그리드 배치
+- [x] dashboard.css 파일 생성
+- [x] 대시보드 레이아웃 구현
+- [x] 그리드 배치
 
 ---
 
@@ -399,14 +399,14 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] 대시보드 Mock 데이터 생성
-- [ ] StatCard 컴포넌트 완료
-- [ ] ActivityChart 컴포넌트 완료 (Recharts)
-- [ ] PopularPosts 컴포넌트 완료
-- [ ] RecentActivity 컴포넌트 완료
-- [ ] 대시보드 페이지 레이아웃 완료
-- [ ] 반응형 그리드 확인
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 대시보드 Mock 데이터 생성
+- [x] StatCard 컴포넌트 완료
+- [x] ActivityChart 컴포넌트 완료
+- [x] PopularPosts 컴포넌트 완료
+- [x] RecentActivity 컴포넌트 완료
+- [x] 대시보드 페이지 레이아웃 완료
+- [x] 반응형 그리드 확인
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

@@ -1,0 +1,236 @@
+/* app/(main)/admin/analytics/analytics.css */
+
+.analytics-charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .analytics-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analytics-chart {
+  padding: 1.5rem;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+
+.analytics-chart__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* 막대 차트 */
+.analytics-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 200px;
+  gap: 0.5rem;
+}
+
+.analytics-bar-chart__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.analytics-bar-chart__bars {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+}
+
+.analytics-bar-chart__bar {
+  width: 100%;
+  max-width: 24px;
+  border-radius: 4px 4px 0 0;
+  transition: height 300ms ease;
+}
+
+.analytics-bar-chart__bar--posts {
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--primary) / 0.7));
+}
+
+.analytics-bar-chart__label {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 범례 */
+.analytics-chart__legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.analytics-chart__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.analytics-chart__legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.analytics-chart__legend-color--posts {
+  background-color: hsl(var(--primary));
+}
+
+/* 라인 차트 */
+.analytics-line-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 200px;
+  position: relative;
+}
+
+.analytics-line-chart__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.analytics-line-chart__point {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analytics-line-chart__point::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: hsl(var(--primary));
+  border: 3px solid hsl(var(--background));
+  border-radius: 50%;
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+}
+
+.analytics-line-chart__value {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+
+.analytics-line-chart__label {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 인기 게시글 */
+.analytics-section {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.analytics-section__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.analytics-top-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.analytics-top-post {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 150ms ease;
+}
+
+.analytics-top-post:hover {
+  background-color: hsl(var(--accent) / 0.5);
+}
+
+.analytics-top-post__rank {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  background-color: hsl(var(--primary) / 0.1);
+  border-radius: 50%;
+}
+
+.analytics-top-post__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.analytics-top-post__title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.analytics-top-post__stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.analytics-top-post__stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.analytics-top-post__bar-wrapper {
+  width: 100px;
+  height: 6px;
+  background-color: hsl(var(--muted));
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.analytics-top-post__bar {
+  height: 100%;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.7));
+  border-radius: 3px;
+  transition: width 300ms ease;
+}

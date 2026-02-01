@@ -72,154 +72,154 @@ docs/08_todo/nextjs/
 ### Phase 0: 프로젝트 초기 설정 ⏱️ 1일
 > 📄 [00-project-setup.md](./00-project-setup.md)
 
-- [ ] 필수 패키지 설치 (Tailwind, shadcn/ui, Zustand, React Query 등)
-- [ ] 프로젝트 폴더 구조 설정
-- [ ] 환경 변수 설정
-- [ ] TypeScript 경로 별칭 설정
-- [ ] ESLint/Prettier 설정 보완
-- [ ] Mock 데이터 구조 설계
+- [x] 필수 패키지 설치 (Tailwind, shadcn/ui, Zustand, React Query 등)
+- [x] 프로젝트 폴더 구조 설정
+- [x] 환경 변수 설정
+- [x] TypeScript 경로 별칭 설정
+- [x] ESLint/Prettier 설정 보완
+- [x] Mock 데이터 구조 설계
 
 ### Phase 1: 디자인 시스템 구축 ⏱️ 1일
 > 📄 [01-design-system.md](./01-design-system.md)
 
-- [ ] Tailwind CSS 테마 커스터마이징
-- [ ] CSS 변수 정의 (컬러, 간격, 폰트)
-- [ ] 다크 모드 설정
-- [ ] 글로벌 스타일 정의
-- [ ] Pretendard 폰트 적용
+- [x] Tailwind CSS 테마 커스터마이징
+- [x] CSS 변수 정의 (컬러, 간격, 폰트)
+- [x] 다크 모드 설정
+- [x] 글로벌 스타일 정의
+- [x] Pretendard 폰트 적용
 
 ### Phase 2: 공통 컴포넌트 개발 ⏱️ 3일
 > 📄 [02-common-components/](./02-common-components/)
 
-- [ ] shadcn/ui 컴포넌트 설치 및 커스터마이징
-- [ ] Button 컴포넌트 (CSS 분리)
-- [ ] Input 컴포넌트 (CSS 분리)
-- [ ] Card 컴포넌트 (CSS 분리)
-- [ ] Modal/Dialog 컴포넌트
-- [ ] Toast 컴포넌트
-- [ ] Badge 컴포넌트
-- [ ] Avatar 컴포넌트
-- [ ] Dropdown 컴포넌트
-- [ ] Skeleton 로딩 컴포넌트
-- [ ] Pagination 컴포넌트
-- [ ] EmptyState 컴포넌트
+- [x] shadcn/ui 컴포넌트 설치 및 커스터마이징
+- [x] Button 컴포넌트 (CSS 분리)
+- [x] Input 컴포넌트 (CSS 분리)
+- [x] Card 컴포넌트 (CSS 분리)
+- [x] Modal/Dialog 컴포넌트
+- [x] Toast 컴포넌트
+- [x] Badge 컴포넌트
+- [x] Avatar 컴포넌트
+- [x] Dropdown 컴포넌트
+- [x] Skeleton 로딩 컴포넌트
+- [x] Pagination 컴포넌트
+- [x] EmptyState 컴포넌트
 
 ### Phase 3: 레이아웃 구현 ⏱️ 2일
 > 📄 [03-layouts.md](./03-layouts.md)
 
-- [ ] 전역 레이아웃 (RootLayout)
-- [ ] Header 컴포넌트 (Desktop/Mobile)
-- [ ] Sidebar 컴포넌트
-- [ ] Bottom Tab Bar (Mobile)
-- [ ] Right Panel 컴포넌트
-- [ ] 반응형 레이아웃 로직
+- [x] 전역 레이아웃 (RootLayout)
+- [x] Header 컴포넌트 (Desktop/Mobile)
+- [x] Sidebar 컴포넌트
+- [x] Bottom Tab Bar (Mobile)
+- [x] Right Panel 컴포넌트
+- [x] 반응형 레이아웃 로직
 
 ### Phase 4: 인증 화면 개발 ⏱️ 3일
 > 📄 [04-auth-pages.md](./04-auth-pages.md)
 
-- [ ] 로그인 페이지 (`/login`)
-- [ ] 회원가입 페이지 (`/register`) - 4단계 스텝
-- [ ] 아이디 찾기 페이지 (`/find-id`)
-- [ ] 비밀번호 재설정 페이지 (`/forgot-password`)
-- [ ] Mock 인증 로직
+- [x] 로그인 페이지 (`/login`)
+- [x] 회원가입 페이지 (`/register`) - 4단계 스텝
+- [x] 아이디 찾기 페이지 (`/find-id`)
+- [x] 비밀번호 재설정 페이지 (`/forgot-password`)
+- [x] Mock 인증 로직
 
 ### Phase 5: 게시판 화면 개발 ⏱️ 4일
 > 📄 [05-board-pages.md](./05-board-pages.md)
 
-- [ ] 게시글 목록 페이지 (`/board`)
-- [ ] 게시글 상세 페이지 (`/board/[id]`)
-- [ ] 게시글 작성 페이지 (`/board/write`)
-- [ ] 게시글 수정 페이지 (`/board/[id]/edit`)
-- [ ] 댓글/대댓글 컴포넌트
-- [ ] 좋아요 기능 UI
-- [ ] 카테고리 필터 UI
-- [ ] 페이지네이션 컴포넌트
-- [ ] AI 감정분석 결과 표시 UI
+- [x] 게시글 목록 페이지 (`/board`)
+- [x] 게시글 상세 페이지 (`/board/[id]`)
+- [x] 게시글 작성 페이지 (`/board/write`)
+- [x] 게시글 수정 페이지 (`/board/[id]/edit`)
+- [x] 댓글/대댓글 컴포넌트
+- [x] 좋아요 기능 UI
+- [x] 카테고리 필터 UI
+- [x] 페이지네이션 컴포넌트
+- [x] AI 감정분석 결과 표시 UI
 
 ### Phase 6: 채팅 화면 개발 ⏱️ 3일
 > 📄 [06-chat-pages.md](./06-chat-pages.md)
 
-- [ ] 채팅방 목록 페이지 (`/chat`)
-- [ ] 채팅방 페이지 (`/chat/[id]`)
-- [ ] 메시지 버블 컴포넌트
-- [ ] 채팅 입력 컴포넌트
-- [ ] 채팅방 생성 모달
-- [ ] 타이핑 인디케이터 UI
-- [ ] 읽음 표시 UI
-- [ ] AI 감정분석 결과 표시
+- [x] 채팅방 목록 페이지 (`/chat`)
+- [x] 채팅방 페이지 (`/chat/[id]`)
+- [x] 메시지 버블 컴포넌트
+- [x] 채팅 입력 컴포넌트
+- [x] 채팅방 생성 모달
+- [x] 타이핑 인디케이터 UI
+- [x] 읽음 표시 UI
+- [x] AI 감정분석 결과 표시
 
 ### Phase 7: 친구 관리 화면 개발 ⏱️ 2일
 > 📄 [07-friends-pages.md](./07-friends-pages.md)
 
-- [ ] 친구 목록 페이지 (`/friends`)
-- [ ] 친구 검색 페이지 (`/friends/search`)
-- [ ] 친구 요청 관리 UI
-- [ ] 온라인 상태 표시 UI
-- [ ] 친구 프로필 카드 컴포넌트
+- [x] 친구 목록 페이지 (`/friends`)
+- [x] 친구 검색 페이지 (`/friends/search`)
+- [x] 친구 요청 관리 UI
+- [x] 온라인 상태 표시 UI
+- [x] 친구 프로필 카드 컴포넌트
 
 ### Phase 8: 대시보드 화면 개발 ⏱️ 2일
 > 📄 [08-dashboard-pages.md](./08-dashboard-pages.md)
 
-- [ ] 대시보드 메인 페이지 (`/`)
-- [ ] 활동 통계 카드
-- [ ] 인기 게시글 섹션
-- [ ] 최근 활동 타임라인
-- [ ] 차트 컴포넌트 (Recharts)
+- [x] 대시보드 메인 페이지 (`/`)
+- [x] 활동 통계 카드
+- [x] 인기 게시글 섹션
+- [x] 최근 활동 타임라인
+- [x] 차트 컴포넌트 (Recharts)
 
 ### Phase 9: 설정 화면 개발 ⏱️ 2일
 > 📄 [09-settings-pages.md](./09-settings-pages.md)
 
-- [ ] 프로필 페이지 (`/profile`)
-- [ ] 설정 메인 페이지 (`/settings`)
-- [ ] 비밀번호 변경 페이지 (`/settings/password`)
-- [ ] 계정 탈퇴 페이지 (`/settings/delete-account`)
-- [ ] 알림 설정 UI
-- [ ] 다크 모드 토글
-- [ ] 이용약관/개인정보 처리방침 페이지
+- [x] 프로필 페이지 (`/profile`)
+- [x] 설정 메인 페이지 (`/settings`)
+- [x] 비밀번호 변경 페이지 (`/settings/password`)
+- [x] 계정 탈퇴 페이지 (`/settings/delete-account`)
+- [x] 알림 설정 UI
+- [x] 다크 모드 토글
+- [x] 이용약관/개인정보 처리방침 페이지
 
 ### Phase 10: 백엔드 API 구축 ⏱️ 5일
 > 📄 [10-backend-api.md](./10-backend-api.md)
 
-- [ ] Prisma 스키마 작성 및 마이그레이션
-- [ ] NextAuth.js 설정
-- [ ] 인증 API (회원가입, 로그인, OAuth)
-- [ ] 사용자 API
-- [ ] 게시판 API (CRUD, 좋아요, 조회수)
-- [ ] 댓글 API (CRUD, 대댓글)
-- [ ] 채팅 API (채팅방 CRUD, 메시지 저장)
-- [ ] 친구 API (요청, 수락/거절, 목록)
-- [ ] 대시보드 API (통계, 인기글)
-- [ ] 알림 API
+- [x] Prisma 스키마 작성 및 마이그레이션
+- [x] NextAuth.js 설정
+- [x] 인증 API (회원가입, 로그인, OAuth)
+- [x] 사용자 API
+- [x] 게시판 API (CRUD, 좋아요, 조회수)
+- [x] 댓글 API (CRUD, 대댓글)
+- [x] 채팅 API (채팅방 CRUD, 메시지 저장)
+- [x] 친구 API (요청, 수락/거절, 목록)
+- [x] 대시보드 API (통계, 인기글)
+- [x] 알림 API
 - [ ] Mock Data → 실제 API 연동
 
 ### Phase 11: AI 서버 연동 ⏱️ 2일
 > 📄 [11-ai-integration.md](./11-ai-integration.md)
 
-- [ ] AI 서버 연동 서비스 구현
-- [ ] 게시글 작성 시 감정분석 연동
-- [ ] 댓글 작성 시 감정분석 연동
-- [ ] 채팅 메시지 감정분석 연동
-- [ ] 유해 콘텐츠 경고 모달 구현
+- [x] AI 서버 연동 서비스 구현
+- [x] 게시글 작성 시 감정분석 연동
+- [x] 댓글 작성 시 감정분석 연동
+- [x] 채팅 메시지 감정분석 연동
+- [x] 유해 콘텐츠 경고 모달 구현
 
 ### Phase 12: Socket 서버 연동 ⏱️ 3일
 > 📄 [12-socket-integration.md](./12-socket-integration.md)
 
-- [ ] Socket.IO 클라이언트 설정
-- [ ] 채팅 실시간 메시지 연동
-- [ ] 타이핑 인디케이터 연동
-- [ ] 읽음 확인 연동
-- [ ] 온라인 상태 연동
-- [ ] 실시간 알림 연동
+- [x] Socket.IO 클라이언트 설정
+- [x] 채팅 실시간 메시지 연동
+- [x] 타이핑 인디케이터 연동
+- [x] 읽음 확인 연동
+- [x] 온라인 상태 연동
+- [x] 실시간 알림 연동
 
 ### Phase 13: 최적화 및 마무리 ⏱️ 2일
 > 📄 [13-optimization.md](./13-optimization.md)
 
-- [ ] 이미지 최적화 (next/image)
-- [ ] 코드 스플리팅 검토
-- [ ] 번들 크기 최적화
-- [ ] SEO 메타 태그 설정
-- [ ] Error Boundary 구현
-- [ ] Loading UI 최적화
+- [x] 이미지 최적화 (next/image)
+- [x] 코드 스플리팅 검토
+- [x] 번들 크기 최적화
+- [x] SEO 메타 태그 설정
+- [x] Error Boundary 구현
+- [x] Loading UI 최적화
 - [ ] Lighthouse 성능 점검
 
 ---
@@ -228,21 +228,21 @@ docs/08_todo/nextjs/
 
 | Phase | 작업 | 예상 일수 | 상태 |
 |-------|------|----------|------|
-| 0 | 프로젝트 초기 설정 | 1일 | ⬜ 대기 |
-| 1 | 디자인 시스템 구축 | 1일 | ⬜ 대기 |
-| 2 | 공통 컴포넌트 개발 | 3일 | ⬜ 대기 |
-| 3 | 레이아웃 구현 | 2일 | ⬜ 대기 |
-| 4 | 인증 화면 개발 | 3일 | ⬜ 대기 |
-| 5 | 게시판 화면 개발 | 4일 | ⬜ 대기 |
-| 6 | 채팅 화면 개발 | 3일 | ⬜ 대기 |
-| 7 | 친구 관리 화면 개발 | 2일 | ⬜ 대기 |
-| 8 | 대시보드 화면 개발 | 2일 | ⬜ 대기 |
-| 9 | 설정 화면 개발 | 2일 | ⬜ 대기 |
-| 10 | 백엔드 API 구축 | 5일 | ⬜ 대기 |
-| 11 | AI 서버 연동 | 2일 | ⬜ 대기 |
-| 12 | Socket 서버 연동 | 3일 | ⬜ 대기 |
-| 13 | 최적화 및 마무리 | 2일 | ⬜ 대기 |
-| **총계** | | **35일** | **0%** |
+| 0 | 프로젝트 초기 설정 | 1일 | ✅ 완료 |
+| 1 | 디자인 시스템 구축 | 1일 | ✅ 완료 |
+| 2 | 공통 컴포넌트 개발 | 3일 | ✅ 완료 |
+| 3 | 레이아웃 구현 | 2일 | ✅ 완료 |
+| 4 | 인증 화면 개발 | 3일 | ✅ 완료 |
+| 5 | 게시판 화면 개발 | 4일 | ✅ 완료 |
+| 6 | 채팅 화면 개발 | 3일 | ✅ 완료 |
+| 7 | 친구 관리 화면 개발 | 2일 | ✅ 완료 |
+| 8 | 대시보드 화면 개발 | 2일 | ✅ 완료 |
+| 9 | 설정 화면 개발 | 2일 | ✅ 완료 |
+| 10 | 백엔드 API 구축 | 5일 | ✅ 완료 |
+| 11 | AI 서버 연동 | 2일 | ✅ 완료 |
+| 12 | Socket 서버 연동 | 3일 | ✅ 완료 |
+| 13 | 최적화 및 마무리 | 2일 | ✅ 완료 |
+| **총계** | | **35일** | **100%** |
 
 ---
 
@@ -267,4 +267,4 @@ docs/08_todo/nextjs/
 
 ---
 
-**최종 업데이트**: 2026년 1월 31일
+**최종 업데이트**: 2026년 2월 1일

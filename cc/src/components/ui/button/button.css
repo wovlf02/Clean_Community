@@ -1,0 +1,144 @@
+/* ===== 기본 스타일 ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 150ms ease-out;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 포커스 스타일 (접근성) ===== */
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+}
+
+/* ===== 비활성화 ===== */
+.btn:disabled,
+.btn--loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ===== 변형 (Variants) ===== */
+.btn--default {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.btn--default:hover {
+  background-color: hsl(var(--primary) / 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+}
+
+.btn--default:active {
+  transform: translateY(0);
+  background-color: hsl(var(--primary) / 0.8);
+}
+
+.btn--destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.btn--destructive:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+.btn--outline {
+  border: 1px solid hsl(var(--border));
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+
+.btn--outline:hover {
+  background-color: hsl(var(--accent));
+  border-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.btn--secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn--secondary:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+
+.btn--ghost:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.btn--link {
+  color: hsl(var(--primary));
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  background-color: transparent;
+}
+
+/* ===== 크기 (Sizes) ===== */
+.btn--sm {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn--md {
+  height: 2.75rem; /* 44px - 터치 친화적 */
+  padding: 0 1rem;
+}
+
+.btn--lg {
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.btn--icon {
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0;
+}
+
+/* ===== 로딩 상태 ===== */
+.btn__spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== 리플 효과 (터치 피드백) ===== */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn:active::after {
+  transform: scale(2);
+  opacity: 1;
+  transition: transform 0s, opacity 0s;
+}

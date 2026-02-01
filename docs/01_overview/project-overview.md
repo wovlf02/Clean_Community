@@ -85,7 +85,7 @@
 | **서빙** | FastAPI 기반 추론 서버 |
 | **입력** | 한국어 텍스트 문장 |
 | **출력** | 9개 카테고리 다중 라벨 분류 결과 |
-| **성능** | Hamming Accuracy 96.72%, F1-Macro 82.91% |
+| **성능** | Hamming Accuracy 96.22% |
 
 ### 4.2 앙상블 모델 구성
 
@@ -235,24 +235,26 @@ AI 모델 관련 상세 문서는 [ai-model/docs](../../ai-model/docs/README.md)
 
 ## 6. 향후 계획
 
-### 6.1 Phase 1 (MVP)
-- [ ] 사용자 인증 (NextAuth.js)
-- [ ] 게시판 기본 CRUD
-- [ ] 댓글/대댓글
-- [x] AI 혐오 탐지 모델 학습 완료 ✅ (Hamming Accuracy 96.72%)
-- [ ] FastAPI AI 모델 서버 구축
+### 6.1 Phase 1 (MVP) - 완료 ✅
+- [x] 사용자 인증 (NextAuth.js v5)
+- [x] 게시판 기본 CRUD
+- [x] 댓글/대댓글
+- [x] AI 혐오 탐지 모델 학습 완료 (Hamming Accuracy 96.22%)
+- [x] FastAPI AI 모델 서버 구축
 
-### 6.2 Phase 2 (Core Features)
-- [ ] 채팅 시스템 (Socket.IO)
-- [ ] 친구 관리
-- [ ] 첨부파일 업로드
-- [ ] 실시간 감정분석 API 연동
+### 6.2 Phase 2 (Core Features) - 완료 ✅
+- [x] 채팅 시스템 (Socket.IO)
+- [x] 친구 관리
+- [x] 첨부파일 업로드
+- [x] 실시간 감정분석 API 연동
+- [x] 대시보드 UI
 
-### 6.3 Phase 3 (Enhancement)
-- [ ] 대시보드 통계
-- [ ] 콘텐츠 필터링/경고 시스템
+### 6.3 Phase 3 (Enhancement) - 진행 중
+- [x] 대시보드 통계 UI
+- [x] 콘텐츠 필터링/경고 시스템 UI
+- [x] 관리자 대시보드
 - [ ] AWS 배포
 
 ---
 
-**최종 업데이트**: 2026년 1월 30일
+**최종 업데이트**: 2026년 2월 2일

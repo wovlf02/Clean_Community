@@ -1,30 +1,45 @@
-docs: Next.js 프론트엔드 개발 TODO 문서 작성
+feat: Next.js 16 기반 프론트엔드 구현 및 문서 업데이트
 
-Next.js 16 기반 프론트엔드/백엔드 구축을 위한 상세 TODO 문서 작성
+AI 기반 감정분석 커뮤니티 플랫폼의 프론트엔드 전면 구현
 
-- Phase 0-13 단계별 개발 가이드 생성 (총 35일 예상)
-- UI/CSS 파일 분리 방식 적용
-- UX 극대화 설계 원칙 문서화
-- npm 패키지 매니저 사용 (안정성 우선)
-- Mock 데이터 기반 프론트엔드 우선 개발 전략
+## 주요 기능
+- 사용자 인증 (로그인, 회원가입, 아이디 찾기, 비밀번호 재설정)
+- 게시판 (목록, 상세, 작성, 수정, 삭제, 좋아요, 댓글/대댓글)
+- 채팅 (1:1 DM, 그룹 채팅, 실시간 메시지, 음성/영상 통화 UI)
+- 친구 관리 (친구 목록, 친구 요청, 친구 검색, 온라인 상태)
+- 대시보드 (통계, 인기 게시글, 최근 활동, 차트)
+- 설정 (프로필, 비밀번호 변경, 계정 탈퇴, 알림 설정)
+- 관리자 대시보드 (사용자 관리, 게시글 관리, 신고 관리, 분석)
 
-주요 Phase:
-- Phase 0: 프로젝트 초기 설정 (패키지 설치, 폴더 구조)
-- Phase 1: 디자인 시스템 구축 (Tailwind, 테마, 폰트)
-- Phase 2: 공통 컴포넌트 개발 (Button, Input, Card, Modal 등)
-  - 폴더 분리 구조로 문서 크기 최적화 (5개 하위 문서)
-- Phase 3: 레이아웃 구현 (Header, Sidebar, BottomTab)
-- Phase 4-9: 화면 개발 (인증, 게시판, 채팅, 친구, 대시보드, 설정)
-- Phase 10: 백엔드 API 구축 (Prisma, NextAuth)
-- Phase 11: AI 서버 연동 (감정분석)
-- Phase 12: Socket 서버 연동 (실시간 채팅)
-- Phase 13: 최적화 및 마무리 (성능, SEO, 에러 처리)
-
-기술 스택:
+## 기술 스택
 - Next.js 16.1.6, React 19.2.3, TypeScript 5.x
-- Tailwind CSS, shadcn/ui
-- Zustand, React Query, React Hook Form, Zod
-- NextAuth.js 5.x, Prisma 5.x
-- AI 서버 (8000 포트), Socket 서버 (4000 포트)
+- Tailwind CSS v4, shadcn/ui
+- Zustand (전역 상태), TanStack Query (서버 상태)
+- NextAuth.js v5 (인증)
+- Prisma 7.x + PostgreSQL (데이터베이스)
+- Socket.IO (실시간 통신)
 
-문서 위치: docs/08_todo/nextjs/
+## 프로젝트 구조
+- src/app/(auth): 인증 페이지 그룹
+- src/app/(main): 메인 레이아웃 페이지 그룹
+- src/app/api: API Routes
+- src/components: 재사용 가능한 컴포넌트
+- src/hooks: 커스텀 훅
+- src/lib: 유틸리티 함수
+- src/providers: Context Providers
+- src/store: Zustand 스토어
+- src/types: TypeScript 타입 정의
+
+## 문서 업데이트
+- docs/01_overview: 프로젝트 개요 및 진행 상태 업데이트
+- docs/02_requirements: 기능/비기능 요구사항 날짜 업데이트
+- docs/03_architecture: 기술 스택 버전 업데이트 (Next.js 16.1.6, Prisma 7.x)
+- docs/04_database: 데이터베이스 스키마 업데이트 (Prisma 7.x)
+- docs/05_screens: 화면 설계 개요 업데이트 (Next.js 16+)
+- docs/06_development: 개발 환경 설정 업데이트 (cc 폴더 구조)
+- docs/07_deployment: AWS 배포 가이드 업데이트
+- docs/08_todo: TODO 체크리스트 업데이트 (진행률 85%)
+- docs/09_git: Git 컨벤션 날짜 업데이트
+- docs/11_security: 보안 설계 업데이트 (bcryptjs)
+- docs/12_api: API 명세서 날짜 업데이트
+- docs/complement: 개선 사항 문서 추가

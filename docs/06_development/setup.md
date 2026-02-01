@@ -30,46 +30,75 @@
 ## 2. 프로젝트 구조
 
 ```
-emotion-community/
-├── apps/
-│   ├── web/                    # Next.js 웹 앱
-│   │   ├── app/                # App Router
-│   │   ├── components/         # React 컴포넌트
-│   │   ├── lib/                # 유틸리티
-│   │   ├── hooks/              # 커스텀 훅
-│   │   ├── store/              # Zustand 스토어
-│   │   └── styles/             # 글로벌 스타일
-│   │
-│   ├── socket-server/          # Express.js 소켓 서버
-│   │   ├── src/
-│   │   │   ├── handlers/       # 이벤트 핸들러
-│   │   │   ├── middlewares/    # 미들웨어
-│   │   │   └── index.ts        # 엔트리포인트
-│   │   └── package.json
-│   │
-│   └── ai-server/              # FastAPI AI 서버
-│       ├── app/
-│       │   ├── api/            # API 라우트
-│       │   ├── models/         # ML 모델
-│       │   ├── services/       # 서비스 레이어
-│       │   └── main.py         # 엔트리포인트
-│       ├── requirements.txt
-│       └── Dockerfile
+Clean_Community/
+├── cc/                           # Next.js 웹 앱 (프론트엔드 + API)
+│   ├── src/
+│   │   ├── app/                  # App Router
+│   │   │   ├── (auth)/           # 인증 페이지 그룹
+│   │   │   │   ├── login/
+│   │   │   │   ├── register/
+│   │   │   │   ├── find-id/
+│   │   │   │   └── forgot-password/
+│   │   │   ├── (main)/           # 메인 레이아웃 그룹
+│   │   │   │   ├── admin/        # 관리자 대시보드
+│   │   │   │   ├── board/        # 게시판
+│   │   │   │   ├── chat/         # 채팅
+│   │   │   │   ├── dashboard/    # 홈 대시보드
+│   │   │   │   ├── friends/      # 친구 관리
+│   │   │   │   ├── profile/      # 프로필
+│   │   │   │   ├── settings/     # 설정
+│   │   │   │   ├── privacy/      # 개인정보 처리방침
+│   │   │   │   └── terms/        # 이용약관
+│   │   │   └── api/              # API Routes
+│   │   │       ├── auth/         # 인증 API
+│   │   │       ├── posts/        # 게시글 API
+│   │   │       ├── comments/     # 댓글 API
+│   │   │       ├── chat/         # 채팅 API
+│   │   │       ├── friends/      # 친구 API
+│   │   │       ├── dashboard/    # 대시보드 API
+│   │   │       ├── notifications/# 알림 API
+│   │   │       ├── analyze/      # AI 분석 API
+│   │   │       └── users/        # 사용자 API
+│   │   ├── components/           # React 컴포넌트
+│   │   │   ├── auth/             # 인증 컴포넌트
+│   │   │   ├── board/            # 게시판 컴포넌트
+│   │   │   ├── chat/             # 채팅 컴포넌트
+│   │   │   ├── common/           # 공통 컴포넌트
+│   │   │   ├── dashboard/        # 대시보드 컴포넌트
+│   │   │   ├── friends/          # 친구 컴포넌트
+│   │   │   ├── layout/           # 레이아웃 컴포넌트
+│   │   │   ├── settings/         # 설정 컴포넌트
+│   │   │   └── ui/               # shadcn/ui 컴포넌트
+│   │   ├── hooks/                # 커스텀 훅
+│   │   ├── lib/                  # 유틸리티
+│   │   ├── mocks/                # 목업 데이터
+│   │   ├── providers/            # 프로바이더
+│   │   ├── store/                # Zustand 스토어
+│   │   ├── styles/               # 글로벌 스타일
+│   │   └── types/                # 타입 정의
+│   ├── prisma/
+│   │   └── schema.prisma         # Prisma 스키마
+│   ├── generated/
+│   │   └── prisma/               # 생성된 Prisma 클라이언트
+│   └── package.json
 │
-├── packages/
-│   ├── database/               # Prisma 스키마
-│   │   ├── prisma/
-│   │   │   └── schema.prisma
-│   │   └── package.json
-│   │
-│   └── shared/                 # 공유 타입/유틸
-│       ├── src/
-│       └── package.json
+├── socket_server/                # Express.js 소켓 서버
+│   ├── src/
+│   │   ├── index.ts              # 엔트리포인트
+│   │   └── config.ts             # 설정
+│   └── package.json
 │
-├── docker-compose.yml          # 로컬 개발 환경
-├── turbo.json                  # Turborepo 설정
-├── pnpm-workspace.yaml         # pnpm 워크스페이스
-└── package.json
+├── ai_server/                    # FastAPI AI 서버
+│   ├── app/
+│   │   ├── api/                  # API 라우트
+│   │   ├── models/               # ML 모델
+│   │   ├── services/             # 서비스 레이어
+│   │   └── main.py               # 엔트리포인트
+│   ├── models/                   # 학습된 모델 파일 (.pt)
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+└── docs/                         # 프로젝트 문서
 ```
 
 ---
@@ -79,33 +108,39 @@ emotion-community/
 ### 3.1 저장소 클론
 
 ```bash
-git clone https://github.com/your-org/emotion-community.git
-cd emotion-community
+git clone https://github.com/your-org/Clean_Community.git
+cd Clean_Community
 ```
 
 ### 3.2 의존성 설치
 
 ```bash
-# pnpm 설치 (없는 경우)
-npm install -g pnpm
+# Next.js 웹 앱 (cc 폴더)
+cd cc
+npm install
 
-# 의존성 설치
-pnpm install
+# Socket 서버
+cd ../socket_server
+npm install
+
+# AI 서버
+cd ../ai_server
+pip install -r requirements.txt
 ```
 
 ### 3.3 환경 변수 설정
 
 ```bash
 # 환경 변수 파일 복사
-cp apps/web/.env.example apps/web/.env.local
-cp apps/socket-server/.env.example apps/socket-server/.env
-cp apps/ai-server/.env.example apps/ai-server/.env
+cp cc/.env.example cc/.env.local
+cp socket_server/.env.example socket_server/.env
+cp ai_server/.env.example ai_server/.env
 ```
 
 ### 3.4 환경 변수 (.env.local)
 
 ```env
-# apps/web/.env.local
+# cc/.env.local
 
 # Database
 DATABASE_URL="postgresql://postgres:password@localhost:5432/emotion_community?schema=public"
@@ -141,38 +176,41 @@ S3_BUCKET_NAME=""
 # Docker로 PostgreSQL 실행
 docker-compose up -d postgres
 
-# Prisma 마이그레이션
-pnpm db:migrate
+# cc 폴더에서 Prisma 마이그레이션
+cd cc
+npx prisma migrate dev
 
 # Prisma 클라이언트 생성
-pnpm db:generate
+npx prisma generate
 
 # (선택) 시드 데이터
-pnpm db:seed
+npx prisma db seed
 ```
 
 ---
 
 ## 4. 개발 서버 실행
 
-### 4.1 전체 실행
+### 4.1 Next.js 웹 앱 (cc)
 
 ```bash
-# 모든 앱 동시 실행
-pnpm dev
+cd cc
+npm run dev
 ```
 
 ### 4.2 개별 실행
 
 ```bash
 # Next.js 웹 앱
-pnpm --filter web dev
+cd cc
+npm run dev
 
 # Socket 서버
-pnpm --filter socket-server dev
+cd socket_server
+npm run dev
 
 # AI 서버 (Python)
-cd apps/ai-server
+cd ai_server
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -186,7 +224,7 @@ uvicorn app.main:app --reload --port 8000
 docker-compose up -d
 
 # 로그 확인
-docker-compose logs -f web
+docker-compose logs -f
 ```
 
 ---
@@ -217,8 +255,8 @@ services:
 
   web:
     build:
-      context: .
-      dockerfile: apps/web/Dockerfile
+      context: ./cc
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
@@ -229,8 +267,8 @@ services:
 
   socket-server:
     build:
-      context: .
-      dockerfile: apps/socket-server/Dockerfile
+      context: ./socket_server
+      dockerfile: Dockerfile
     ports:
       - "4000:4000"
     environment:
@@ -240,7 +278,7 @@ services:
 
   ai-server:
     build:
-      context: apps/ai-server
+      context: ./ai_server
     ports:
       - "8000:8000"
 
@@ -253,20 +291,36 @@ volumes:
 ## 6. 유용한 스크립트
 
 ```json
-// package.json (root)
+// cc/package.json
 {
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "db:migrate": "pnpm --filter database prisma migrate dev",
-    "db:generate": "pnpm --filter database prisma generate",
-    "db:seed": "pnpm --filter database prisma db seed",
-    "db:studio": "pnpm --filter database prisma studio",
-    "format": "prettier --write ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,json}\""
   }
 }
+```
+
+### Prisma 명령어
+
+```bash
+# cc 폴더에서 실행
+cd cc
+
+# 마이그레이션 생성 및 적용
+npx prisma migrate dev --name migration_name
+
+# 클라이언트 생성
+npx prisma generate
+
+# Prisma Studio (DB GUI)
+npx prisma studio
+
+# DB 리셋
+npx prisma migrate reset
 ```
 
 ---
@@ -288,11 +342,12 @@ kill -9 <PID>
 ### 7.2 Prisma 오류
 
 ```bash
-# 클라이언트 재생성
-pnpm db:generate
+# cc 폴더에서 클라이언트 재생성
+cd cc
+npx prisma generate
 
 # 마이그레이션 리셋
-pnpm --filter database prisma migrate reset
+npx prisma migrate reset
 ```
 
 ### 7.3 Node 버전 문제
@@ -305,4 +360,4 @@ nvm use 20
 
 ---
 
-**최종 업데이트**: 2026년 1월 29일
+**최종 업데이트**: 2026년 2월 2일

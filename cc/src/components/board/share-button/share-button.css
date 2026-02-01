@@ -1,0 +1,13 @@
+/* ===========================================
+   Share Button Styles
+   =========================================== */
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.share-button__menu {
+  min-width: 180px;
+}

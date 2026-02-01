@@ -1,0 +1,138 @@
+/* app/(main)/admin/users/users.css */
+
+.admin-users__summary {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.admin-users__summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+.admin-users__summary-item--success {
+  background-color: hsl(142 76% 36% / 0.15);
+  color: hsl(142 76% 36%);
+}
+
+.admin-users__summary-item--danger {
+  background-color: hsl(0 84% 60% / 0.15);
+  color: hsl(0 84% 55%);
+}
+
+.admin-users__user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-users__nickname {
+  font-weight: 500;
+}
+
+.admin-users__email {
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.admin-users__role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.admin-users__role--admin {
+  background-color: hsl(var(--primary) / 0.15);
+  color: hsl(var(--primary));
+}
+
+.admin-users__role--user {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.admin-users__date {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 사용자 상세 모달 */
+.admin-user-detail-modal {
+  max-width: 500px;
+}
+
+.admin-user-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.admin-user-detail__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-user-detail__info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.admin-user-detail__badges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-user-detail__grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin-user-detail__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.admin-user-detail__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: hsl(var(--muted) / 0.3);
+  border-radius: 0.75rem;
+}
+
+.admin-user-detail__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.admin-user-detail__stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.admin-user-detail__stat-value--warning {
+  color: hsl(0 84% 55%);
+}
+
+.admin-user-detail__stat-label {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}

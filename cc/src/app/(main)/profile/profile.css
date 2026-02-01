@@ -1,0 +1,194 @@
+/* app/(main)/profile/profile.css */
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 페이지 헤더 */
+.profile-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-page__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* 메인 프로필 카드 */
+.profile-page__main-card {
+  overflow: hidden;
+}
+
+.profile-page__main-content {
+  padding: 2rem;
+}
+
+/* 프로필 헤더 */
+.profile-page__profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+@media (max-width: 639px) {
+  .profile-page__profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.profile-page__profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-page__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.profile-page__nickname {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.dark .profile-page__nickname {
+  color: hsl(40 15% 65%);
+}
+
+.profile-page__bio {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}
+
+/* 프로필 상세 정보 */
+.profile-page__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .profile-page__details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.profile-page__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg,
+    hsl(var(--muted) / 0.3) 0%,
+    hsl(var(--muted) / 0.1) 100%);
+  border-radius: 0.75rem;
+  transition: all 200ms ease;
+}
+
+.profile-page__detail-item:hover {
+  background: linear-gradient(135deg,
+    hsl(var(--muted) / 0.5) 0%,
+    hsl(var(--muted) / 0.2) 100%);
+}
+
+.profile-page__detail-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,
+    hsl(280 55% 55% / 0.15) 0%,
+    hsl(200 55% 55% / 0.1) 100%);
+  color: hsl(280 55% 55%);
+  border-radius: 0.625rem;
+  flex-shrink: 0;
+}
+
+.profile-page__detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-page__detail-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dark .profile-page__detail-label {
+  color: hsl(40 15% 60%);
+}
+
+.profile-page__detail-value {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  word-break: break-all;
+}
+
+.profile-page__detail-value--active {
+  color: hsl(142 76% 40%);
+  font-weight: 600;
+}
+
+/* 프로필 수정 폼 */
+.profile-page__edit-card {
+  animation: slideIn 200ms ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-page__edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.profile-page__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 639px) {
+  .profile-page__actions {
+    flex-direction: column-reverse;
+  }
+
+  .profile-page__actions button {
+    width: 100%;
+  }
+}
+

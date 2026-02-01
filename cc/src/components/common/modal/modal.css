@@ -1,0 +1,174 @@
+/* ===== 오버레이 ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+  animation: modal-overlay-show 200ms ease-out;
+}
+
+@keyframes modal-overlay-show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== 모달 콘텐츠 ===== */
+.modal-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 51;
+  width: 100%;
+  max-width: 28rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  animation: modal-content-show 200ms ease-out;
+}
+
+@keyframes modal-content-show {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* ===== 모바일 최적화 ===== */
+@media (max-width: 640px) {
+  .modal-content {
+    max-width: calc(100% - 2rem);
+    padding: 1.25rem;
+  }
+
+  /* 하단 시트 스타일 옵션 */
+  .modal-content--bottom-sheet {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 80vh;
+    animation: modal-slide-up 300ms ease-out;
+  }
+}
+
+@keyframes modal-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== 모달 헤더 ===== */
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal-header__icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-header__icon--warning {
+  background-color: rgb(254 243 199); /* warning-light */
+  color: rgb(245 158 11); /* warning */
+}
+
+.modal-header__icon--danger {
+  background-color: rgb(254 226 226); /* error-light */
+  color: rgb(239 68 68); /* error */
+}
+
+.modal-header__icon--success {
+  background-color: rgb(220 252 231); /* success-light */
+  color: rgb(34 197 94); /* success */
+}
+
+.modal-header__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.modal-header__description {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ===== 모달 푸터 ===== */
+.modal-footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .modal-footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .modal-footer > * {
+    flex: 0 0 auto;
+  }
+}
+
+/* ===== 닫기 버튼 ===== */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  color: hsl(var(--muted-foreground));
+  transition: all 150ms ease-out;
+}
+
+.modal-close:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+/* ===== 다크 모드 ===== */
+.dark .modal-header__icon--warning {
+  background-color: rgb(120 53 15);
+  color: rgb(253 224 71);
+}
+
+.dark .modal-header__icon--danger {
+  background-color: rgb(127 29 29);
+  color: rgb(254 202 202);
+}
+
+.dark .modal-header__icon--success {
+  background-color: rgb(20 83 45);
+  color: rgb(187 247 208);
+}

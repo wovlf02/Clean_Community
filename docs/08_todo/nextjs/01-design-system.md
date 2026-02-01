@@ -140,12 +140,12 @@ const config: Config = {
 export default config;
 ```
 
-- [ ] tailwind.config.ts 생성/수정
-- [ ] 브랜드 컬러 팔레트 설정
-- [ ] 시맨틱 컬러 설정
-- [ ] 커스텀 폰트 크기 설정
-- [ ] 커스텀 애니메이션 설정
-- [ ] Typography 플러그인 적용
+- [x] tailwind.config.ts 생성/수정
+- [x] 브랜드 컬러 팔레트 설정
+- [x] 시맨틱 컬러 설정
+- [x] 커스텀 폰트 크기 설정
+- [x] 커스텀 애니메이션 설정
+- [x] Typography 플러그인 적용
 
 ---
 
@@ -283,12 +283,12 @@ body {
 }
 ```
 
-- [ ] CSS 변수 정의 (라이트 모드)
-- [ ] CSS 변수 정의 (다크 모드)
-- [ ] 기본 스타일 정의
-- [ ] 스크롤바 스타일
-- [ ] 포커스 스타일
-- [ ] 선택 스타일
+- [x] CSS 변수 정의 (라이트 모드)
+- [x] CSS 변수 정의 (다크 모드)
+- [x] 기본 스타일 정의
+- [x] 스크롤바 스타일
+- [x] 포커스 스타일
+- [x] 선택 스타일
 
 ---
 
@@ -318,9 +318,9 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 }
 ```
 
-- [ ] ThemeProvider 설정 확인
-- [ ] `attribute="class"` 설정 (Tailwind dark mode)
-- [ ] `enableSystem` 설정 (시스템 테마 감지)
+- [x] ThemeProvider 설정 확인
+- [x] `attribute="class"` 설정 (Tailwind dark mode)
+- [x] `enableSystem` 설정 (시스템 테마 감지)
 
 #### 3.2 다크 모드 토글 훅
 
@@ -355,8 +355,8 @@ export function useThemeToggle() {
 }
 ```
 
-- [ ] useThemeToggle 훅 생성
-- [ ] 마운트 상태 처리 (hydration 이슈 방지)
+- [x] useThemeToggle 훅 생성
+- [x] 마운트 상태 처리 (hydration 이슈 방지)
 
 ---
 
@@ -402,10 +402,10 @@ export default function RootLayout({
 }
 ```
 
-- [ ] 폰트 파일 다운로드 또는 CDN 설정
-- [ ] next/font 또는 CSS import 적용
-- [ ] CSS 변수 설정 (`--font-pretendard`)
-- [ ] Tailwind fontFamily에 연결
+- [x] 폰트 파일 다운로드 또는 CDN 설정
+- [x] next/font 또는 CSS import 적용
+- [x] CSS 변수 설정 (`--font-pretendard`)
+- [x] Tailwind fontFamily에 연결
 
 ---
 
@@ -466,10 +466,10 @@ export const badgeStyles = {
 };
 ```
 
-- [ ] 버튼 스타일 상수 정의
-- [ ] 입력 필드 스타일 상수 정의
-- [ ] 카드 스타일 상수 정의
-- [ ] 배지 스타일 상수 정의
+- [x] 버튼 스타일 상수 정의
+- [x] 입력 필드 스타일 상수 정의
+- [x] 카드 스타일 상수 정의
+- [x] 배지 스타일 상수 정의
 
 ---
 
@@ -525,8 +525,8 @@ export function useIsDesktop() {
 }
 ```
 
-- [ ] useMediaQuery 훅 생성
-- [ ] useIsMobile, useIsTablet, useIsDesktop 훅 생성
+- [x] useMediaQuery 훅 생성
+- [x] useIsMobile, useIsTablet, useIsDesktop 훅 생성
 
 ---
 
@@ -553,13 +553,13 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] Tailwind CSS 테마 커스터마이징 완료
-- [ ] CSS 변수 정의 완료 (라이트/다크 모드)
-- [ ] 다크 모드 토글 동작 확인
-- [ ] Pretendard 폰트 적용 확인
-- [ ] 스타일 유틸리티 정의 완료
-- [ ] 반응형 훅 생성 완료
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] Tailwind CSS 테마 커스터마이징 완료
+- [x] CSS 변수 정의 완료 (라이트/다크 모드)
+- [x] 다크 모드 토글 동작 확인
+- [x] Pretendard 폰트 적용 확인
+- [x] 스타일 유틸리티 정의 완료
+- [x] 반응형 훅 생성 완료
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

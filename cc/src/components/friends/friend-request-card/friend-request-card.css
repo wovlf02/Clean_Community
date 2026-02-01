@@ -1,0 +1,151 @@
+/* components/friends/friend-request-card/friend-request-card.css */
+
+.friend-request-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 0.875rem;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(135deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--muted) / 0.2) 100%);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.friend-request-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    hsl(280 55% 60%) 0%,
+    hsl(350 55% 60%) 50%,
+    hsl(200 60% 55%) 100%);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.friend-request-card:hover {
+  border-color: hsl(var(--border) / 0.8);
+  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.12);
+  transform: translateY(-2px);
+}
+
+.friend-request-card:hover::before {
+  opacity: 1;
+}
+
+.friend-request-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.friend-request-card__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.friend-request-card__time {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+.dark .friend-request-card__time {
+  color: hsl(40 15% 62%);
+}
+
+.friend-request-card__actions {
+  display: flex;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.friend-request-card__actions button {
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+/* 수락 버튼 스타일 */
+.friend-request-card__actions button:first-child {
+  background: linear-gradient(135deg,
+    hsl(142 76% 40%) 0%,
+    hsl(142 76% 50%) 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 8px hsl(142 76% 40% / 0.3);
+}
+
+.friend-request-card__actions button:first-child:hover {
+  background: linear-gradient(135deg,
+    hsl(142 76% 45%) 0%,
+    hsl(142 76% 55%) 100%);
+  box-shadow: 0 4px 12px hsl(142 76% 40% / 0.4);
+  transform: translateY(-2px);
+}
+
+.friend-request-card__actions button:first-child:active {
+  transform: translateY(0);
+}
+
+/* 거절 버튼 스타일 */
+.friend-request-card__actions button:last-child {
+  border: 2px solid hsl(var(--border));
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+}
+
+.friend-request-card__actions button:last-child:hover {
+  border-color: hsl(0 72% 51% / 0.5);
+  background: hsl(0 72% 51% / 0.08);
+  color: hsl(0 72% 45%);
+  transform: translateY(-2px);
+}
+
+.friend-request-card__actions button:last-child:active {
+  transform: translateY(0);
+}
+
+/* 다크모드 개선 */
+.dark .friend-request-card {
+  background: linear-gradient(135deg,
+    hsl(var(--card)) 0%,
+    hsl(var(--muted) / 0.15) 100%);
+}
+
+.dark .friend-request-card__actions button:last-child {
+  color: hsl(40 15% 70%);
+}
+
+.dark .friend-request-card__actions button:last-child:hover {
+  color: hsl(0 72% 60%);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 639px) {
+  .friend-request-card {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .friend-request-card__actions {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .friend-request-card__actions button {
+    flex: 1;
+  }
+}
+

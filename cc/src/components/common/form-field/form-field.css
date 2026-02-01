@@ -1,0 +1,40 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.form-field__required {
+  margin-left: 0.25rem;
+  color: hsl(var(--destructive));
+}
+
+.form-field__description {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.form-field__error {
+  font-size: 0.75rem;
+  color: hsl(var(--destructive));
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* 에러 시 흔들림 애니메이션 (UX 피드백) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.form-field--error .form-field__error {
+  animation: shake 0.3s ease-in-out;
+}

@@ -1,0 +1,88 @@
+/* app/(main)/friends/friends.css */
+
+.friends-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.friends-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friends-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.friends-page__search {
+  max-width: 300px;
+}
+
+.friends-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.friends-page__requests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Tabs 스타일 개선 */
+.friends-page [role="tablist"] {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background-color: hsl(var(--muted));
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.friends-page [role="tab"] {
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.friends-page [role="tab"]:hover {
+  color: hsl(var(--foreground));
+}
+
+.friends-page [role="tab"][data-state="active"] {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+/* 다크모드 가독성 향상 */
+.dark .friends-page [role="tab"] {
+  color: hsl(40 15% 65%);
+}
+
+.dark .friends-page [role="tab"]:hover {
+  color: hsl(40 15% 90%);
+}
+
+.dark .friends-page [role="tab"][data-state="active"] {
+  color: hsl(40 15% 95%);
+}
+
+/* 친구 추가 버튼 스타일 개선 */
+.friends-page__header button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+

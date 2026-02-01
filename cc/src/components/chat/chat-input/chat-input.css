@@ -1,0 +1,188 @@
+/* components/chat/chat-input/chat-input.css */
+
+.chat-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+/* 파일 미리보기 */
+.chat-input__preview {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.chat-input__preview-image {
+  position: relative;
+  display: inline-block;
+}
+
+.chat-input__preview-image img {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.chat-input__preview-file {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: hsl(var(--muted));
+  border-radius: 0.5rem;
+  max-width: 300px;
+}
+
+.chat-input__preview-file-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-input__preview-file-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-input__preview-file-size {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.chat-input__preview-remove {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--destructive));
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.chat-input__preview-file .chat-input__preview-remove {
+  position: static;
+}
+
+.chat-input {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.chat-input__textarea {
+  flex: 1;
+  max-height: 120px;
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  resize: none;
+  background-color: hsl(var(--background));
+  transition: border-color 150ms ease-out;
+  font-family: inherit;
+}
+
+.chat-input__textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+}
+
+/* 이모지 래퍼 */
+.chat-input__emoji-wrapper {
+  position: relative;
+}
+
+/* 이모지 피커 */
+.chat-input__emoji-picker {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  z-index: 50;
+}
+
+.chat-input__emoji-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
+}
+
+.chat-input__emoji-btn:hover {
+  background-color: hsl(var(--accent));
+}
+
+/* 파일 입력 숨김 */
+.chat-input__file-input {
+  display: none;
+}
+
+.chat-input__action-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: hsl(var(--muted-foreground));
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.chat-input__action-btn:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--foreground));
+}
+
+.chat-input__send-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+}
+
+.chat-input__send-btn:hover {
+  opacity: 0.9;
+}
+
+.chat-input__send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -129,9 +129,9 @@ export const useAuthStore = create<AuthState>()(
 );
 ```
 
-- [ ] Mock 사용자 데이터 생성
-- [ ] Auth Store 생성
-- [ ] 로그인/로그아웃/회원가입 액션
+- [x] Mock 사용자 데이터 생성
+- [x] Auth Store 생성
+- [x] 로그인/로그아웃/회원가입 액션
 
 ---
 
@@ -395,12 +395,12 @@ export default function LoginPage() {
 }
 ```
 
-- [ ] login.css 파일 생성
-- [ ] 로그인 페이지 컴포넌트 생성
-- [ ] 폼 유효성 검사 (react-hook-form + zod)
-- [ ] 비밀번호 보기/숨기기 토글
-- [ ] 소셜 로그인 UI (원형 아이콘)
-- [ ] 로딩 상태 처리
+- [x] login.css 파일 생성
+- [x] 로그인 페이지 컴포넌트 생성
+- [x] 폼 유효성 검사 (react-hook-form + zod)
+- [x] 비밀번호 보기/숨기기 토글
+- [x] 소셜 로그인 UI (원형 아이콘)
+- [x] 로딩 상태 처리
 
 ---
 
@@ -517,30 +517,30 @@ export default function RegisterPage() {
 }
 ```
 
-- [ ] register.css 파일 생성
-- [ ] 스텝 인디케이터 UI
-- [ ] StepBasicInfo 컴포넌트 (아이디, 비밀번호, 이메일)
-- [ ] StepEmailVerify 컴포넌트 (이메일 인증번호 6자리)
-- [ ] StepProfile 컴포넌트 (닉네임, 프로필 이미지)
-- [ ] StepTerms 컴포넌트 (약관 동의)
+- [x] register.css 파일 생성
+- [x] 스텝 인디케이터 UI
+- [x] StepBasicInfo 컴포넌트 (아이디, 비밀번호, 이메일)
+- [x] StepEmailVerify 컴포넌트 (이메일 인증번호 6자리)
+- [x] StepProfile 컴포넌트 (닉네임, 프로필 이미지)
+- [x] StepTerms 컴포넌트 (약관 동의)
 
 ---
 
 ### 4. 아이디 찾기 페이지 (/find-id)
 
-- [ ] find-id.css 파일 생성
-- [ ] 이메일 입력 폼
-- [ ] 인증번호 발송 및 확인
-- [ ] 아이디 표시 결과 화면
+- [x] find-id.css 파일 생성
+- [x] 이메일 입력 폼
+- [x] 인증번호 발송 및 확인
+- [x] 아이디 표시 결과 화면
 
 ---
 
 ### 5. 비밀번호 재설정 페이지 (/forgot-password)
 
-- [ ] forgot-password.css 파일 생성
-- [ ] 이메일 입력 폼
-- [ ] 인증번호 6자리 입력
-- [ ] 새 비밀번호 설정 폼
+- [x] forgot-password.css 파일 생성
+- [x] 이메일 입력 폼
+- [x] 인증번호 6자리 입력
+- [x] 새 비밀번호 설정 폼
 
 ---
 
@@ -578,15 +578,15 @@ cc/src/
 
 ## ✅ 완료 조건
 
-- [ ] Mock 사용자 데이터 생성
-- [ ] Auth Store 구현
-- [ ] 로그인 페이지 완료
-- [ ] 회원가입 페이지 (4단계 스텝) 완료
-- [ ] 아이디 찾기 페이지 완료
-- [ ] 비밀번호 재설정 페이지 완료
-- [ ] 폼 유효성 검사 동작 확인
-- [ ] 소셜 로그인 UI 완료 (기능은 백엔드 연동 시)
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] Mock 사용자 데이터 생성
+- [x] Auth Store 구현
+- [x] 로그인 페이지 완료
+- [x] 회원가입 페이지 (4단계 스텝) 완료
+- [x] 아이디 찾기 페이지 완료
+- [x] 비밀번호 재설정 페이지 완료
+- [x] 폼 유효성 검사 동작 확인
+- [x] 소셜 로그인 UI 완료 (기능은 백엔드 연동 시)
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

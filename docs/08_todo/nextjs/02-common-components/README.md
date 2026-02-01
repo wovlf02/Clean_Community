@@ -112,29 +112,29 @@ components/
 ## ✅ 전체 체크리스트
 
 ### Setup (01-setup.md)
-- [ ] shadcn/ui 기본 컴포넌트 설치
-- [ ] 컴포넌트 폴더 구조 설정
+- [x] shadcn/ui 기본 컴포넌트 설치
+- [x] 컴포넌트 폴더 구조 설정
 
 ### Button & Input (02-button-input.md)
-- [ ] Button 컴포넌트 (CSS 분리)
-- [ ] Input 컴포넌트 (CSS 분리)
-- [ ] FormField 래퍼 컴포넌트
+- [x] Button 컴포넌트 (CSS 분리)
+- [x] Input 컴포넌트 (CSS 분리)
+- [x] FormField 래퍼 컴포넌트
 
 ### Card & Modal (03-card-modal.md)
-- [ ] Card 컴포넌트 (CSS 분리)
-- [ ] ConfirmDialog 컴포넌트
-- [ ] SentimentWarningModal 컴포넌트
+- [x] Card 컴포넌트 (CSS 분리)
+- [x] ConfirmDialog 컴포넌트
+- [x] SentimentWarningModal 컴포넌트
 
 ### Feedback (04-feedback.md)
-- [ ] Toast/Sonner 설정
-- [ ] Skeleton 로딩 컴포넌트
-- [ ] Progress 컴포넌트
+- [x] Toast/Sonner 설정
+- [x] Skeleton 로딩 컴포넌트
+- [x] Progress 컴포넌트
 
 ### Data Display (05-data-display.md)
-- [ ] UserAvatar 컴포넌트
-- [ ] Badge 컴포넌트
-- [ ] Pagination 컴포넌트
-- [ ] EmptyState 컴포넌트
+- [x] UserAvatar 컴포넌트
+- [x] Badge 컴포넌트
+- [x] Pagination 컴포넌트
+- [x] EmptyState 컴포넌트
 
 ---
 
@@ -200,11 +200,11 @@ cc/src/components/
 
 ## ✅ 완료 조건
 
-- [ ] 모든 하위 문서 작업 완료
-- [ ] 컴포넌트별 CSS 파일 분리 완료
-- [ ] UX 피드백 (호버, 포커스, 애니메이션) 구현
-- [ ] 접근성 속성 (aria-*, role) 적용
-- [ ] 프로젝트 빌드 성공 (`npm run build`)
+- [x] 모든 하위 문서 작업 완료
+- [x] 컴포넌트별 CSS 파일 분리 완료
+- [x] UX 피드백 (호버, 포커스, 애니메이션) 구현
+- [x] 접근성 속성 (aria-*, role) 적용
+- [x] 프로젝트 빌드 성공 (`npm run build`)
 
 ---
 

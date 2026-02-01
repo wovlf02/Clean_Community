@@ -75,7 +75,7 @@ export interface ServerToClientEvents {
   typing: (data: { userId: string; nickname: string; isTyping: boolean }) => void;
   user_joined: (data: { userId: string; nickname: string }) => void;
   user_left: (data: { userId: string; nickname: string }) => void;
-  message_read: (data: { userId: string; messageId: string }) => void;
+  message_read: (data: { userId: string; messageId: string; unreadCount?: number }) => void;
 
   // Notification events
   notification: (notification: Notification) => void;

@@ -1,0 +1,356 @@
+/* components/layout/header/header.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background) / 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem; /* 64px */
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* 좌측 영역 - 로고 + 네비게이션 */
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* 로고 */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+.header__logo:hover {
+  opacity: 0.9;
+}
+
+.header__logo-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.header__logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 네비게이션 - 데스크톱에서 숨김 (사이드바와 중복 제거) */
+.header__nav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* 태블릿에서만 헤더 네비게이션 표시 (사이드바가 아이콘만 표시할 때) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__nav {
+    display: flex;
+  }
+}
+
+.header__nav-item {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  border-radius: 0.5rem;
+  transition: all 150ms ease-out;
+}
+
+.header__nav-item:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+.header__nav-item--active {
+  color: hsl(var(--primary));
+  background-color: hsl(var(--accent));
+}
+
+/* 우측 액션 영역 */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* 검색 드롭다운 */
+.header__search-wrapper {
+  position: relative;
+}
+
+.header__search-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 320px;
+  padding: 1rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+.header__search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__search-input {
+  flex: 1;
+}
+
+/* 알림 */
+.header__notification {
+  position: relative;
+}
+
+.header__notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 1rem;
+  height: 1rem;
+  padding: 0 0.25rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(239 68 68);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__notification-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 320px;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+}
+
+.header__notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+  font-weight: 600;
+}
+
+.header__notification-mark-read {
+  font-size: 0.75rem;
+  color: hsl(var(--primary));
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__notification-mark-read:hover {
+  text-decoration: underline;
+}
+
+.header__notification-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.header__notification-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
+}
+
+.header__notification-item:hover {
+  background-color: hsl(var(--accent));
+}
+
+.header__notification-item--unread {
+  background-color: hsl(var(--primary) / 0.05);
+}
+
+.header__notification-item--unread::before {
+  content: '●';
+  color: hsl(var(--primary));
+  font-size: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.header__notification-message {
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.header__notification-time {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.header__notification-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+.header__notification-footer {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(var(--primary));
+  border-top: 1px solid hsl(var(--border));
+}
+
+.header__notification-footer:hover {
+  background-color: hsl(var(--accent));
+}
+
+/* 프로필 드롭다운 */
+.header__profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  padding-right: 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
+}
+
+.header__profile:hover {
+  background-color: hsl(var(--accent));
+}
+
+.header__profile-name {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .header__profile-name {
+    display: block;
+  }
+}
+
+.header__profile-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 240px;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+}
+
+.header__profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.header__profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__profile-detail-name {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.header__profile-email {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.header__profile-divider {
+  height: 1px;
+  background-color: hsl(var(--border));
+}
+
+.header__profile-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+}
+
+.header__profile-item:hover {
+  background-color: hsl(var(--accent));
+}
+
+.header__profile-item--logout {
+  color: hsl(var(--destructive));
+}
+
+.header__profile-item--admin {
+  color: hsl(var(--primary));
+}
+
+.header__profile-item--admin:hover {
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+
+/* 모바일 높이 조정 */
+@media (max-width: 767px) {
+  .header__container {
+    height: 3.5rem; /* 56px */
+    padding: 0 1rem;
+  }
+
+  .header__search-dropdown {
+    width: 280px;
+    right: -50px;
+  }
+
+  .header__notification-dropdown {
+    width: 280px;
+    right: -50px;
+  }
+}
