@@ -16,3 +16,7 @@ httpx>=0.24.0
 
 # 유틸리티
 python-dotenv>=1.0.0
+
+# 추가 의존성
+sentencepiece>=0.1.99  # 일부 토크나이저에서 필요
+tokenizers>=0.13.0  # HuggingFace tokenizers

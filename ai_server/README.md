@@ -16,8 +16,12 @@
 ```bash
 cd ai_server
 python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# venv\Scripts\activate   # Windows
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
 ```
 
 ### 2. 의존성 설치
@@ -33,23 +37,151 @@ pip install -r requirements-dev.txt
 ### 3. 환경 변수 설정
 
 ```bash
+# Windows
+copy .env.example .env
+
+# macOS/Linux
 cp .env.example .env
+
 # .env 파일을 편집하여 설정 수정
 ```
 
 ### 4. 모델 파일 준비
 
-모델 파일은 `ai-model/models/` 폴더에 위치해야 합니다:
+모델 파일은 `ai_server/models/` 폴더에 위치해야 합니다:
 - `kcelectra.pt`
 - `soongsil.pt`
 - `roberta_base.pt`
 
-### 5. 서버 실행
+## 🏋️ 모델 학습 가이드
+
+### 학습 환경 준비
+
+모델 학습을 위해서는 별도의 학습 프로젝트(`ai-model/`)가 필요합니다.
 
 ```bash
-# 프로젝트 루트에서 실행
-cd ..  # Clean_Community 루트로 이동
+# ai-model 프로젝트 디렉토리로 이동
+cd ai-model
+
+# 학습용 의존성 설치
+pip install -r requirements.txt
+
+# 데이터셋 준비 (data/ 폴더에 배치)
+# - train.csv
+# - valid.csv
+# - test.csv
+```
+
+### 단일 모델 학습
+
+```bash
+# KcELECTRA 모델 학습
+python src/train.py --model kcelectra --epochs 5 --batch-size 32
+
+# SoongsilBERT 모델 학습
+python src/train.py --model soongsil --epochs 5 --batch-size 32
+
+# RoBERTa-Base 모델 학습
+python src/train.py --model roberta --epochs 5 --batch-size 32
+```
+
+### 학습된 모델 파일 배치
+
+학습이 완료되면 생성된 `.pt` 파일을 `ai_server/models/` 폴더로 복사합니다:
+
+```bash
+# Windows
+copy ai-model\models\kcelectra.pt ai_server\models\
+copy ai-model\models\soongsil.pt ai_server\models\
+copy ai-model\models\roberta_base.pt ai_server\models\
+
+# macOS/Linux
+cp ai-model/models/kcelectra.pt ai_server/models/
+cp ai-model/models/soongsil.pt ai_server/models/
+cp ai-model/models/roberta_base.pt ai_server/models/
+```
+
+### 모델 평가
+
+```bash
+# 단일 모델 평가
+python src/evaluate.py --model kcelectra
+
+# 앙상블 모델 평가
+python src/ensemble_evaluate.py
+```
+
+## 🖥️ FastAPI 서버 실행 가이드
+
+### 방법 1: run_server.py 스크립트 사용 (권장)
+
+```bash
+# Clean_Community 프로젝트 루트에서 실행
+python ai_server/run_server.py
+```
+
+### 방법 2: uvicorn 직접 실행
+
+```bash
+# Clean_Community 프로젝트 루트에서 실행
 uvicorn ai_server.app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### 방법 3: 배포 환경에서 실행 (프로덕션)
+
+```bash
+# 리로드 비활성화, 워커 프로세스 사용
+uvicorn ai_server.app.main:app --host 0.0.0.0 --port 8000 --workers 4
+```
+
+### 방법 4: Docker 사용
+
+```bash
+# Docker 이미지 빌드
+docker build -t ai-server:latest ./ai_server
+
+# Docker 컨테이너 실행
+docker run -d -p 8000:8000 --name ai-server ai-server:latest
+```
+
+### 서버 동작 확인
+
+서버가 실행되면 다음 URL에서 확인할 수 있습니다:
+
+- **API 문서 (Swagger UI)**: http://localhost:8000/docs
+- **API 문서 (ReDoc)**: http://localhost:8000/redoc
+- **헬스체크**: http://localhost:8000/health
+- **루트 엔드포인트**: http://localhost:8000/
+
+### API 테스트 예시
+
+```bash
+# 헬스체크
+curl http://localhost:8000/health
+
+# 단일 텍스트 분석
+curl -X POST "http://localhost:8000/analyze" \
+  -H "Content-Type: application/json" \
+  -d "{\"text\": \"테스트 문장입니다\"}"
+
+# 배치 분석
+curl -X POST "http://localhost:8000/analyze/batch" \
+  -H "Content-Type: application/json" \
+  -d "{\"texts\": [\"문장1\", \"문장2\", \"문장3\"]}"
+```
+
+### Python에서 API 호출
+
+```python
+import requests
+
+# 단일 텍스트 분석
+response = requests.post(
+    "http://localhost:8000/analyze",
+    json={"text": "테스트 문장입니다"}
+)
+result = response.json()
+print(result)
 ```
 
 ## 📁 프로젝트 구조
@@ -107,6 +239,66 @@ ai_server/
 | `/analyze/batch` | POST | 배치 텍스트 분석 |
 | `/docs` | GET | Swagger UI 문서 |
 | `/redoc` | GET | ReDoc 문서 |
+
+## 🔧 환경 변수 설정
+
+`.env` 파일에서 다음 설정을 변경할 수 있습니다:
+
+```env
+# 서버 설정
+HOST=0.0.0.0
+PORT=8000
+DEBUG=False
+
+# 모델 설정
+MODEL_PATH=./models
+KCELECTRA_MODEL=beomi/KcELECTRA-base
+SOONGSIL_MODEL=snunlp/KR-SBERT-V40K-klueNLI-augSTS
+ROBERTA_MODEL=klue/roberta-base
+
+# 앙상블 가중치
+KCELECTRA_WEIGHT=0.35
+SOONGSIL_WEIGHT=0.33
+ROBERTA_WEIGHT=0.32
+
+# 추론 설정
+MAX_LENGTH=128
+BATCH_SIZE=32
+
+# CORS 설정
+CORS_ORIGINS=http://localhost:3000
+
+# 로깅
+LOG_LEVEL=INFO
+```
+
+## 🐛 트러블슈팅
+
+### 모델 로드 실패
+
+```bash
+# 모델 파일 경로 확인
+ls ai_server/models/
+
+# 필요한 파일:
+# - kcelectra.pt
+# - soongsil.pt
+# - roberta_base.pt
+```
+
+### CUDA 메모리 부족
+
+```python
+# config.py에서 배치 크기 줄이기
+BATCH_SIZE=16  # 기본값 32에서 줄임
+```
+
+### 포트 충돌
+
+```bash
+# 다른 포트로 실행
+uvicorn ai_server.app.main:app --port 8001
+```
 
 ## 🔗 관련 문서
 
