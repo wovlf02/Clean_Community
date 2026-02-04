@@ -12,6 +12,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-20T09:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'msg-2',
@@ -22,6 +23,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-20T09:05:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'msg-3',
@@ -32,6 +34,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: false,
     createdAt: '2024-03-20T09:10:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'msg-4',
@@ -42,6 +45,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: false,
     createdAt: '2024-03-20T09:11:00Z',
+    sentimentPredictions: { '여성/가족': 0.02, '악플/욕설': 0.08 },
   },
 
   // Room 2: user-1 <-> user-3
@@ -54,6 +58,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-19T14:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'msg-6',
@@ -64,6 +69,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-19T14:30:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
 
   // Room 3: 개발 스터디 그룹
@@ -76,6 +82,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-20T10:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'msg-8',
@@ -86,6 +93,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-20T10:05:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'msg-9',
@@ -96,6 +104,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: false,
     createdAt: '2024-03-20T10:10:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'msg-10',
@@ -106,6 +115,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: false,
     createdAt: '2024-03-20T10:12:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
 
   // Room 4: user-1 <-> user-6
@@ -118,6 +128,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: true,
     createdAt: '2024-03-18T16:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
 
   // Room 5: Next.js 마스터
@@ -130,6 +141,7 @@ export const messages: Message[] = [
     type: 'text',
     isRead: false,
     createdAt: '2024-03-20T11:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.25, '악플/욕설': 0.40 },
   },
   {
     id: 'msg-13',
@@ -140,6 +152,7 @@ export const messages: Message[] = [
     type: 'emoji',
     isRead: false,
     createdAt: '2024-03-20T11:05:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'msg-14',

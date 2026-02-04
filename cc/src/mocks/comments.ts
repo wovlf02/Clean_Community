@@ -10,6 +10,7 @@ export const comments: Comment[] = [
     content: '정말 유용한 글이네요! App Router 이해하는데 도움이 많이 됐습니다.',
     isEdited: false,
     createdAt: '2024-03-20T10:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'comment-2',
@@ -19,6 +20,7 @@ export const comments: Comment[] = [
     content: '저도 App Router로 마이그레이션 고민 중인데, 좋은 가이드가 되었어요!',
     isEdited: false,
     createdAt: '2024-03-20T11:30:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'comment-3',
@@ -28,6 +30,7 @@ export const comments: Comment[] = [
     content: '혹시 서버 컴포넌트와 클라이언트 컴포넌트 분리하는 팁도 있을까요?',
     isEdited: false,
     createdAt: '2024-03-20T12:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
     replies: [
       {
         id: 'comment-3-1',
@@ -38,6 +41,7 @@ export const comments: Comment[] = [
         content: '네! 다음 글에서 그 부분도 다룰 예정이에요. 기대해주세요!',
         isEdited: false,
         createdAt: '2024-03-20T12:30:00Z',
+        sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
       },
       {
         id: 'comment-3-2',
@@ -48,6 +52,7 @@ export const comments: Comment[] = [
         content: '감사합니다! 기다리고 있을게요 ㅎㅎ',
         isEdited: false,
         createdAt: '2024-03-20T13:00:00Z',
+        sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.01 },
       },
     ],
   },
@@ -59,6 +64,7 @@ export const comments: Comment[] = [
     content: '타입 가드 개념이 항상 어려웠는데 이 글 덕분에 이해가 됐어요!',
     isEdited: false,
     createdAt: '2024-03-19T15:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.03 },
   },
   {
     id: 'comment-5',
@@ -68,6 +74,7 @@ export const comments: Comment[] = [
     content: 'is 키워드 사용법이 정말 잘 설명되어 있네요. 북마크합니다!',
     isEdited: true,
     createdAt: '2024-03-19T16:30:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'comment-6',
@@ -77,6 +84,7 @@ export const comments: Comment[] = [
     content: '저는 React Query 사용하고 있는데, devtools가 정말 편해요!',
     isEdited: false,
     createdAt: '2024-03-18T12:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'comment-7',
@@ -86,6 +94,7 @@ export const comments: Comment[] = [
     content: 'SWR이 더 가볍다고 들었는데, 실제로 그런가요?',
     isEdited: false,
     createdAt: '2024-03-18T13:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.02, '악플/욕설': 0.05 },
     replies: [
       {
         id: 'comment-7-1',
@@ -96,6 +105,7 @@ export const comments: Comment[] = [
         content: '번들 사이즈는 SWR이 작지만, 기능은 React Query가 더 풍부해요!',
         isEdited: false,
         createdAt: '2024-03-18T14:00:00Z',
+        sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.03 },
       },
     ],
   },
@@ -107,6 +117,7 @@ export const comments: Comment[] = [
     content: '고생하셨어요! 버그 잡는 순간의 쾌감은 최고죠 ㅋㅋㅋ',
     isEdited: false,
     createdAt: '2024-03-18T00:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'comment-9',
@@ -116,6 +127,7 @@ export const comments: Comment[] = [
     content: 'group 호버 팁은 처음 알았어요! 정말 유용하네요.',
     isEdited: false,
     createdAt: '2024-03-16T11:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.15, '악플/욕설': 0.35 },
   },
   {
     id: 'comment-10',

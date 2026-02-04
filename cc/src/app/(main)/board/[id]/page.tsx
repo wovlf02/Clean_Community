@@ -20,6 +20,7 @@ import { Badge } from '@/components/ui/badge';
 import { UserAvatar } from '@/components/common/user-avatar';
 import { ConfirmDialog } from '@/components/common/confirm-dialog';
 import { ReportModal } from '@/components/common/report-modal';
+import { SentimentBadge } from '@/components/common/sentiment-badge';
 import { CommentList } from '@/components/board/comment-list';
 import {
   DropdownMenu,
@@ -125,13 +126,22 @@ export default function PostDetailPage({ params }: PageProps) {
             {categoryLabels[post.category]}
           </Badge>
 
-          {/* 점 3개 메뉴 버튼 */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="post-detail__more-btn">
-                <MoreVertical className="h-5 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
+          {/* 감정분석 점수 + 점 3개 메뉴 버튼 */}
+          <div className="post-detail__header-actions">
+            {post.sentimentPredictions && (
+              <SentimentBadge
+                predictions={post.sentimentPredictions}
+                showScore
+                showText
+                size="lg"
+              />
+            )}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="post-detail__more-btn">
+                  <MoreVertical className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="post-detail__dropdown">
               {isAuthor && (
                 <>
@@ -160,6 +170,7 @@ export default function PostDetailPage({ params }: PageProps) {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          </div>
         </div>
 
         <h1 className="post-detail__title">{post.title}</h1>

@@ -6,6 +6,7 @@ import type { Message } from '@/types/chat';
 import { UserAvatar } from '@/components/common/user-avatar';
 import { ReportModal } from '@/components/common/report-modal';
 import { ConfirmDialog } from '@/components/common/confirm-dialog';
+import { SentimentBadge } from '@/components/common/sentiment-badge';
 import {
   ContextMenu,
   ContextMenuContent,
@@ -91,7 +92,18 @@ export function MessageBubble({
             )}
             <span className="message-bubble__time">{time}</span>
           </div>
-          <div className="message-bubble__body">{message.content}</div>
+          <div className="message-bubble__body-wrapper">
+            {message.sentimentPredictions && (
+              <SentimentBadge
+                predictions={message.sentimentPredictions}
+                showScore
+                showText
+                size="sm"
+                className="message-bubble__sentiment message-bubble__sentiment--own"
+              />
+            )}
+            <div className="message-bubble__body">{message.content}</div>
+          </div>
         </div>
       ) : (
         // 상대방 메시지: 좌측 정렬, 버블 우측에 시간과 읽지않은수
@@ -116,7 +128,18 @@ export function MessageBubble({
             )}
 
             <div className="message-bubble__row">
-              <div className="message-bubble__body">{message.content}</div>
+              <div className="message-bubble__body-wrapper">
+                {message.sentimentPredictions && (
+                  <SentimentBadge
+                    predictions={message.sentimentPredictions}
+                    showScore
+                    showText
+                    size="sm"
+                    className="message-bubble__sentiment message-bubble__sentiment--other"
+                  />
+                )}
+                <div className="message-bubble__body">{message.content}</div>
+              </div>
 
               <div className="message-bubble__meta message-bubble__meta--other">
                 {unreadCount && (

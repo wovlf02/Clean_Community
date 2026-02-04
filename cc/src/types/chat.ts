@@ -26,4 +26,6 @@ export interface Message {
   fileType?: string;
   fileUrl?: string;
   thumbnailUrl?: string;
+  // AI 감정분석 결과
+  sentimentPredictions?: Record<string, number>;
 }

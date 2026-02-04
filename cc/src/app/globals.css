@@ -1,12 +1,10 @@
-
 @import "tw-animate-css";
+@import "tailwindcss/preflight";
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 @layer base {
@@ -206,4 +204,35 @@ a {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* ===================================
+   Dialog Modal 중앙 정렬 - @layer 밖에서 최고 우선순위로 적용
+   =================================== */
+/* Radix Portal의 Dialog Content를 강제로 중앙 정렬 */
+html body [data-radix-portal] [role="dialog"],
+html body [data-radix-portal] [data-radix-dialog-content] {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  margin: 0 !important;
+  inset: unset !important;
+}
+
+/* Dialog Content의 데이터 상태별 추가 보장 */
+[data-radix-dialog-content][data-state="open"],
+[data-radix-dialog-content][data-state="closed"] {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  inset: unset !important;
+}
+
+
 

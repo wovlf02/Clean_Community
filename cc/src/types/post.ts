@@ -16,8 +16,10 @@ export interface Post {
   createdAt: string;
   updatedAt: string;
   // 감정 분석 결과
-  sentimentScore?: number; // -100 ~ +100
+  sentimentScore?: number; // -100 ~ +100 (레거시)
   sentimentLabel?: 'positive' | 'neutral' | 'negative' | 'warning';
+  // AI 감정분석 예측 점수
+  sentimentPredictions?: Record<string, number>;
 }
 
 export type PostCategory = 'general' | 'qna' | 'info' | 'daily';

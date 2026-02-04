@@ -1,101 +1,294 @@
 /* components/friends/friend-card/friend-card.css */
 
 .friend-card {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  transition: background-color 150ms ease-out;
+  flex-direction: column;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .friend-card:hover {
-  background-color: hsl(var(--accent));
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: 0 12px 32px -8px rgb(0 0 0 / 0.15);
+  transform: translateY(-4px);
+}
+
+/* 상태 바 (상단) */
+.friend-card__status-bar {
+  height: 4px;
+  background: hsl(var(--muted));
+  transition: background 200ms ease;
+}
+
+.friend-card__status-bar--online {
+  background: linear-gradient(90deg, rgb(34 197 94), rgb(74 222 128), rgb(34 197 94));
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* 카드 헤더 - 더보기 버튼 */
+.friend-card__header {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+}
+
+.friend-card__more-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--background) / 0.9);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  backdrop-filter: blur(8px);
+  color: hsl(var(--muted-foreground));
+}
+
+.friend-card__more-btn:hover {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--primary) / 0.3);
+  color: hsl(var(--primary));
+  transform: scale(1.05);
+}
+
+/* 카드 콘텐츠 */
+.friend-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+/* 프로필 섹션 */
+.friend-card__profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .friend-card__info {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .friend-card__name {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1.0625rem;
+  font-weight: 700;
   color: hsl(var(--foreground));
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .friend-card__status {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 0.75rem;
-  color: hsl(var(--muted-foreground));
+  gap: 0.375rem;
 }
 
 .friend-card__status-dot {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
+  flex-shrink: 0;
 }
 
 .friend-card__status-dot--online {
   background-color: rgb(34 197 94);
+  box-shadow: 0 0 8px rgb(34 197 94 / 0.6);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 8px rgb(34 197 94 / 0.6); }
+  50% { box-shadow: 0 0 12px rgb(34 197 94 / 0.9); }
 }
 
 .friend-card__status-dot--offline {
   background-color: rgb(156 163 175);
 }
 
+.friend-card__status-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 액션 버튼 영역 */
 .friend-card__actions {
   display: flex;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsl(var(--border));
 }
 
-.friend-card__actions button {
-  width: 1.75rem;
-  height: 1.75rem;
+.friend-card__action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.75rem;
   padding: 0;
-}
-
-.friend-card__actions button svg {
-  width: 0.875rem;
-  height: 0.875rem;
-}
-
-/* 채팅 버튼 스타일 */
-.friend-card__chat-btn {
-  color: hsl(var(--primary));
-}
-
-.friend-card__chat-btn:hover {
-  background-color: hsl(var(--primary) / 0.1);
-}
-
-/* 드롭다운 메뉴 스타일 개선 */
-.friend-card__actions [role="menu"] {
-  min-width: 140px;
-  padding: 0.375rem;
-  background: hsl(var(--popover));
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: all 200ms ease;
   border: 1px solid hsl(var(--border));
-  border-radius: 0.5rem;
-  box-shadow: 0 8px 24px -6px rgb(0 0 0 / 0.15);
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
 }
 
-.friend-card__actions [role="menuitem"] {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8125rem;
-  border-radius: 0.375rem;
+.friend-card__action-btn:hover {
+  background: hsl(var(--accent));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--primary) / 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+}
+
+.friend-card__action-btn:active {
+  transform: translateY(0);
+}
+
+/* Primary 버튼 (채팅) */
+.friend-card__action-btn--primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
+  color: hsl(var(--primary-foreground));
+  border-color: transparent;
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.25);
+}
+
+.friend-card__action-btn--primary:hover {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary) / 0.75));
+  color: hsl(var(--primary-foreground));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.35);
+}
+
+
+/* 드롭다운 메뉴 */
+.friend-card__dropdown {
+  min-width: 180px;
+  padding: 0.5rem;
+  border-radius: 0.875rem;
+  box-shadow: 0 16px 48px -12px hsl(var(--foreground) / 0.2);
+  border: 1px solid hsl(var(--border));
+}
+
+.friend-card__dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 150ms ease;
+  color: hsl(var(--foreground));
 }
 
-.friend-card__actions [role="menuitem"]:hover {
-  background: hsl(var(--accent));
+.friend-card__dropdown-item:hover {
+  background-color: hsl(var(--accent));
 }
 
-.friend-card__actions [role="menuitem"] svg {
-  width: 0.875rem;
-  height: 0.875rem;
+.friend-card__dropdown-item--danger {
+  color: hsl(0 65% 50%);
+}
+
+.friend-card__dropdown-item--danger:hover {
+  background-color: hsl(0 65% 50% / 0.1);
+}
+
+/* 다크모드 */
+.dark .friend-card {
+  background: hsl(var(--card));
+}
+
+.dark .friend-card:hover {
+  border-color: hsl(var(--primary) / 0.4);
+}
+
+.dark .friend-card__status-text {
+  color: hsl(40 15% 65%);
+}
+
+.dark .friend-card__action-btn {
+  background: hsl(var(--muted) / 0.5);
+  border-color: hsl(var(--border) / 0.5);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .friend-card__content {
+    padding: 1.25rem;
+  }
+
+  .friend-card__name {
+    font-size: 1rem;
+  }
+
+  .friend-card__action-btn {
+    height: 2.5rem;
+  }
+}
+
+.friend-card__dropdown-item--danger {
+  color: hsl(0 65% 55%);
+}
+
+.friend-card__dropdown-item--danger:hover {
+  background-color: hsl(0 65% 55% / 0.1);
+}
+
+/* 다크모드 */
+.dark .friend-card {
+  background: hsl(var(--card));
+}
+
+.dark .friend-card:hover {
+  border-color: hsl(var(--primary) / 0.4);
+}
+
+.dark .friend-card__status-text {
+  color: hsl(40 15% 65%);
+}
+
+.dark .friend-card__message {
+  color: hsl(40 15% 60%);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .friend-card__content {
+    padding: 1rem;
+  }
+
+  .friend-card__name {
+    font-size: 0.9375rem;
+  }
 }
 
 /* 친구 삭제 메뉴 아이템 */

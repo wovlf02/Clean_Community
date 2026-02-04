@@ -67,6 +67,13 @@
   gap: 0.5rem;
 }
 
+/* 본문 래퍼 - 감정분석 뱃지 + 메시지 본문 */
+.message-bubble__body-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 /* 메시지 본문 */
 .message-bubble__body {
   padding: 0.625rem 1rem;
@@ -75,6 +82,19 @@
   line-height: 1.5;
   word-break: break-word;
   white-space: pre-wrap;
+}
+
+/* 감정분석 뱃지 - 메시지 버블 위에 배치 */
+.message-bubble__sentiment {
+  align-self: flex-start;
+}
+
+.message-bubble__sentiment--other {
+  align-self: flex-start;
+}
+
+.message-bubble__sentiment--own {
+  align-self: flex-end;
 }
 
 /* 상대방 메시지 버블 스타일 */

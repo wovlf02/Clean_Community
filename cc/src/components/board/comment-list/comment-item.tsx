@@ -7,6 +7,7 @@ import { UserAvatar } from '@/components/common/user-avatar';
 import { RelativeTime } from '@/components/common/relative-time';
 import { ReportModal } from '@/components/common/report-modal';
 import { ConfirmDialog } from '@/components/common/confirm-dialog';
+import { SentimentBadge } from '@/components/common/sentiment-badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -59,6 +60,14 @@ export function CommentItem({ comment, isReply = false }: CommentItemProps) {
           </div>
 
           <div className="comment-item__actions">
+            {comment.sentimentPredictions && (
+              <SentimentBadge
+                predictions={comment.sentimentPredictions}
+                showScore
+                showText
+                size="sm"
+              />
+            )}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="h-7 w-7">

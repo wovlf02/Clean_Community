@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { UserAvatar } from '@/components/common/user-avatar';
 import { RelativeTime } from '@/components/common/relative-time';
+import { SentimentBadge } from '@/components/common/sentiment-badge';
 import type { Post, PostCategory } from '@/types/post';
 import { truncate } from '@/lib/utils';
 import './post-card.css';
@@ -22,64 +23,56 @@ const categoryLabels: Record<PostCategory, string> = {
   daily: '일상',
 };
 
-// 감정 라벨 설정
-const getSentimentDisplay = (score?: number, label?: string) => {
-  if (score === undefined) return null;
-
-  const absScore = Math.abs(score);
-
-  if (label === 'warning') {
-    return { emoji: '⚠️', color: 'sentiment--warning', text: `${absScore}` };
-  }
-  if (label === 'negative' || score < -20) {
-    return { emoji: '😟', color: 'sentiment--negative', text: `-${absScore}` };
-  }
-  if (label === 'positive' || score > 20) {
-    return { emoji: '😊', color: 'sentiment--positive', text: `+${absScore}` };
-  }
-  return { emoji: '😐', color: 'sentiment--neutral', text: `${absScore}` };
-};
-
 export function PostCard({ post }: PostCardProps) {
-  const sentiment = getSentimentDisplay(post.sentimentScore, post.sentimentLabel);
-
   return (
     <Link href={`/board/${post.id}`}>
       <Card className="post-card">
-        {/* 카드 헤더 - 카테고리, 감정점수, 등록시각 */}
-        <div className="post-card__header">
-          <div className="post-card__header-left">
+        {/* 메인 컨텐츠 영역 */}
+        <div className="post-card__main">
+          {/* 좌측: 카테고리 + 제목 + 내용 */}
+          <div className="post-card__left">
+            {/* 카테고리 */}
             <Badge variant="secondary" className="post-card__category">
               {categoryLabels[post.category]}
             </Badge>
-            {sentiment && (
-              <span className={`post-card__sentiment ${sentiment.color}`}>
-                {sentiment.emoji} {sentiment.text}
-              </span>
+
+            {/* 제목 */}
+            <h3 className="post-card__title">{post.title}</h3>
+
+            {/* 본문 미리보기 */}
+            <p className="post-card__excerpt">
+              {truncate(post.content, 100)}
+            </p>
+          </div>
+
+          {/* 우측: 등록일자 + 점수 + 썸네일 */}
+          <div className="post-card__right">
+            {/* 등록시각 */}
+            <RelativeTime date={post.createdAt} className="post-card__time" />
+
+            {/* 감정분석 점수 */}
+            {post.sentimentPredictions && (
+              <SentimentBadge
+                predictions={post.sentimentPredictions}
+                showScore
+                showText
+                size="sm"
+              />
+            )}
+
+            {/* 썸네일 */}
+            {post.thumbnailUrl && (
+              <div className="post-card__thumbnail">
+                <Image
+                  src={post.thumbnailUrl}
+                  alt=""
+                  fill
+                  sizes="100px"
+                />
+              </div>
             )}
           </div>
-          <RelativeTime date={post.createdAt} className="post-card__time" />
         </div>
-
-        {/* 제목 */}
-        <h3 className="post-card__title">{post.title}</h3>
-
-        {/* 본문 미리보기 */}
-        <p className="post-card__excerpt">
-          {truncate(post.content, 100)}
-        </p>
-
-        {/* 썸네일 (작게, 선택적) */}
-        {post.thumbnailUrl && (
-          <div className="post-card__thumbnail">
-            <Image
-              src={post.thumbnailUrl}
-              alt=""
-              fill
-              sizes="48px"
-            />
-          </div>
-        )}
 
         {/* 푸터 */}
         <div className="post-card__footer">

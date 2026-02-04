@@ -16,6 +16,13 @@
   margin-bottom: 0.75rem;
 }
 
+/* 감정분석 + 점3개 버튼 영역 */
+.post-detail__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .post-detail__more-btn {
   flex-shrink: 0;
   width: 2.5rem;

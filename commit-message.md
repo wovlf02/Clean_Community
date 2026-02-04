@@ -1,23 +1,57 @@
-docs: clean_community.md 프로젝트 소개 문서 작성
+feat: 감정 분석 기능 및 UI/UX 개선 완료
 
-Clean Community 프로젝트에 맞게 프로젝트 소개 문서 작성
+프론트엔드 전반에 걸쳐 감정 분석 기능을 통합하고 UI/UX를 개선했습니다.
 
-## 변경 사항
-- clean_community.md 파일을 Clean Community 프로젝트 내용으로 전면 재작성
-- 기존 CoUp 프로젝트 내용 → Clean Community 내용으로 변경
+## 주요 변경사항
 
-## 추가된 내용
-- 프로젝트 개요: AI 기반 감정분석 커뮤니티 플랫폼 소개
-- 기술 스택: Next.js 16, React 19, TypeScript, FastAPI, PyTorch, Socket.IO 등
-- 개발 기간: 2026/01/15 ~ 2026/02/02
-- 프로젝트 진행률: 85% (Phase 1-3 완료)
-- GitHub 링크: https://github.com/wovlf02/Clean_Community
-- 문서 링크: docs 폴더 주요 문서 링크 추가
+### 1. Tailwind CSS v4 마이그레이션
+- @tailwind base → @import "tailwindcss/preflight" 변경
+- @tailwind components 제거 (v4에서 더 이상 사용하지 않음)
+- @import 순서 재정렬하여 CSS 표준 준수
 
-## 개발 이슈 및 해결 방법 (6가지)
-1. 효율성 개선: 마이크로서비스 아키텍처, API Routes 도메인별 분리, 컴포넌트 모듈화
-2. AI 모델 개발: 3-모델 하이브리드 앙상블, 멀티라벨 분류 (9개 카테고리), Hamming Accuracy 96.22%
-3. 실시간 통신 구현: Socket.IO 독립 서버, 실시간 채팅/알림, 온라인 상태 관리
-4. 대시보드 및 관리자 기능: Recharts 활용 통계 시각화, 악성 콘텐츠 모니터링
-5. UI/UX 최적화: Tailwind CSS v4 + shadcn/ui, 다크 모드, 반응형 디자인
-6. 성능 최적화: Next.js 16 활용, React Query 캐싱, 코드 스플리팅
+### 2. 감정 분석 기능 통합
+- 게시글, 댓글, 채팅 메시지에 감정 분석 배지 추가
+- SentimentBadge 컴포넌트 개선 및 스타일링
+- 6가지 감정 타입 지원 (긍정, 부정, 중립, 공격적, 유해, 스팸)
+- 감정별 색상 테마 및 아이콘 적용
+
+### 3. UI 컴포넌트 개선
+- PostCard: 감정 배지 통합, 레이아웃 개선
+- MessageBubble: 채팅 메시지에 감정 분석 표시
+- CommentItem: 댓글에 감정 분석 배지 추가
+- FriendCard, FriendRequestCard: 디자인 개선
+
+### 4. 친구 페이지 개선
+- 친구 추가 버튼을 아이콘 전용 버튼으로 변경
+- 버튼 레이아웃 및 호버 효과 개선
+- 반응형 디자인 적용
+
+### 5. Dialog 모달 중앙 정렬 수정
+- Radix UI Dialog의 중앙 정렬 이슈 해결
+- !important 플래그로 강제 중앙 정렬 적용
+- 모든 상태(open/closed)에서 일관된 위치 보장
+
+### 6. 타입 정의 개선
+- Sentiment 타입 추가 및 확장
+- Post, Comment, Message, User 타입에 sentiment 필드 추가
+- 타입 안정성 강화
+
+### 7. 목 데이터 업데이트
+- 모든 목 데이터에 감정 분석 값 추가
+- 다양한 감정 시나리오 반영
+- 실제 사용 사례를 반영한 테스트 데이터
+
+## 기술 스택
+- Next.js 15
+- TypeScript
+- Tailwind CSS v4
+- Radix UI
+- Lucide React Icons
+
+## 테스트
+- UI 컴포넌트 렌더링 검증
+- 감정 배지 색상 및 아이콘 표시 확인
+- 반응형 레이아웃 테스트
+- 다이얼로그 중앙 정렬 검증
+
+Closes #frontend-sentiment-analysis

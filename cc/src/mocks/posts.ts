@@ -17,6 +17,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-20T09:00:00Z',
     updatedAt: '2024-03-20T09:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.02, '남성': 0.01, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.02, '악플/욕설': 0.03 },
   },
   {
     id: 'post-2',
@@ -32,6 +33,7 @@ export const posts: Post[] = [
     isEdited: true,
     createdAt: '2024-03-19T14:30:00Z',
     updatedAt: '2024-03-19T16:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '남성': 0.01, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.01, '악플/욕설': 0.02 },
   },
   {
     id: 'post-3',
@@ -47,6 +49,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-18T11:00:00Z',
     updatedAt: '2024-03-18T11:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.05, '남성': 0.03, '성소수자': 0.02, '인종/국적': 0.02, '연령': 0.02, '지역': 0.02, '종교': 0.02, '기타 혐오': 0.08, '악플/욕설': 0.12 },
   },
   {
     id: 'post-4',
@@ -62,6 +65,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-17T23:00:00Z',
     updatedAt: '2024-03-17T23:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '남성': 0.01, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.01, '악플/욕설': 0.01 },
   },
   {
     id: 'post-5',
@@ -78,6 +82,7 @@ export const posts: Post[] = [
     isEdited: true,
     createdAt: '2024-03-16T10:00:00Z',
     updatedAt: '2024-03-16T12:30:00Z',
+    sentimentPredictions: { '여성/가족': 0.02, '남성': 0.02, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.03, '악플/욕설': 0.05 },
   },
   {
     id: 'post-6',
@@ -93,6 +98,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-15T15:00:00Z',
     updatedAt: '2024-03-15T15:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '남성': 0.01, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.02, '악플/욕설': 0.02 },
   },
   {
     id: 'post-7',
@@ -108,6 +114,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-14T09:30:00Z',
     updatedAt: '2024-03-14T09:30:00Z',
+    sentimentPredictions: { '여성/가족': 0.15, '남성': 0.05, '성소수자': 0.02, '인종/국적': 0.02, '연령': 0.02, '지역': 0.02, '종교': 0.02, '기타 혐오': 0.20, '악플/욕설': 0.35 },
   },
   {
     id: 'post-8',
@@ -124,6 +131,7 @@ export const posts: Post[] = [
     isEdited: false,
     createdAt: '2024-03-13T20:00:00Z',
     updatedAt: '2024-03-13T20:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.01, '남성': 0.01, '성소수자': 0.01, '인종/국적': 0.01, '연령': 0.01, '지역': 0.01, '종교': 0.01, '기타 혐오': 0.02, '악플/욕설': 0.03 },
   },
   {
     id: 'post-9',
@@ -139,6 +147,7 @@ export const posts: Post[] = [
     isEdited: true,
     createdAt: '2024-03-12T11:00:00Z',
     updatedAt: '2024-03-12T14:00:00Z',
+    sentimentPredictions: { '여성/가족': 0.30, '남성': 0.25, '성소수자': 0.10, '인종/국적': 0.15, '연령': 0.10, '지역': 0.05, '종교': 0.05, '기타 혐오': 0.55, '악플/욕설': 0.65 },
   },
   {
     id: 'post-10',

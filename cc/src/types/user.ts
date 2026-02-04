@@ -5,6 +5,7 @@ export interface User {
   name: string;
   image?: string;
   bio?: string;
+  statusMessage?: string;
   isOnline: boolean;
   createdAt: string;
 }

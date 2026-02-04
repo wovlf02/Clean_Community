@@ -131,14 +131,16 @@ export function AddFriendModal({ open, onOpenChange }: AddFriendModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="add-friend-modal">
+      <DialogContent className="add-friend-modal" showClose={false}>
+        {/* 우측 상단 닫기 버튼 */}
         <button
           className="add-friend-modal__close-btn"
           onClick={handleClose}
           aria-label="닫기"
         >
-          <X className="h-5 w-5" />
+          <X className="h-4 w-4" />
         </button>
+
         <DialogHeader className="add-friend-modal__header">
           <div className="add-friend-modal__icon">
             <Users className="h-6 w-6" />
